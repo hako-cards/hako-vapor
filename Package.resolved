@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "hako-shared",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kylebshr/hako-shared.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0e3030a82efdcd929286607fb0eb762a662334d2"
+      }
+    },
+    {
       "identity" : "multipart-kit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/multipart-kit.git",
