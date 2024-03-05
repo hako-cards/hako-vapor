@@ -9,22 +9,22 @@ import HakoShared
 
 extension Issuer {
     static let chase = Issuer(
-        id: ID(rawValue: "chase"),
+        id: "chase",
         name: "Chase"
     )
 
     static let amex = Issuer(
-        id: ID(rawValue: "amex"),
+        id: "amex",
         name: "American Express"
     )
 
     static let apple = Issuer(
-        id: ID(rawValue: "apple"),
+        id: "apple",
         name: "Apple"
     )
 
     static let citi = Issuer(
-        id: ID(rawValue: "citi"),
+        id: "citi",
         name: "Citi"
     )
 }

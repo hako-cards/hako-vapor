@@ -11,9 +11,7 @@ import Foundation
 extension Card {
     static let all = [
         Card(
-            id: .init(
-                rawValue: "freedom-unlimited"
-            ),
+            id: "freedom-unlimited",
             name: "Freedom Unlimited",
             issuer: .chase,
             basePoints: [.init(
@@ -33,12 +31,11 @@ extension Card {
                 )
             ),
             redemptionMultiplier: nil,
+            canCombinePoints: true,
             icon: .midBlue
         ),
         Card(
-            id: .init(
-                rawValue: "sapphire-preferred"
-            ),
+            id: "sapphire-preferred",
             name: "Sapphire Preferred",
             issuer: .chase,
             basePoints: [.init(
@@ -70,12 +67,11 @@ extension Card {
                 )
             ),
             redemptionMultiplier: 1.25,
+            canCombinePoints: true,
             icon: .darkBlue
         ),
         Card(
-            id: .init(
-                rawValue: "sapphire-reserve"
-            ),
+            id: "sapphire-reserve",
             name: "Sapphire Reserve",
             issuer: .chase,
             basePoints: [.init(
@@ -123,12 +119,29 @@ extension Card {
                 )
             ),
             redemptionMultiplier: 1.5,
+            canCombinePoints: true,
             icon: .darkBlue
         ),
         Card(
-            id: .init(
-                rawValue: "blue-cash-everyday"
-            ),
+            id: "united-club-infinite",
+            name: "United Club Infinite",
+            issuer: .chase,
+            basePoints: [
+                .init(percent: 1, attributes: [])
+            ],
+            categoryPoints: .fixed(.init(categoryPoints: [
+                SpendCategory.travel.id: [
+                    .init(percent: 4, attributes: [.caveat("United purchases only")]),
+                    .init(percent: 2, attributes: [])
+                ],
+                SpendCategory.dining.id: [
+                    .init(percent: 2, attributes: []),
+                ],
+            ])),
+            icon: .black
+        ),
+        Card(
+            id: "blue-cash-everyday",
             name: "Blue Cash Everyday",
             issuer: .amex,
             basePoints: [.init(
@@ -157,9 +170,7 @@ extension Card {
             icon: .lightBlue
         ),
         Card(
-            id: .init(
-                rawValue: "platinum"
-            ),
+            id: "platinum",
             name: "Platinum Card",
             issuer: .amex,
             basePoints: [.init(
@@ -192,9 +203,7 @@ extension Card {
             icon: .silver
         ),
         Card(
-            id: .init(
-                rawValue: "gold"
-            ),
+            id: "gold",
             name: "Gold Card",
             issuer: .amex,
             basePoints: [.init(
@@ -231,9 +240,7 @@ extension Card {
             icon: .gold
         ),
         Card(
-            id: .init(
-                rawValue: "apple-card"
-            ),
+            id: "apple-card",
             name: "Apple Card",
             issuer: .apple,
             basePoints: [
@@ -251,9 +258,7 @@ extension Card {
             icon: .white
         ),
         Card(
-            id: .init(
-                rawValue: "double-cash"
-            ),
+            id: "double-cash",
             name: "Double Cash",
             issuer: .citi,
             basePoints: [
@@ -267,9 +272,7 @@ extension Card {
             icon: .midBlue
         ),
         Card(
-            id: .init(
-                rawValue: "aadvantage-exec"
-            ),
+            id: "aadvantage-exec",
             name: "AA Executive",
             issuer: .citi,
             basePoints: [

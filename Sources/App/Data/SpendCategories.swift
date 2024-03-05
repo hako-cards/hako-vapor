@@ -18,52 +18,46 @@ extension SpendCategory {
         .carRentals,
     ]
 
-    static let everything = SpendCategory(
-        id: .init(rawValue: "everything"),
-        name: "Anything else",
-        tint: .foregound
-    )
-
     static let dining = SpendCategory(
-        id: .init(rawValue: "dining"),
+        id: "dining",
         name: "Dining",
         tint: .orange
     )
 
     static let groceries = SpendCategory(
-        id: .init(rawValue: "groceries"),
+        id: "groceries",
         name: "Groceries",
         tint: .green
     )
 
     static let travel = SpendCategory(
-        id: .init(rawValue: "travel"),
+        id: "travel",
         name: "Travel",
         tint: .blue
     )
 
     static let gas = SpendCategory(
-        id: .init(rawValue: "gas"),
+        id: "gas",
         name: "Gasoline",
         tint: .red
     )
 
     static let flights = SpendCategory(
-        id: .init(rawValue: "flights"),
+        id: "flights",
         name: "Flights",
         tint: .blue,
         parent: SpendCategory.travel.id
     )
 
     static let hotels = SpendCategory(
-        id: .init(rawValue: "hotels"),
+        id: "hotels",
         name: "Hotels",
         tint: .blue,
         parent: SpendCategory.travel.id
     )
 
     static let carRentals = SpendCategory(
-        id: .init(rawValue: "car-rentals"),
+        id: "car-rentals",
         name: "Car rentals",
         tint: .blue,
         parent: SpendCategory.travel.id
