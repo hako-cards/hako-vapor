@@ -30,7 +30,6 @@ extension Card {
                     ]
                 )
             ),
-            redemptionMultiplier: nil,
             canCombinePoints: true,
             icon: .midBlue
         ),
@@ -59,7 +58,7 @@ extension Card {
                             .init(
                                 percent: 5,
                                 attributes: [.caveat(
-                                    "Purchased through Chase"
+                                    "Booked through Chase Ultimate Rewards"
                                 )]
                             )
                         ],
@@ -95,7 +94,7 @@ extension Card {
                             .init(
                                 percent: 5,
                                 attributes: [.caveat(
-                                    "Purchased through Chase"
+                                    "Booked through Chase Ultimate Rewards"
                                 )]
                             ),
                         ],
@@ -103,7 +102,7 @@ extension Card {
                             .init(
                                 percent: 10,
                                 attributes: [.caveat(
-                                    "Purchased through Chase"
+                                    "Booked through Chase Ultimate Rewards"
                                 )]
                             ),
                         ],
@@ -111,7 +110,7 @@ extension Card {
                             .init(
                                 percent: 10,
                                 attributes: [.caveat(
-                                    "Purchased through Chase"
+                                    "Booked through Chase Ultimate Rewards"
                                 )]
                             ),
                         ],
@@ -166,7 +165,6 @@ extension Card {
                     ]
                 )
             ),
-            redemptionMultiplier: nil,
             icon: .lightBlue
         ),
         Card(
@@ -199,7 +197,6 @@ extension Card {
                     ]
                 )
             ),
-            redemptionMultiplier: nil,
             icon: .silver
         ),
         Card(
@@ -236,7 +233,6 @@ extension Card {
                     ]
                 )
             ),
-            redemptionMultiplier: nil,
             icon: .gold
         ),
         Card(
@@ -253,8 +249,6 @@ extension Card {
                     attributes: [.applePay]
                 )
             ],
-            categoryPoints: nil,
-            redemptionMultiplier: nil,
             icon: .white
         ),
         Card(
@@ -267,8 +261,6 @@ extension Card {
                     attributes: [.caveat("1% when you buy, 1% as you pay")]
                 )
             ],
-            categoryPoints: nil,
-            redemptionMultiplier: nil,
             icon: .midBlue
         ),
         Card(
@@ -303,7 +295,6 @@ extension Card {
                     ]
                 )
             ),
-            redemptionMultiplier: nil,
             icon: .black
         ),
     ]
