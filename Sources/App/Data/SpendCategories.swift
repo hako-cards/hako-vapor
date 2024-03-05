@@ -12,6 +12,7 @@ extension SpendCategory {
         .dining,
         .gas,
         .groceries,
+        .drugstores,
         .travel,
         .flights,
         .hotels,
