@@ -13,10 +13,12 @@ extension SpendCategory {
         .gas,
         .groceries,
         .drugstores,
+        .streaming,
         .travel,
         .flights,
         .hotels,
         .carRentals,
+        .transit,
     ]
 
     static let dining = SpendCategory(
@@ -69,5 +71,23 @@ extension SpendCategory {
         name: "Drugstores",
         tint: .teal
     )
-}
 
+    static let online = SpendCategory(
+        id: "online",
+        name: "Online Retail",
+        tint: .yellow
+    )
+
+    static let streaming = SpendCategory(
+        id: "streaming",
+        name: "Streaming",
+        tint: .gray
+    )
+
+    static let transit = SpendCategory(
+        id: "transit",
+        name: "Transit",
+        tint: .blue,
+        parent: SpendCategory.travel.id
+    )
+}

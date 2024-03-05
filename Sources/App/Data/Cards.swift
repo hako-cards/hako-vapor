@@ -91,6 +91,12 @@ extension Card {
                                 attributes: []
                             )
                         ],
+                        SpendCategory.drugstores.id: [
+                            .init(
+                                percent: 3,
+                                attributes: []
+                            )
+                        ],
                     ]
                 )
             ),
@@ -226,10 +232,50 @@ extension Card {
                                 attributes: []
                             ),
                         ],
+                        SpendCategory.online.id: [
+                            .init(percent: 3, attributes: [.caveat("On up to $6,000 per year")])
+                        ]
                     ]
                 )
             ),
             icon: .lightBlue
+        ),
+        Card(
+            id: "blue-cash-preferred",
+            name: "Blue Cash Preferred",
+            issuer: .amex,
+            basePoints: [.init(
+                percent: 1,
+                attributes: []
+            )],
+            categoryPoints: .fixed(
+                .init(
+                    categoryPoints: [
+                        SpendCategory.groceries.id: [
+                            .init(
+                                percent: 6,
+                                attributes: [.caveat("On up to $6,000 per year")]
+                            ),
+                        ],
+                        SpendCategory.streaming.id: [
+                            .init(
+                                percent: 6,
+                                attributes: [.caveat("Select streaming subscriptions")]
+                            ),
+                        ],
+                        SpendCategory.gas.id: [
+                            .init(
+                                percent: 3,
+                                attributes: []
+                            ),
+                        ],
+                        SpendCategory.transit.id: [
+                            .init(percent: 3, attributes: [.caveat("On up to $6,000 per year")])
+                        ]
+                    ]
+                )
+            ),
+            icon: .darkBlue
         ),
         Card(
             id: "platinum",
