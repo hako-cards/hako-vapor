@@ -11,6 +11,70 @@ import Foundation
 extension Card {
     static let all = [
         Card(
+            id: "freedom",
+            name: "Freedom",
+            issuer: .chase,
+            basePoints: [.init(
+                percent: 1,
+                attributes: []
+            )],
+            categoryPoints: .fixed(
+                .init(
+                    categoryPoints: [
+                        SpendCategory.groceries.id: [
+                            .init(
+                                percent: 5,
+                                attributes: [
+                                    .caveat("Until March 31st on up to $1,500"),
+                                    .caveat("Must be activated"),
+                                ]
+                            )
+                        ],
+                    ]
+                )
+            ),
+            canCombinePoints: true,
+            icon: .lightBlue
+        ),
+        Card(
+            id: "freedom-flex",
+            name: "Freedom Flex",
+            issuer: .chase,
+            basePoints: [.init(
+                percent: 1,
+                attributes: []
+            )],
+            categoryPoints: .fixed(
+                .init(
+                    categoryPoints: [
+                        SpendCategory.groceries.id: [
+                            .init(
+                                percent: 5,
+                                attributes: [
+                                    .caveat("Until March 31st on up to $1,500"),
+                                    .caveat("Must be activated"),
+                                ]
+                            )
+                        ],
+                        SpendCategory.dining.id: [
+                            .init(
+                                percent: 3,
+                                attributes: []
+                            )
+                        ],
+                        SpendCategory.drugstores.id: [
+                            .init(
+                                percent: 3,
+                                attributes: []
+                            )
+                        ],
+                    ]
+                )
+            ),
+            canCombinePoints: true,
+            icon: .lightBlue
+        ),
+        Card(
             id: "freedom-unlimited",
             name: "Freedom Unlimited",
             issuer: .chase,

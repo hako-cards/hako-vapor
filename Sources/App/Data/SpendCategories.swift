@@ -62,5 +62,11 @@ extension SpendCategory {
         tint: .blue,
         parent: SpendCategory.travel.id
     )
+
+    static let drugstores = SpendCategory(
+        id: "drugstores",
+        name: "Drugstores",
+        tint: .teal
+    )
 }
 
