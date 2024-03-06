@@ -13,6 +13,7 @@ extension SpendCategory {
         .gas,
         .groceries,
         .drugstores,
+        .online,
         .streaming,
         .travel,
         .flights,
