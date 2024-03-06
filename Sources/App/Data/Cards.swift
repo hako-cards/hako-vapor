@@ -512,7 +512,7 @@ extension Card {
                     ]
                 )
             ),
-            icon: .gray
+            icon: .lightGray
         ),
     ].sorted {
         ($0.issuer.name, $0.name) < ($1.issuer.name, $1.name)

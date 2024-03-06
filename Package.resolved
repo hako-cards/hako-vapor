@@ -33,7 +33,7 @@
       "location" : "https://github.com/kylebshr/hako-shared",
       "state" : {
         "branch" : "main",
-        "revision" : "ceb7757732fa284e7d7cfb991a989c54e5713d14"
+        "revision" : "ad517ecb19fe0b4c168f055cce87806c3be42cd6"
       }
     },
     {
@@ -183,7 +183,7 @@
     {
       "identity" : "vapor",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/vapor/vapor",
+      "location" : "https://github.com/vapor/vapor.git",
       "state" : {
         "revision" : "3a7da193a2937472b252b8db210897e7abf37b47",
         "version" : "4.92.4"
