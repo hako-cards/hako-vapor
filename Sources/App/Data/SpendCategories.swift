@@ -42,30 +42,9 @@ extension SpendCategory {
         name: "Travel",
         tint: .blue
     )
-
-    static let gas = SpendCategory(
-        id: "gas",
-        name: "Gasoline",
-        tint: .red
-    )
-
     static let flights = SpendCategory(
         id: "flights",
         name: "Flights",
-        tint: .blue,
-        parent: SpendCategory.travel.id
-    )
-
-    static let delta = SpendCategory(
-        id: "delta",
-        name: "Delta Airlines",
-        tint: .blue,
-        parent: SpendCategory.travel.id
-    )
-
-    static let hotels = SpendCategory(
-        id: "hotels",
-        name: "Hotels",
         tint: .blue,
         parent: SpendCategory.travel.id
     )
@@ -74,6 +53,27 @@ extension SpendCategory {
         id: "car-rentals",
         name: "Car rentals",
         tint: .blue,
+        parent: SpendCategory.travel.id
+    )
+
+    static let gas = SpendCategory(
+        id: "gas",
+        name: "Gasoline",
+        tint: .red,
+        parent: SpendCategory.travel.id
+    )
+
+    static let delta = SpendCategory(
+        id: "delta",
+        name: "Delta Airlines",
+        tint: .subduedBlue,
+        parent: SpendCategory.travel.id
+    )
+
+    static let hotels = SpendCategory(
+        id: "hotels",
+        name: "Hotels",
+        tint: .indigo,
         parent: SpendCategory.travel.id
     )
 
