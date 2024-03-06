@@ -15,9 +15,11 @@ extension SpendCategory {
         .drugstores,
         .costco,
         .online,
+        .amazon,
         .streaming,
         .travel,
         .flights,
+        .delta,
         .hotels,
         .carRentals,
         .transit,
@@ -50,6 +52,13 @@ extension SpendCategory {
     static let flights = SpendCategory(
         id: "flights",
         name: "Flights",
+        tint: .blue,
+        parent: SpendCategory.travel.id
+    )
+
+    static let delta = SpendCategory(
+        id: "delta",
+        name: "Delta Airlines",
         tint: .blue,
         parent: SpendCategory.travel.id
     )
@@ -97,5 +106,12 @@ extension SpendCategory {
         id: "costco",
         name: "Costco",
         tint: .red
+    )
+
+    static let amazon = SpendCategory(
+        id: "amazon",
+        name: "Amazon",
+        tint: .orange,
+        parent: SpendCategory.online.id
     )
 }

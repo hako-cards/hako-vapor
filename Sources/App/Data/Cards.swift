@@ -431,7 +431,89 @@ extension Card {
                 )
             ),
             icon: .gray
-        )
+        ),
+        Card(
+            id: "skymiles-gold",
+            name: "Delta SkyMiles Gold",
+            issuer: .amex,
+            basePoints: [.init(percent: 1, attributes: [])],
+            categoryPoints: .fixed(
+                .init(
+                    categoryPoints: [
+                        SpendCategory.delta.id: [.init(percent: 2, attributes: [])],
+                        SpendCategory.dining.id: [.init(percent: 2, attributes: [])],
+                        SpendCategory.groceries.id: [.init(percent: 2, attributes: [])],
+                    ]
+                )
+            ),
+            icon: .gold
+        ),
+        Card(
+            id: "prime-visa",
+            name: "Prime Visa",
+            issuer: .chase,
+            basePoints: [.init(percent: 1, attributes: [])],
+            categoryPoints: .fixed(
+                .init(
+                    categoryPoints: [
+                        SpendCategory.amazon.id: [.init(
+                            percent: 5,
+                            attributes: [.caveat(
+                                "Including amazon.com, Amazon Fresh, and Whole Foods Market"
+                            )]
+                        )],
+                        SpendCategory.travel.id: [.init(
+                            percent: 5,
+                            attributes: [
+                                .caveat("Booked through Chase Ultimate Rewards")
+                            ]
+                        )],
+                        SpendCategory.dining.id: [.init(
+                            percent: 2,
+                            attributes: []
+                        )],
+                        SpendCategory.transit.id: [.init(
+                            percent: 2,
+                            attributes: []
+                        )],
+                    ]
+                )
+            ),
+            icon: .darkBlue
+        ),
+        Card(
+            id: "amazon-visa",
+            name: "Amazon Visa",
+            issuer: .chase,
+            basePoints: [.init(percent: 1, attributes: [])],
+            categoryPoints: .fixed(
+                .init(
+                    categoryPoints: [
+                        SpendCategory.amazon.id: [.init(
+                            percent: 3,
+                            attributes: [.caveat(
+                                "Including amazon.com, Amazon Fresh, and Whole Foods Market"
+                            )]
+                        )],
+                        SpendCategory.travel.id: [.init(
+                            percent: 3,
+                            attributes: [
+                                .caveat("Booked through Chase Ultimate Rewards")
+                            ]
+                        )],
+                        SpendCategory.dining.id: [.init(
+                            percent: 2,
+                            attributes: []
+                        )],
+                        SpendCategory.transit.id: [.init(
+                            percent: 2,
+                            attributes: []
+                        )],
+                    ]
+                )
+            ),
+            icon: .gray
+        ),
     ].sorted {
         ($0.issuer.name, $0.name) < ($1.issuer.name, $1.name)
     }
