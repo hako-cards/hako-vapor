@@ -407,5 +407,30 @@ extension Card {
             ),
             icon: .black
         ),
+        Card(
+            id: "costco-anywhere",
+            name: "Costco Anywhere Visa",
+            issuer: .citi,
+            basePoints: [.init(percent: 1, attributes: [])],
+            categoryPoints: .fixed(
+                .init(
+                    categoryPoints: [
+                        SpendCategory.costco.id: [
+                            .init(percent: 2, attributes: [])
+                        ],
+                        SpendCategory.dining.id: [
+                            .init(percent: 3, attributes: [])
+                        ],
+                        SpendCategory.travel.id: [
+                            .init(percent: 3, attributes: [])
+                        ],
+                        SpendCategory.gas.id: [
+                            .init(percent: 4, attributes: [.caveat("And EV charging")])
+                        ],
+                    ]
+                )
+            ),
+            icon: .gray
+        )
     ]
 }

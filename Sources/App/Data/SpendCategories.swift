@@ -13,6 +13,7 @@ extension SpendCategory {
         .gas,
         .groceries,
         .drugstores,
+        .costco,
         .online,
         .streaming,
         .travel,
@@ -90,5 +91,11 @@ extension SpendCategory {
         name: "Transit",
         tint: .blue,
         parent: SpendCategory.travel.id
+    )
+
+    static let costco = SpendCategory(
+        id: "costco",
+        name: "Costco",
+        tint: .red
     )
 }
