@@ -4,7 +4,7 @@ A lightweight backend for [Hako](https://hako.cards) that provides up-to-date cr
 
 ### Design
 
-The backend and frontend for Hako share models in the [hako-shared](https://github.com/kylebshr/hako-shared) package. Right now, cards and categories are simply defined in the backend as static constants written in Swift. While this might seem odd, it's lightweight and works for now, and if I decide to deal with databases at some point I could easily write some code to write those constants to the db.
+The backend and frontend for Hako share models in the [hako-shared](https://github.com/hako-cards/hako-shared) package. Right now, cards and categories are simply defined in the backend as static constants written in Swift. While this might seem odd, it's lightweight and works for now, and if I decide to deal with databases at some point I could easily write some code to write those constants to the db.
 
 ### Contributing
 
