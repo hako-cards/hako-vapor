@@ -514,6 +514,41 @@ extension Card {
             ),
             icon: .lightGray
         ),
+        Card(
+            id: "discover-it",
+            name: "Discover it",
+            issuer: .discover,
+            basePoints: [.init(percent: 1, attributes: [])],
+            categoryPoints: .fixed(
+                .init(
+                    categoryPoints: [
+                        SpendCategory.dining.id: [.init(
+                            percent: 5,
+                            attributes: [
+                                .caveat(
+                                    "Until March 31st on up to $1,500"
+                                ),
+                                .caveat(
+                                    "Must be activated"
+                                ),
+                            ]
+                        )],
+                        SpendCategory.drugstores.id: [.init(
+                            percent: 5,
+                            attributes: [
+                                .caveat(
+                                    "Until March 31st on up to $1,500"
+                                ),
+                                .caveat(
+                                    "Must be activated"
+                                ),
+                            ]
+                        )],
+                    ]
+                )
+            ),
+            icon: .midBlue
+        )
     ].sorted {
         ($0.issuer.name, $0.name) < ($1.issuer.name, $1.name)
     }

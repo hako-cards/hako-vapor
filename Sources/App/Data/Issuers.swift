@@ -27,4 +27,9 @@ extension Issuer {
         id: "citi",
         name: "Citi"
     )
+
+    static let discover = Issuer(
+        id: "discover",
+        name: "Discover"
+    )
 }
