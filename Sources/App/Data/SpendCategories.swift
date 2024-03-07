@@ -15,6 +15,7 @@ extension SpendCategory {
         .costco,
         .online,
         .amazon,
+        .entertainment,
         .streaming,
         .travel,
         .flights,
@@ -121,5 +122,11 @@ extension SpendCategory {
         name: "Amazon",
         tint: .orange,
         parent: SpendCategory.online.id
+    )
+
+    static let entertainment = SpendCategory(
+        id: "entertainment",
+        name: "Entertainment",
+        tint: .pink
     )
 }

@@ -32,4 +32,9 @@ extension Issuer {
         id: "discover",
         name: "Discover"
     )
+
+    static let capitalOne = Issuer(
+        id: "capital-one",
+        name: "Capital One"
+    )
 }

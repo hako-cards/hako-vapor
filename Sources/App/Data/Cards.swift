@@ -555,7 +555,65 @@ extension Card {
                         kind: try .Q12024()
                     )],
                 ]
-            )
+            ),
+            Card(
+                id: "savor-rewards",
+                name: "Savor Rewards",
+                icon: .bronze,
+                issuer: .capitalOne,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.hotels.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                    SpendCategory.carRentals.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                    SpendCategory.dining.id: [.init(multiplier: 4)],
+                    SpendCategory.entertainment.id: [
+                        .init(multiplier: 8, attributes: [.caveat("On Capital One Entertainment purchases")]),
+                        .init(multiplier: 4),
+                    ],
+                    SpendCategory.streaming.id: [.init(multiplier: 4, attributes: [.caveat("On popular services")])],
+                    SpendCategory.groceries.id: [.init(multiplier: 3)],
+                ]
+            ),
+            Card(
+                id: "savor-one",
+                name: "SavorOne",
+                icon: .bronze,
+                issuer: .capitalOne,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.hotels.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                    SpendCategory.carRentals.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                    SpendCategory.dining.id: [.init(multiplier: 3)],
+                    SpendCategory.entertainment.id: [
+                        .init(multiplier: 8, attributes: [.caveat("On Capital One Entertainment purchases")]),
+                        .init(multiplier: 3),
+                    ],
+                    SpendCategory.streaming.id: [.init(multiplier: 3, attributes: [.caveat("On popular services")])],
+                    SpendCategory.groceries.id: [.init(multiplier: 3)],
+                ]
+            ),
+            Card(
+                id: "venture-rewards",
+                name: "Venture Rewards",
+                icon: .darkBlue,
+                issuer: .capitalOne,
+                basePoints: [.init(multiplier: 2)],
+                categoryPoints: [
+                    SpendCategory.hotels.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                    SpendCategory.carRentals.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                ]
+            ),
+            Card(
+                id: "venture-one",
+                name: "VentureOne",
+                icon: .darkBlue,
+                issuer: .capitalOne,
+                basePoints: [.init(multiplier: 1.25)],
+                categoryPoints: [
+                    SpendCategory.hotels.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                    SpendCategory.carRentals.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                ]
+            ),
         ].sorted {
             (
                 $0.issuer.name,
