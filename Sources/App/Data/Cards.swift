@@ -8,9 +8,13 @@
 import HakoShared
 import Foundation
 
+enum CardError: Error {
+    case duplicateIDs
+}
+
 extension Card {
     static func buildCards() throws -> [Card] {
-        [
+        let cards = [
             Card(
                 id: "freedom",
                 name: "Freedom",
@@ -623,5 +627,11 @@ extension Card {
                 $1.name
             )
         }
+
+        guard cards.count == Set(cards.map { $0.id }).count else {
+            throw CardError.duplicateIDs
+        }
+
+        return cards
     }
 }
