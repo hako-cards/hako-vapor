@@ -10,6 +10,7 @@ let package = Package(
         // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", from: "4.89.0"),
         .package(url: "https://github.com/kylebshr/hako-shared", branch: "main"),
+        .package(url: "https://github.com/davedelong/time", from: "1.0.0"),
     ],
     targets: [
         .executableTarget(
@@ -17,6 +18,7 @@ let package = Package(
             dependencies: [
                 .product(name: "Vapor", package: "vapor"),
                 .product(name: "HakoShared", package: "hako-shared"),
+                .product(name: "Time", package: "time"),
             ]
         ),
         .testTarget(name: "AppTests", dependencies: [

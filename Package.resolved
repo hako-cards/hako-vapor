@@ -33,7 +33,7 @@
       "location" : "https://github.com/kylebshr/hako-shared",
       "state" : {
         "branch" : "main",
-        "revision" : "330b2b754b4a1211b4605cf540d1fcd8c70b127d"
+        "revision" : "11e73e9906d38c17eca8bf8eaef483755e31d18a"
       }
     },
     {
@@ -178,6 +178,15 @@
       "state" : {
         "revision" : "025bcb1165deab2e20d4eaba79967ce73013f496",
         "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "time",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/davedelong/time",
+      "state" : {
+        "revision" : "f827477216e688ef59b68cada2d038124ec08185",
+        "version" : "1.0.0"
       }
     },
     {

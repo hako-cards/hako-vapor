@@ -9,13 +9,15 @@ import HakoShared
 import Vapor
 
 struct Controller: RouteCollection {
+    let cards: [Card]
+
     func boot(routes: Vapor.RoutesBuilder) throws {
         routes.get("cards", use: cards)
         routes.get("categories", use: categories)
     }
 
     func cards(req: Request) -> CardsResponse {
-        CardsResponse(cards: Card.all)
+        CardsResponse(cards: cards)
     }
 
     func categories(req: Request) -> SpendCategoriesResponse {

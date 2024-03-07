@@ -19,6 +19,7 @@ extension SpendCategory {
         .travel,
         .flights,
         .delta,
+        .united,
         .hotels,
         .gas,
         .carRentals,
@@ -66,6 +67,13 @@ extension SpendCategory {
     static let delta = SpendCategory(
         id: "delta",
         name: "Delta Airlines",
+        tint: .subduedBlue,
+        parent: SpendCategory.travel.id
+    )
+
+    static let united = SpendCategory(
+        id: "united",
+        name: "United Airlines",
         tint: .subduedBlue,
         parent: SpendCategory.travel.id
     )
