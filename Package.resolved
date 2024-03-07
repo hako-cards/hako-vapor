@@ -30,10 +30,10 @@
     {
       "identity" : "hako-shared",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kylebshr/hako-shared",
+      "location" : "https://github.com/kylebshr/hako-shared.git",
       "state" : {
         "branch" : "main",
-        "revision" : "11e73e9906d38c17eca8bf8eaef483755e31d18a"
+        "revision" : "11b2ebd47373ecc931e0a1325af1036d80f5e736"
       }
     },
     {

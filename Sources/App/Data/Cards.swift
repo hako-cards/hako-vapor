@@ -17,28 +17,18 @@ extension Card {
                 icon: .lightBlue,
                 issuer: .chase,
                 basePoints: [.init(
-                    percent: 1,
-                    attributes: []
+                    multiplier: 1
                 )],
-                rotatingPoints: [
-                    try RotatingCategoryPoints(
-                        year: 2024,
-                        startingMonth: 1,
-                        endingMonth: 3,
-                        requiresActivation: true,
-                        categoryPoints: [
-                            SpendCategory.groceries.id: [
-                                .init(
-                                    percent: 5,
-                                    attributes: [
-                                        .caveat(
-                                            "On up to $1,500"
-                                        ),
-                                    ]
-                                )
-                            ],
-                        ]
-                    )
+                categoryPoints: [
+                    SpendCategory.groceries.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.caveat(
+                                "On up to $1,500"
+                            )],
+                            kind: try .Q12024()
+                        )
+                    ],
                 ],
                 canCombinePoints: true
             ),
@@ -48,42 +38,31 @@ extension Card {
                 icon: .lightBlue,
                 issuer: .chase,
                 basePoints: [.init(
-                    percent: 1,
-                    attributes: []
+                    multiplier: 1,
+                    attributes: [],
+                    kind: .standard
                 )],
-                fixedPoints: [
+                categoryPoints: [
                     SpendCategory.dining.id: [
                         .init(
-                            percent: 3,
-                            attributes: []
+                            multiplier: 3
                         )
                     ],
                     SpendCategory.drugstores.id: [
                         .init(
-                            percent: 3,
-                            attributes: []
+                            multiplier: 3
                         )
                     ],
-                ],
-                rotatingPoints: [
-                    try RotatingCategoryPoints(
-                        year: 2024,
-                        startingMonth: 1,
-                        endingMonth: 3,
-                        requiresActivation: true,
-                        categoryPoints: [
-                            SpendCategory.groceries.id: [
-                                .init(
-                                    percent: 5,
-                                    attributes: [
-                                        .caveat(
-                                            "On up to $1,500"
-                                        )
-                                    ]
-                                )
-                            ],
-                        ]
-                    )
+                    SpendCategory.groceries.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.caveat(
+                                "On up to $1,500"
+                            )],
+                            kind: try .Q12024()
+                        )
+                    ],
+                    
                 ],
                 canCombinePoints: true
             ),
@@ -93,20 +72,17 @@ extension Card {
                 icon: .midBlue,
                 issuer: .chase,
                 basePoints: [.init(
-                    percent: 1.5,
-                    attributes: []
+                    multiplier: 1.5
                 )],
-                fixedPoints: [
+                categoryPoints: [
                     SpendCategory.dining.id: [
                         .init(
-                            percent: 3,
-                            attributes: []
+                            multiplier: 3
                         )
                     ],
                     SpendCategory.drugstores.id: [
                         .init(
-                            percent: 3,
-                            attributes: []
+                            multiplier: 3
                         )
                     ],
                 ],
@@ -118,30 +94,32 @@ extension Card {
                 icon: .darkBlue,
                 issuer: .chase,
                 basePoints: [.init(
-                    percent: 1,
-                    attributes: []
+                    multiplier: 1
                 )],
-                fixedPoints: [
+                categoryPoints: [
                     SpendCategory.dining.id: [
                         .init(
-                            percent: 3,
-                            attributes: []
+                            multiplier: 3
                         )
                     ],
                     SpendCategory.travel.id: [
                         .init(
-                            percent: 2,
-                            attributes: []
+                            multiplier: 2
                         ),
                         .init(
-                            percent: 5,
+                            multiplier: 5,
                             attributes: [.caveat(
                                 "Booked through Chase Ultimate Rewards"
                             )]
                         )
                     ],
                 ],
-                redemptionMultiplier: 1.25,
+                redemptionReward: .init(
+                    multiplier: 1.25,
+                    attributes: [.caveat(
+                        "Redeemed for Travel through Chase"
+                    )]
+                ),
                 canCombinePoints: true
             ),
             Card(
@@ -150,23 +128,21 @@ extension Card {
                 icon: .darkBlue,
                 issuer: .chase,
                 basePoints: [.init(
-                    percent: 1,
+                    multiplier: 1,
                     attributes: []
                 )],
-                fixedPoints: [
+                categoryPoints: [
                     SpendCategory.dining.id: [
                         .init(
-                            percent: 3,
-                            attributes: []
+                            multiplier: 3
                         )
                     ],
                     SpendCategory.travel.id: [
                         .init(
-                            percent: 3,
-                            attributes: []
+                            multiplier: 3
                         ),
                         .init(
-                            percent: 5,
+                            multiplier: 5,
                             attributes: [.caveat(
                                 "Booked through Chase Ultimate Rewards"
                             )]
@@ -174,7 +150,7 @@ extension Card {
                     ],
                     SpendCategory.flights.id: [
                         .init(
-                            percent: 10,
+                            multiplier: 10,
                             attributes: [.caveat(
                                 "Booked through Chase Ultimate Rewards"
                             )]
@@ -182,14 +158,19 @@ extension Card {
                     ],
                     SpendCategory.hotels.id: [
                         .init(
-                            percent: 10,
+                            multiplier: 10,
                             attributes: [.caveat(
                                 "Booked through Chase Ultimate Rewards"
                             )]
                         ),
                     ],
                 ],
-                redemptionMultiplier: 1.5,
+                redemptionReward: .init(
+                    multiplier: 1.5,
+                    attributes: [.caveat(
+                        "Redeemed for Travel through Chase"
+                    )]
+                ),
                 canCombinePoints: true
             ),
             Card(
@@ -199,27 +180,24 @@ extension Card {
                 issuer: .chase,
                 basePoints: [
                     .init(
-                        percent: 1,
+                        multiplier: 1,
                         attributes: []
                     )
                 ],
-                fixedPoints: [
+                categoryPoints: [
                     SpendCategory.united.id: [
                         .init(
-                            percent: 4,
-                            attributes: []
+                            multiplier: 4
                         ),
                     ],
                     SpendCategory.travel.id: [
                         .init(
-                            percent: 2,
-                            attributes: []
+                            multiplier: 2
                         ),
                     ],
                     SpendCategory.dining.id: [
                         .init(
-                            percent: 2,
-                            attributes: []
+                            multiplier: 2
                         ),
                     ],
                 ]
@@ -230,25 +208,23 @@ extension Card {
                 icon: .lightBlue,
                 issuer: .amex,
                 basePoints: [.init(
-                    percent: 1,
+                    multiplier: 1,
                     attributes: []
                 )],
-                fixedPoints: [
+                categoryPoints: [
                     SpendCategory.groceries.id: [
                         .init(
-                            percent: 3,
-                            attributes: []
+                            multiplier: 3
                         ),
                     ],
                     SpendCategory.gas.id: [
                         .init(
-                            percent: 3,
-                            attributes: []
+                            multiplier: 3
                         ),
                     ],
                     SpendCategory.online.id: [
                         .init(
-                            percent: 3,
+                            multiplier: 3,
                             attributes: [.caveat(
                                 "On up to $6,000 per year"
                             )]
@@ -262,13 +238,13 @@ extension Card {
                 icon: .darkBlue,
                 issuer: .amex,
                 basePoints: [.init(
-                    percent: 1,
+                    multiplier: 1,
                     attributes: []
                 )],
-                fixedPoints: [
+                categoryPoints: [
                     SpendCategory.groceries.id: [
                         .init(
-                            percent: 6,
+                            multiplier: 6,
                             attributes: [.caveat(
                                 "On up to $6,000 per year"
                             )]
@@ -276,7 +252,7 @@ extension Card {
                     ],
                     SpendCategory.streaming.id: [
                         .init(
-                            percent: 6,
+                            multiplier: 6,
                             attributes: [.caveat(
                                 "Select streaming subscriptions"
                             )]
@@ -284,13 +260,12 @@ extension Card {
                     ],
                     SpendCategory.gas.id: [
                         .init(
-                            percent: 3,
-                            attributes: []
+                            multiplier: 3
                         ),
                     ],
                     SpendCategory.transit.id: [
                         .init(
-                            percent: 3,
+                            multiplier: 3,
                             attributes: [.caveat(
                                 "On up to $6,000 per year"
                             )]
@@ -304,13 +279,13 @@ extension Card {
                 icon: .silver,
                 issuer: .amex,
                 basePoints: [.init(
-                    percent: 1,
+                    multiplier: 1,
                     attributes: []
                 )],
-                fixedPoints: [
+                categoryPoints: [
                     SpendCategory.hotels.id: [
                         .init(
-                            percent: 5,
+                            multiplier: 5,
                             attributes: [
                                 .caveat(
                                     "Booked on AmexTravel.com"
@@ -320,7 +295,7 @@ extension Card {
                     ],
                     SpendCategory.flights.id: [
                         .init(
-                            percent: 5,
+                            multiplier: 5,
                             attributes: [
                                 .caveat(
                                     "Booked directly with airlines or on AmexTravel.com"
@@ -336,25 +311,23 @@ extension Card {
                 icon: .gold,
                 issuer: .amex,
                 basePoints: [.init(
-                    percent: 1,
+                    multiplier: 1,
                     attributes: []
                 )],
-                fixedPoints: [
+                categoryPoints: [
                     SpendCategory.dining.id: [
                         .init(
-                            percent: 4,
-                            attributes: []
+                            multiplier: 4
                         ),
                     ],
                     SpendCategory.groceries.id: [
                         .init(
-                            percent: 4,
-                            attributes: []
+                            multiplier: 4
                         ),
                     ],
                     SpendCategory.flights.id: [
                         .init(
-                            percent: 4,
+                            multiplier: 4,
                             attributes: [
                                 .caveat(
                                     "Booked directly with airlines or on AmexTravel.com"
@@ -371,11 +344,11 @@ extension Card {
                 issuer: .apple,
                 basePoints: [
                     .init(
-                        percent: 1,
+                        multiplier: 1,
                         attributes: []
                     ),
                     .init(
-                        percent: 2,
+                        multiplier: 2,
                         attributes: [.applePay]
                     )
                 ]
@@ -387,7 +360,7 @@ extension Card {
                 issuer: .citi,
                 basePoints: [
                     .init(
-                        percent: 2,
+                        multiplier: 2,
                         attributes: [.caveat(
                             "1% when you buy, 1% as you pay"
                         )]
@@ -401,14 +374,14 @@ extension Card {
                 issuer: .citi,
                 basePoints: [
                     .init(
-                        percent: 1,
+                        multiplier: 1,
                         attributes: []
                     ),
                 ],
-                fixedPoints: [
+                categoryPoints: [
                     SpendCategory.hotels.id: [
                         .init(
-                            percent: 10,
+                            multiplier: 10,
                             attributes: [
                                 .caveat(
                                     "Booked through aa.com/hotels"
@@ -418,7 +391,7 @@ extension Card {
                     ],
                     SpendCategory.carRentals.id: [
                         .init(
-                            percent: 10,
+                            multiplier: 10,
                             attributes: [
                                 .caveat(
                                     "Booked through aa.com/cars"
@@ -434,31 +407,28 @@ extension Card {
                 icon: .gray,
                 issuer: .citi,
                 basePoints: [.init(
-                    percent: 1,
+                    multiplier: 1,
                     attributes: []
                 )],
-                fixedPoints: [
+                categoryPoints: [
                     SpendCategory.costco.id: [
                         .init(
-                            percent: 2,
-                            attributes: []
+                            multiplier: 2
                         )
                     ],
                     SpendCategory.dining.id: [
                         .init(
-                            percent: 3,
-                            attributes: []
+                            multiplier: 3
                         )
                     ],
                     SpendCategory.travel.id: [
                         .init(
-                            percent: 3,
-                            attributes: []
+                            multiplier: 3
                         )
                     ],
                     SpendCategory.gas.id: [
                         .init(
-                            percent: 4,
+                            multiplier: 4,
                             attributes: [.caveat(
                                 "And EV charging"
                             )]
@@ -472,20 +442,20 @@ extension Card {
                 icon: .gold,
                 issuer: .amex,
                 basePoints: [.init(
-                    percent: 1,
+                    multiplier: 1,
                     attributes: []
                 )],
-                fixedPoints: [
+                categoryPoints: [
                     SpendCategory.delta.id: [.init(
-                        percent: 2,
+                        multiplier: 2,
                         attributes: []
                     )],
                     SpendCategory.dining.id: [.init(
-                        percent: 2,
+                        multiplier: 2,
                         attributes: []
                     )],
                     SpendCategory.groceries.id: [.init(
-                        percent: 2,
+                        multiplier: 2,
                         attributes: []
                     )],
                 ]
@@ -496,18 +466,18 @@ extension Card {
                 icon: .darkBlue,
                 issuer: .chase,
                 basePoints: [.init(
-                    percent: 1,
+                    multiplier: 1,
                     attributes: []
                 )],
-                fixedPoints: [
+                categoryPoints: [
                     SpendCategory.amazon.id: [.init(
-                        percent: 5,
+                        multiplier: 5,
                         attributes: [.caveat(
                             "Including amazon.com, Amazon Fresh, and Whole Foods Market"
                         )]
                     )],
                     SpendCategory.travel.id: [.init(
-                        percent: 5,
+                        multiplier: 5,
                         attributes: [
                             .caveat(
                                 "Booked through Chase Ultimate Rewards"
@@ -515,11 +485,11 @@ extension Card {
                         ]
                     )],
                     SpendCategory.dining.id: [.init(
-                        percent: 2,
+                        multiplier: 2,
                         attributes: []
                     )],
                     SpendCategory.transit.id: [.init(
-                        percent: 2,
+                        multiplier: 2,
                         attributes: []
                     )],
                 ]
@@ -530,18 +500,18 @@ extension Card {
                 icon: .lightGray,
                 issuer: .chase,
                 basePoints: [.init(
-                    percent: 1,
+                    multiplier: 1,
                     attributes: []
                 )],
-                fixedPoints: [
+                categoryPoints: [
                     SpendCategory.amazon.id: [.init(
-                        percent: 3,
+                        multiplier: 3,
                         attributes: [.caveat(
                             "Including amazon.com, Amazon Fresh, and Whole Foods Market"
                         )]
                     )],
                     SpendCategory.travel.id: [.init(
-                        percent: 3,
+                        multiplier: 3,
                         attributes: [
                             .caveat(
                                 "Booked through Chase Ultimate Rewards"
@@ -549,11 +519,11 @@ extension Card {
                         ]
                     )],
                     SpendCategory.dining.id: [.init(
-                        percent: 2,
+                        multiplier: 2,
                         attributes: []
                     )],
                     SpendCategory.transit.id: [.init(
-                        percent: 2,
+                        multiplier: 2,
                         attributes: []
                     )],
                 ]
@@ -564,34 +534,26 @@ extension Card {
                 icon: .midBlue,
                 issuer: .discover,
                 basePoints: [.init(
-                    percent: 1,
+                    multiplier: 1,
                     attributes: []
                 )],
-                rotatingPoints: [
-                    try RotatingCategoryPoints(
-                        year: 2024,
-                        startingMonth: 1,
-                        endingMonth: 3,
-                        requiresActivation: true,
-                        categoryPoints: [
-                            SpendCategory.dining.id: [.init(
-                                percent: 5,
-                                attributes: [
-                                    .caveat(
-                                        "On up to $1,500"
-                                    ),
-                                ]
-                            )],
-                            SpendCategory.drugstores.id: [.init(
-                                percent: 5,
-                                attributes: [
-                                    .caveat(
-                                        "On up to $1,500"
-                                    ),
-                                ]
-                            )],
-                        ]
-                    )
+                categoryPoints: [
+                    SpendCategory.dining.id: [.init(
+                        multiplier: 5,
+                        attributes: [.caveat(
+                            "On up to $1,500"
+                        )],
+                        kind: try .Q12024()
+                    )],
+                    SpendCategory.drugstores.id: [.init(
+                        multiplier: 5,
+                        attributes: [
+                            .caveat(
+                                "On up to $1,500"
+                            ),
+                        ],
+                        kind: try .Q12024()
+                    )],
                 ]
             )
         ].sorted {
