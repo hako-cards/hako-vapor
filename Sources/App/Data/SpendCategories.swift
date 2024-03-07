@@ -10,7 +10,6 @@ import HakoShared
 extension SpendCategory {
     static let all: [SpendCategory] = [
         .dining,
-        .gas,
         .groceries,
         .drugstores,
         .costco,
@@ -21,6 +20,7 @@ extension SpendCategory {
         .flights,
         .delta,
         .hotels,
+        .gas,
         .carRentals,
         .transit,
     ]
