@@ -30,7 +30,7 @@ extension Card {
                             attributes: [.caveat(
                                 "On up to $1,500"
                             )],
-                            kind: try .Q12024()
+                            kind: try .Q12024(activateBy: (3, 14))
                         )
                     ],
                 ],
@@ -63,7 +63,7 @@ extension Card {
                             attributes: [.caveat(
                                 "On up to $1,500"
                             )],
-                            kind: try .Q12024()
+                            kind: try .Q12024(activateBy: (3, 14))
                         )
                     ],
                     
