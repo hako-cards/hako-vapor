@@ -624,10 +624,31 @@ extension Card {
                 issuer: .bilt,
                 basePoints: [.init(multiplier: 1, attributes: [.bilt5x])],
                 categoryPoints: [
-                    SpendCategory.lyft.id: [.init(multiplier: 5, attributes: [.bilt5x, .caveat("When you link Bilt and Lyft")])],
-                    SpendCategory.dining.id: [.init(multiplier: 3, attributes: [.bilt5x])],
-                    SpendCategory.travel.id: [.init(multiplier: 2, attributes: [.bilt5x, .caveat("Booked directly through a hotel, airline, or car rental agency")])],
-                    SpendCategory.rent.id: [.init(multiplier: 1, attributes: [.bilt5x, .caveat("Up to 100,000 points annually")])],
+                    SpendCategory.lyft.id: [.init(
+                        multiplier: 5,
+                        attributes: [
+                            .caveat("When you link Bilt and Lyft"),
+                            .bilt5x,
+                        ]
+                    )],
+                    SpendCategory.dining.id: [.init(
+                        multiplier: 3,
+                        attributes: [.bilt5x]
+                    )],
+                    SpendCategory.travel.id: [.init(
+                        multiplier: 2,
+                        attributes: [
+                            .caveat("Booked directly through a hotel, airline, or car rental agency"),
+                            .bilt5x,
+                        ]
+                    )],
+                    SpendCategory.rent.id: [.init(
+                        multiplier: 1,
+                        attributes: [
+                            .caveat("Up to 100,000 points annually"),
+                            .bilt5x,
+                        ]
+                    )],
                 ]
             )
         ].sorted {
