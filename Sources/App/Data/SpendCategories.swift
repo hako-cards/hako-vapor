@@ -17,6 +17,7 @@ extension SpendCategory {
         .amazon,
         .entertainment,
         .streaming,
+        .rent,
         .travel,
         .flights,
         .delta,
@@ -24,6 +25,7 @@ extension SpendCategory {
         .hotels,
         .gas,
         .carRentals,
+        .lyft,
         .transit,
     ]
 
@@ -127,6 +129,18 @@ extension SpendCategory {
     static let entertainment = SpendCategory(
         id: "entertainment",
         name: "Entertainment",
+        tint: .pink
+    )
+
+    static let rent = SpendCategory(
+        id: "rent",
+        name: "Rent",
+        tint: .foregound
+    )
+
+    static let lyft = SpendCategory(
+        id: "lyft",
+        name: "Lyft",
         tint: .pink
     )
 }

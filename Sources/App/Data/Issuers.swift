@@ -37,4 +37,9 @@ extension Issuer {
         id: "capital-one",
         name: "Capital One"
     )
+
+    static let bilt = Issuer(
+        id: "bilt",
+        name: "Bilt"
+    )
 }
