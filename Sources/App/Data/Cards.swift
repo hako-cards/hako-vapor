@@ -625,7 +625,7 @@ extension Card {
                 issuer: .bilt,
                 basePoints: [.init(multiplier: 1, attributes: [.bilt5x])],
                 categoryPoints: [
-                    SpendCategory.lyft.id: [.init(multiplier: 5, attributes: [.bilt5x, .caveat("When you link your accounts")])],
+                    SpendCategory.lyft.id: [.init(multiplier: 5, attributes: [.bilt5x, .caveat("When you link Bilt and Lyft")])],
                     SpendCategory.dining.id: [.init(multiplier: 3, attributes: [.bilt5x])],
                     SpendCategory.travel.id: [.init(multiplier: 2, attributes: [.bilt5x, .caveat("Booked directly through a hotel, airline, or car rental agency")])],
                     SpendCategory.rent.id: [.init(multiplier: 1, attributes: [.bilt5x, .caveat("Up to 100,000 points annually")])],
