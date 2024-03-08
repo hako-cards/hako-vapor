@@ -119,9 +119,9 @@ extension Card {
                     ],
                 ],
                 redemptionReward: .init(
-                    multiplier: 1.25,
+                    amount: .multiplier(1.25),
                     attributes: [.caveat(
-                        "Redeemed for Travel through Chase"
+                        "When redeemed for Travel through Chase"
                     )]
                 ),
                 canCombinePoints: true
@@ -170,9 +170,9 @@ extension Card {
                     ],
                 ],
                 redemptionReward: .init(
-                    multiplier: 1.5,
+                    amount: .multiplier(1.5),
                     attributes: [.caveat(
-                        "Redeemed for Travel through Chase"
+                        "When redeemed for Travel through Chase"
                     )]
                 ),
                 canCombinePoints: true
@@ -363,13 +363,12 @@ extension Card {
                 icon: .midBlue,
                 issuer: .citi,
                 basePoints: [
-                    .init(
-                        multiplier: 2,
-                        attributes: [.caveat(
-                            "1% when you buy, 1% as you pay"
-                        )]
-                    )
-                ]
+                    .init(multiplier: 1)
+                ],
+                redemptionReward: .init(
+                    amount: .additional(1),
+                    attributes: [.caveat("1% when you buy, 1% as you pay")]
+                )
             ),
             Card(
                 id: "aadvantage-exec",
