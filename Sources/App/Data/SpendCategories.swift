@@ -141,6 +141,7 @@ extension SpendCategory {
     static let lyft = SpendCategory(
         id: "lyft",
         name: "Lyft",
-        tint: .pink
+        tint: .pink,
+        parent: SpendCategory.travel.id
     )
 }

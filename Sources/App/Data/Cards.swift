@@ -543,17 +543,17 @@ extension Card {
                 categoryPoints: [
                     SpendCategory.dining.id: [.init(
                         multiplier: 5,
-                        attributes: [.caveat(
-                            "On up to $1,500"
-                        )],
+                        attributes: [
+                            .caveat("On up to $1,500"),
+                            .caveat("Must be activated"),
+                        ],
                         kind: try .Q12024()
                     )],
                     SpendCategory.drugstores.id: [.init(
                         multiplier: 5,
                         attributes: [
-                            .caveat(
-                                "On up to $1,500"
-                            ),
+                            .caveat("On up to $1,500"),
+                            .caveat("Must be activated"),
                         ],
                         kind: try .Q12024()
                     )],
