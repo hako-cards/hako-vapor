@@ -63,8 +63,7 @@ extension SpendCategory {
     static let gas = SpendCategory(
         id: "gas",
         name: "Gasoline",
-        tint: .red,
-        parent: SpendCategory.travel.id
+        tint: .red
     )
 
     static let delta = SpendCategory(
@@ -109,8 +108,7 @@ extension SpendCategory {
     static let transit = SpendCategory(
         id: "transit",
         name: "Transit",
-        tint: .blue,
-        parent: SpendCategory.travel.id
+        tint: .blue
     )
 
     static let costco = SpendCategory(
@@ -141,7 +139,6 @@ extension SpendCategory {
     static let lyft = SpendCategory(
         id: "lyft",
         name: "Lyft",
-        tint: .pink,
-        parent: SpendCategory.travel.id
+        tint: .pink
     )
 }
