@@ -363,11 +363,11 @@ extension Card {
                 icon: .midBlue,
                 issuer: .citi,
                 basePoints: [
-                    .init(multiplier: 1)
+                    .init(multiplier: 1, attributes: [.info("When you buy")])
                 ],
                 redemptionReward: .init(
                     amount: .additional(1),
-                    attributes: [.caveat("1% when you buy, 1% as you pay")]
+                    attributes: [.caveat("When you pay")]
                 )
             ),
             Card(
