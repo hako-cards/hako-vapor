@@ -14,6 +14,7 @@ struct Controller: RouteCollection {
     func boot(routes: Vapor.RoutesBuilder) throws {
         routes.get("cards", use: cards)
         routes.get("categories", use: categories)
+        routes.get("version", use: version)
     }
 
     func cards(req: Request) -> CardsResponse {
@@ -22,5 +23,9 @@ struct Controller: RouteCollection {
 
     func categories(req: Request) -> SpendCategoriesResponse {
         SpendCategoriesResponse(categories: SpendCategory.all)
+    }
+
+    func version(req: Request) -> Version {
+        Version(minimumBuild: 84)
     }
 }
