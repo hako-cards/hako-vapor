@@ -93,6 +93,13 @@ extension Card {
                 canCombinePoints: true
             ),
             Card(
+                id: "freedom-rise",
+                name: "Freedom Rise",
+                icon: .lightBlue,
+                issuer: .chase,
+                basePoints: [.init(multiplier: 1.5)]
+            ),
+            Card(
                 id: "sapphire-preferred",
                 name: "Sapphire Preferred",
                 icon: .darkBlue,
@@ -533,7 +540,7 @@ extension Card {
             ),
             Card(
                 id: "discover-it",
-                name: "Discover it",
+                name: "Discover it Cash Back",
                 icon: .midBlue,
                 issuer: .discover,
                 basePoints: [.init(
@@ -557,6 +564,50 @@ extension Card {
                         ],
                         kind: try .Q12024()
                     )],
+                    SpendCategory.gas.id: [.init(
+                        multiplier: 5,
+                        attributes: [
+                            .caveat("On up to $1,500"),
+                            .caveat("Must be activated"),
+                        ],
+                        kind: try .Q22024()
+                    )],
+                    SpendCategory.evCharging.id: [.init(
+                        multiplier: 5,
+                        attributes: [
+                            .caveat("On up to $1,500"),
+                            .caveat("Must be activated"),
+                        ],
+                        kind: try .Q22024()
+                    )],
+                    SpendCategory.homeImprovement.id: [.init(
+                        multiplier: 5,
+                        attributes: [
+                            .caveat("On up to $1,500"),
+                            .caveat("Must be activated"),
+                        ],
+                        kind: try .Q22024()
+                    )],
+                    SpendCategory.transit.id: [.init(
+                        multiplier: 5,
+                        attributes: [
+                            .caveat("Public transit"),
+                            .caveat("On up to $1,500"),
+                            .caveat("Must be activated"),
+                        ],
+                        kind: try .Q22024()
+                    )],
+                ]
+            ),
+            Card(
+                id: "discover-it-chrome",
+                name: "Discover it Chrome",
+                icon: .silver,
+                issuer: .discover,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.dining.id: [.init(multiplier: 2, attributes: [.caveat("On up to $1,000")])],
+                    SpendCategory.gas.id: [.init(multiplier: 2, attributes: [.caveat("On up to $1,000")])]
                 ]
             ),
             Card(
@@ -650,6 +701,13 @@ extension Card {
                         ]
                     )],
                 ]
+            ),
+            Card(
+                id: "active-cash",
+                name: "Active Cash",
+                icon: .red,
+                issuer: .wellsFargo,
+                basePoints: [.init(multiplier: 2)]
             )
         ].sorted {
             (

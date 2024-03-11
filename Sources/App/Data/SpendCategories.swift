@@ -12,7 +12,9 @@ extension SpendCategory {
         .dining,
         .groceries,
         .gas,
+        .evCharging,
         .drugstores,
+        .homeImprovement,
         .online,
         .amazon,
         .entertainment,
@@ -64,6 +66,18 @@ extension SpendCategory {
         id: "gas",
         name: "Gasoline",
         tint: .red
+    )
+
+    static let evCharging = SpendCategory(
+        id: "ev",
+        name: "EV Charging Stations",
+        tint: .green
+    )
+
+    static let homeImprovement = SpendCategory(
+        id: "home-improvement",
+        name: "Home Improvement Stores",
+        tint: .orange
     )
 
     static let delta = SpendCategory(
