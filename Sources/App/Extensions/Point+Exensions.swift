@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  Point+Exensions.swift
+//
 //
 //  Created by Kyle Bashour on 3/6/24.
 //

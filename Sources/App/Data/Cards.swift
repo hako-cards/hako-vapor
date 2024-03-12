@@ -5,8 +5,8 @@
 //  Created by Kyle Bashour on 3/5/24.
 //
 
-import HakoShared
 import Foundation
+import HakoShared
 
 enum CardError: Error {
     case duplicateIDs
@@ -14,7 +14,7 @@ enum CardError: Error {
 
 extension Card {
     static func buildCards() throws -> [Card] {
-        let cards = [
+        let cards = try [
             Card(
                 id: "freedom",
                 name: "Freedom",
@@ -30,8 +30,8 @@ extension Card {
                             attributes: [.caveat(
                                 "On up to $1,500"
                             )],
-                            kind: try .Q12024(activateBy: (3, 14))
-                        )
+                            kind: .Q12024(activateBy: (3, 14))
+                        ),
                     ],
                 ],
                 canCombinePoints: true
@@ -50,12 +50,12 @@ extension Card {
                     SpendCategory.dining.id: [
                         .init(
                             multiplier: 3
-                        )
+                        ),
                     ],
                     SpendCategory.drugstores.id: [
                         .init(
                             multiplier: 3
-                        )
+                        ),
                     ],
                     SpendCategory.groceries.id: [
                         .init(
@@ -63,10 +63,10 @@ extension Card {
                             attributes: [.caveat(
                                 "On up to $1,500"
                             )],
-                            kind: try .Q12024(activateBy: (3, 14))
-                        )
+                            kind: .Q12024(activateBy: (3, 14))
+                        ),
                     ],
-                    
+
                 ],
                 canCombinePoints: true
             ),
@@ -82,12 +82,12 @@ extension Card {
                     SpendCategory.dining.id: [
                         .init(
                             multiplier: 3
-                        )
+                        ),
                     ],
                     SpendCategory.drugstores.id: [
                         .init(
                             multiplier: 3
-                        )
+                        ),
                     ],
                 ],
                 canCombinePoints: true
@@ -111,7 +111,7 @@ extension Card {
                     SpendCategory.dining.id: [
                         .init(
                             multiplier: 3
-                        )
+                        ),
                     ],
                     SpendCategory.travel.id: [
                         .init(
@@ -122,7 +122,7 @@ extension Card {
                             attributes: [.caveat(
                                 "Booked through Chase Ultimate Rewards"
                             )]
-                        )
+                        ),
                     ],
                 ],
                 redemptionReward: .init(
@@ -146,7 +146,7 @@ extension Card {
                     SpendCategory.dining.id: [
                         .init(
                             multiplier: 3
-                        )
+                        ),
                     ],
                     SpendCategory.travel.id: [
                         .init(
@@ -193,7 +193,7 @@ extension Card {
                     .init(
                         multiplier: 1,
                         attributes: []
-                    )
+                    ),
                 ],
                 categoryPoints: [
                     SpendCategory.united.id: [
@@ -227,20 +227,20 @@ extension Card {
                         .init(
                             multiplier: 3,
                             attributes: [.caveat("On up to $6,000 per year")]
-                        )
+                        ),
                     ],
                     SpendCategory.gas.id: [
                         .init(
                             multiplier: 3,
                             attributes: [.caveat("On up to $6,000 per year")]
-                        )
+                        ),
                     ],
                     SpendCategory.online.id: [
                         .init(
                             multiplier: 3,
                             attributes: [.caveat("On up to $6,000 per year")]
-                        )
-                    ]
+                        ),
+                    ],
                 ]
             ),
             Card(
@@ -280,8 +280,8 @@ extension Card {
                             attributes: [.info(
                                 "Including taxis, rideshare, parking, tolls, trains, buses, and more"
                             )]
-                        )
-                    ]
+                        ),
+                    ],
                 ]
             ),
             Card(
@@ -300,7 +300,7 @@ extension Card {
                             attributes: [
                                 .caveat(
                                     "Booked on AmexTravel.com"
-                                )
+                                ),
                             ]
                         ),
                     ],
@@ -310,7 +310,7 @@ extension Card {
                             attributes: [
                                 .caveat(
                                     "Booked directly with airlines or on AmexTravel.com"
-                                )
+                                ),
                             ]
                         ),
                     ],
@@ -342,7 +342,7 @@ extension Card {
                             attributes: [
                                 .caveat(
                                     "Booked directly with airlines or on AmexTravel.com"
-                                )
+                                ),
                             ]
                         ),
                     ],
@@ -361,10 +361,10 @@ extension Card {
                     .init(
                         multiplier: 2,
                         attributes: [.applePay]
-                    )
+                    ),
                 ],
                 categoryPoints: [
-                    SpendCategory.apple.id: [.init(multiplier: 3)]
+                    SpendCategory.apple.id: [.init(multiplier: 3)],
                 ]
             ),
             Card(
@@ -373,7 +373,7 @@ extension Card {
                 icon: .midBlue,
                 issuer: .citi,
                 basePoints: [
-                    .init(multiplier: 1, attributes: [.info("When you buy")])
+                    .init(multiplier: 1, attributes: [.info("When you buy")]),
                 ],
                 redemptionReward: .init(
                     amount: .additional(1),
@@ -398,9 +398,9 @@ extension Card {
                             attributes: [
                                 .caveat(
                                     "Booked through aa.com/hotels"
-                                )
+                                ),
                             ]
-                        )
+                        ),
                     ],
                     SpendCategory.carRentals.id: [
                         .init(
@@ -408,9 +408,9 @@ extension Card {
                             attributes: [
                                 .caveat(
                                     "Booked through aa.com/cars"
-                                )
+                                ),
                             ]
-                        )
+                        ),
                     ],
                 ]
             ),
@@ -427,23 +427,23 @@ extension Card {
                     SpendCategory.costco.id: [
                         .init(
                             multiplier: 2
-                        )
+                        ),
                     ],
                     SpendCategory.dining.id: [
                         .init(
                             multiplier: 3
-                        )
+                        ),
                     ],
                     SpendCategory.travel.id: [
                         .init(
                             multiplier: 3
-                        )
+                        ),
                     ],
                     SpendCategory.gas.id: [
-                        .init(multiplier: 4)
+                        .init(multiplier: 4),
                     ],
                     SpendCategory.evCharging.id: [
-                        .init(multiplier: 4)
+                        .init(multiplier: 4),
                     ],
                 ]
             ),
@@ -492,7 +492,7 @@ extension Card {
                         attributes: [
                             .caveat(
                                 "Booked through Chase Ultimate Rewards"
-                            )
+                            ),
                         ]
                     )],
                     SpendCategory.dining.id: [.init(
@@ -526,7 +526,7 @@ extension Card {
                         attributes: [
                             .caveat(
                                 "Booked through Chase Ultimate Rewards"
-                            )
+                            ),
                         ]
                     )],
                     SpendCategory.dining.id: [.init(
@@ -555,7 +555,7 @@ extension Card {
                             .caveat("On up to $1,500"),
                             .caveat("Must be activated"),
                         ],
-                        kind: try .Q12024()
+                        kind: .Q12024()
                     )],
                     SpendCategory.drugstores.id: [.init(
                         multiplier: 5,
@@ -563,7 +563,7 @@ extension Card {
                             .caveat("On up to $1,500"),
                             .caveat("Must be activated"),
                         ],
-                        kind: try .Q12024()
+                        kind: .Q12024()
                     )],
                     SpendCategory.gas.id: [.init(
                         multiplier: 5,
@@ -571,7 +571,7 @@ extension Card {
                             .caveat("On up to $1,500"),
                             .caveat("Must be activated"),
                         ],
-                        kind: try .Q22024()
+                        kind: .Q22024()
                     )],
                     SpendCategory.evCharging.id: [.init(
                         multiplier: 5,
@@ -579,7 +579,7 @@ extension Card {
                             .caveat("On up to $1,500"),
                             .caveat("Must be activated"),
                         ],
-                        kind: try .Q22024()
+                        kind: .Q22024()
                     )],
                     SpendCategory.homeImprovement.id: [.init(
                         multiplier: 5,
@@ -587,7 +587,7 @@ extension Card {
                             .caveat("On up to $1,500"),
                             .caveat("Must be activated"),
                         ],
-                        kind: try .Q22024()
+                        kind: .Q22024()
                     )],
                     SpendCategory.transit.id: [.init(
                         multiplier: 5,
@@ -596,7 +596,7 @@ extension Card {
                             .caveat("On up to $1,500"),
                             .caveat("Must be activated"),
                         ],
-                        kind: try .Q22024()
+                        kind: .Q22024()
                     )],
                 ]
             ),
@@ -608,7 +608,7 @@ extension Card {
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
                     SpendCategory.dining.id: [.init(multiplier: 2, attributes: [.caveat("On up to $1,000")])],
-                    SpendCategory.gas.id: [.init(multiplier: 2, attributes: [.caveat("On up to $1,000")])]
+                    SpendCategory.gas.id: [.init(multiplier: 2, attributes: [.caveat("On up to $1,000")])],
                 ]
             ),
             Card(
@@ -709,7 +709,7 @@ extension Card {
                 icon: .red,
                 issuer: .wellsFargo,
                 basePoints: [.init(multiplier: 2)]
-            )
+            ),
         ].sorted {
             (
                 $0.issuer.name,

@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  PointAttribute+Extensions.swift
+//
 //
 //  Created by Kyle Bashour on 3/7/24.
 //

@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  CardsResponse+Content.swift
+//
 //
 //  Created by Kyle Bashour on 3/5/24.
 //

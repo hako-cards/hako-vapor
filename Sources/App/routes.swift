@@ -1,6 +1,6 @@
-import Vapor
 import HakoShared
+import Vapor
 
 func routes(_ app: Application) throws {
-    try app.register(collection: Controller(cards: try Card.buildCards()))
+    try app.register(collection: Controller(cards: Card.buildCards()))
 }
