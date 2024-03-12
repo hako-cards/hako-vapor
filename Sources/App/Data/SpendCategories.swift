@@ -155,4 +155,10 @@ extension SpendCategory {
         name: "Lyft",
         tint: .pink
     )
+
+    static let apple = SpendCategory(
+        id: "apple",
+        name: "Apple",
+        tint: .gray
+    )
 }

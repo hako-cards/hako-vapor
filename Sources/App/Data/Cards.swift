@@ -362,6 +362,9 @@ extension Card {
                         multiplier: 2,
                         attributes: [.applePay]
                     )
+                ],
+                categoryPoints: [
+                    SpendCategory.apple.id: [.init(multiplier: 3)]
                 ]
             ),
             Card(
