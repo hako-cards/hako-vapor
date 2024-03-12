@@ -225,20 +225,20 @@ extension Card {
                 categoryPoints: [
                     SpendCategory.groceries.id: [
                         .init(
-                            multiplier: 3
-                        ),
+                            multiplier: 3,
+                            attributes: [.caveat("On up to $6,000 per year")]
+                        )
                     ],
                     SpendCategory.gas.id: [
                         .init(
-                            multiplier: 3
-                        ),
+                            multiplier: 3,
+                            attributes: [.caveat("On up to $6,000 per year")]
+                        )
                     ],
                     SpendCategory.online.id: [
                         .init(
                             multiplier: 3,
-                            attributes: [.caveat(
-                                "On up to $6,000 per year"
-                            )]
+                            attributes: [.caveat("On up to $6,000 per year")]
                         )
                     ]
                 ]
@@ -277,8 +277,8 @@ extension Card {
                     SpendCategory.transit.id: [
                         .init(
                             multiplier: 3,
-                            attributes: [.caveat(
-                                "On up to $6,000 per year"
+                            attributes: [.info(
+                                "Including taxis, rideshare, parking, tolls, trains, buses, and more"
                             )]
                         )
                     ]
@@ -377,7 +377,7 @@ extension Card {
                 ],
                 redemptionReward: .init(
                     amount: .additional(1),
-                    attributes: [.caveat("When you pay")]
+                    attributes: [.info("When you pay")]
                 )
             ),
             Card(
@@ -440,12 +440,10 @@ extension Card {
                         )
                     ],
                     SpendCategory.gas.id: [
-                        .init(
-                            multiplier: 4,
-                            attributes: [.caveat(
-                                "And EV charging"
-                            )]
-                        )
+                        .init(multiplier: 4)
+                    ],
+                    SpendCategory.evCharging.id: [
+                        .init(multiplier: 4)
                     ],
                 ]
             ),
@@ -485,7 +483,7 @@ extension Card {
                 categoryPoints: [
                     SpendCategory.amazon.id: [.init(
                         multiplier: 5,
-                        attributes: [.caveat(
+                        attributes: [.info(
                             "Including amazon.com, Amazon Fresh, and Whole Foods Market"
                         )]
                     )],
@@ -519,7 +517,7 @@ extension Card {
                 categoryPoints: [
                     SpendCategory.amazon.id: [.init(
                         multiplier: 3,
-                        attributes: [.caveat(
+                        attributes: [.info(
                             "Including amazon.com, Amazon Fresh, and Whole Foods Market"
                         )]
                     )],
