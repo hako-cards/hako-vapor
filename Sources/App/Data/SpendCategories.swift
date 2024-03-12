@@ -20,6 +20,7 @@ extension SpendCategory {
         .streaming,
         .amazon,
         .costco,
+        .apple,
         .rent,
         .travel,
         .flights,
