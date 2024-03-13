@@ -9,7 +9,6 @@ import HakoShared
 
 extension SpendCategory {
     static let all: [SpendCategory] = [
-        .yourTopCategories,
         .dining,
         .groceries,
         .gas,
@@ -32,6 +31,7 @@ extension SpendCategory {
         .carRentals,
         .lyft,
         .transit,
+        .yourTopCategories,
     ]
 
     static let dining = SpendCategory(
@@ -175,6 +175,7 @@ extension SpendCategory {
     static let yourTopCategories = SpendCategory(
         id: "your-top-categories",
         name: "Your Top Categories",
-        tint: .foregound
+        tint: .foregound,
+        showCategoryCardsOnly: true
     )
 }
