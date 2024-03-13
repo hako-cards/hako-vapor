@@ -9,11 +9,13 @@ import HakoShared
 
 extension SpendCategory {
     static let all: [SpendCategory] = [
+        .yourTopCategories,
         .dining,
         .groceries,
         .gas,
         .evCharging,
         .drugstores,
+        .phoneBill,
         .homeImprovement,
         .online,
         .entertainment,
@@ -162,5 +164,17 @@ extension SpendCategory {
         id: "apple",
         name: "Apple",
         tint: .gray
+    )
+
+    static let phoneBill = SpendCategory(
+        id: "phone-bill",
+        name: "Phone Bill",
+        tint: .indigo
+    )
+
+    static let yourTopCategories = SpendCategory(
+        id: "your-top-categories",
+        name: "Your Top Categories",
+        tint: .foregound
     )
 }

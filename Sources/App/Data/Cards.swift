@@ -233,7 +233,10 @@ extension Card {
                     SpendCategory.groceries.id: [
                         .init(
                             multiplier: 3,
-                            attributes: [.caveat("On up to $6,000 per year")]
+                            attributes: [
+                                .caveat("At U.S. supermarkets"),
+                                .caveat("On up to $6,000 per year"),
+                            ]
                         ),
                     ],
                     SpendCategory.gas.id: [
@@ -264,9 +267,10 @@ extension Card {
                     SpendCategory.groceries.id: [
                         .init(
                             multiplier: 6,
-                            attributes: [.caveat(
-                                "On up to $6,000 per year"
-                            )]
+                            attributes: [
+                                .caveat("At U.S. supermarkets"),
+                                .caveat("On up to $6,000 per year"),
+                            ]
                         ),
                     ],
                     SpendCategory.streaming.id: [
@@ -735,6 +739,107 @@ extension Card {
                 issuer: .wellsFargo,
                 basePoints: [.init(multiplier: 2)], network: .visa
             ),
+            Card(
+                id: "marriot-bonvoy",
+                name: "Marriot Bonvoy Business",
+                icon: .gray,
+                issuer: .amex,
+                basePoints: [.init(multiplier: 2)],
+                categoryPoints: [
+                    SpendCategory.hotels.id: [
+                        .init(
+                            multiplier: 6,
+                            attributes: [.caveat("On eligible purchases at hotels participating in the Marriott Bonvoy program")],
+                            kind: .standard
+                        )
+                    ],
+                    SpendCategory.dining.id: [
+                        .init(multiplier: 4)
+                    ],
+                    SpendCategory.gas.id: [
+                        .init(multiplier: 4)
+                    ],
+                    SpendCategory.phoneBill.id: [
+                        .init(multiplier: 4, attributes: [.caveat("Purchased directly from U.S. service providers ")])
+                    ],
+                ],
+                network: .amex
+            ),
+            Card(
+                id: "business-gold-card",
+                name: "Business Gold Card",
+                icon: .gold,
+                issuer: .amex,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.yourTopCategories.id: [
+                        .init(multiplier: 4, attributes: [.info("On your top 2 eligible categories")])
+                    ],
+                    SpendCategory.hotels.id: [
+                        .init(
+                            multiplier: 3,
+                            attributes: [
+                                .caveat(
+                                    "Booked on AmexTravel.com"
+                                ),
+                            ]
+                        ),
+                    ],
+                    SpendCategory.flights.id: [
+                        .init(
+                            multiplier: 3,
+                            attributes: [
+                                .caveat(
+                                    "Booked directly with airlines or on AmexTravel.com"
+                                ),
+                            ]
+                        ),
+                    ],
+                ],
+                network: .amex
+            ),
+            Card(
+                id: "amex-everyday",
+                name: "EveryDay",
+                icon: .white,
+                issuer: .amex,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.groceries.id: [
+                        .init(
+                            multiplier: 2,
+                            attributes: [
+                                .caveat("At U.S. supermarkets"),
+                                .caveat("On up to $6,000 per year"),
+                            ]
+                        )
+                    ]
+                ],
+                network: .amex
+            ),
+            Card(
+                id: "amex-hilton-honors",
+                name: "Hilton Honors",
+                icon: .white,
+                issuer: .amex,
+                basePoints: [.init(multiplier: 3)],
+                categoryPoints: [
+                    SpendCategory.gas.id: [
+                        .init(multiplier: 5, attributes: [.caveat("At U.S. gas stations")])
+                    ],
+                    SpendCategory.groceries.id: [
+                        .init(multiplier: 5, attributes: [.caveat("At U.S. supermarkets")])
+                    ],
+                    SpendCategory.dining.id: [
+                        .init(multiplier: 5, attributes: [.caveat("At U.S. restaurants, including takeout and delivery")])
+                    ],
+                    SpendCategory.hotels.id: [
+                        .init(multiplier: 7, attributes: [.caveat("For eligible purchases at hotels and resorts in the Hilton portfolio")])
+                    ],
+                ],
+                network: .amex
+            ),
+            
         ].sorted {
             (
                 $0.issuer.name,
