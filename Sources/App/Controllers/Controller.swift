@@ -26,6 +26,6 @@ struct Controller: RouteCollection {
     }
 
     func version(req: Request) -> Version {
-        Version(minimumBuild: 84)
+        Version(minimumBuild: 100)
     }
 }
