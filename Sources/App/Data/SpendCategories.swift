@@ -129,7 +129,8 @@ extension SpendCategory {
     static let costco = SpendCategory(
         id: "costco",
         name: "Costco",
-        tint: .red
+        tint: .red,
+        networks: [.visa]
     )
 
     static let amazon = SpendCategory(

@@ -34,7 +34,8 @@ extension Card {
                         ),
                     ],
                 ],
-                canCombinePoints: true
+                canCombinePoints: true,
+                network: .visa
             ),
             Card(
                 id: "freedom-flex",
@@ -68,7 +69,8 @@ extension Card {
                     ],
 
                 ],
-                canCombinePoints: true
+                canCombinePoints: true,
+                network: .mastercard
             ),
             Card(
                 id: "freedom-unlimited",
@@ -90,14 +92,16 @@ extension Card {
                         ),
                     ],
                 ],
-                canCombinePoints: true
+                canCombinePoints: true, 
+                network: .visa
             ),
             Card(
                 id: "freedom-rise",
                 name: "Freedom Rise",
                 icon: .lightBlue,
                 issuer: .chase,
-                basePoints: [.init(multiplier: 1.5)]
+                basePoints: [.init(multiplier: 1.5)], 
+                network: .visa
             ),
             Card(
                 id: "sapphire-preferred",
@@ -131,7 +135,8 @@ extension Card {
                         "When redeemed for Travel through Chase"
                     )]
                 ),
-                canCombinePoints: true
+                canCombinePoints: true,
+                network: .visa
             ),
             Card(
                 id: "sapphire-reserve",
@@ -182,7 +187,8 @@ extension Card {
                         "When redeemed for Travel through Chase"
                     )]
                 ),
-                canCombinePoints: true
+                canCombinePoints: true, 
+                network: .visa
             ),
             Card(
                 id: "united-club-infinite",
@@ -211,7 +217,8 @@ extension Card {
                             multiplier: 2
                         ),
                     ],
-                ]
+                ],
+                network: .visa
             ),
             Card(
                 id: "blue-cash-everyday",
@@ -241,7 +248,8 @@ extension Card {
                             attributes: [.caveat("On up to $6,000 per year")]
                         ),
                     ],
-                ]
+                ],
+                network: .amex
             ),
             Card(
                 id: "blue-cash-preferred",
@@ -282,7 +290,8 @@ extension Card {
                             )]
                         ),
                     ],
-                ]
+                ],
+                network: .amex
             ),
             Card(
                 id: "platinum",
@@ -314,7 +323,8 @@ extension Card {
                             ]
                         ),
                     ],
-                ]
+                ],
+                network: .amex
             ),
             Card(
                 id: "gold",
@@ -346,7 +356,8 @@ extension Card {
                             ]
                         ),
                     ],
-                ]
+                ],
+                network: .amex
             ),
             Card(
                 id: "apple-card",
@@ -365,7 +376,8 @@ extension Card {
                 ],
                 categoryPoints: [
                     SpendCategory.apple.id: [.init(multiplier: 3)],
-                ]
+                ],
+                network: .mastercard
             ),
             Card(
                 id: "double-cash",
@@ -378,7 +390,8 @@ extension Card {
                 redemptionReward: .init(
                     amount: .additional(1),
                     attributes: [.info("When you pay")]
-                )
+                ),
+                network: .mastercard
             ),
             Card(
                 id: "aadvantage-exec",
@@ -412,7 +425,8 @@ extension Card {
                             ]
                         ),
                     ],
-                ]
+                ],
+                network: .mastercard
             ),
             Card(
                 id: "costco-anywhere",
@@ -445,7 +459,8 @@ extension Card {
                     SpendCategory.evCharging.id: [
                         .init(multiplier: 4),
                     ],
-                ]
+                ],
+                network: .visa
             ),
             Card(
                 id: "skymiles-gold",
@@ -469,7 +484,8 @@ extension Card {
                         multiplier: 2,
                         attributes: []
                     )],
-                ]
+                ],
+                network: .amex
             ),
             Card(
                 id: "prime-visa",
@@ -503,7 +519,8 @@ extension Card {
                         multiplier: 2,
                         attributes: []
                     )],
-                ]
+                ],
+                network: .visa
             ),
             Card(
                 id: "amazon-visa",
@@ -537,7 +554,8 @@ extension Card {
                         multiplier: 2,
                         attributes: []
                     )],
-                ]
+                ],
+                network: .visa
             ),
             Card(
                 id: "discover-it",
@@ -598,7 +616,8 @@ extension Card {
                         ],
                         kind: .Q22024()
                     )],
-                ]
+                ],
+                network: .discover
             ),
             Card(
                 id: "discover-it-chrome",
@@ -609,7 +628,8 @@ extension Card {
                 categoryPoints: [
                     SpendCategory.dining.id: [.init(multiplier: 2, attributes: [.caveat("On up to $1,000")])],
                     SpendCategory.gas.id: [.init(multiplier: 2, attributes: [.caveat("On up to $1,000")])],
-                ]
+                ],
+                network: .discover
             ),
             Card(
                 id: "savor-rewards",
@@ -627,7 +647,8 @@ extension Card {
                     ],
                     SpendCategory.streaming.id: [.init(multiplier: 4, attributes: [.caveat("On popular services")])],
                     SpendCategory.groceries.id: [.init(multiplier: 3)],
-                ]
+                ],
+                network: .mastercard
             ),
             Card(
                 id: "savor-one",
@@ -645,7 +666,8 @@ extension Card {
                     ],
                     SpendCategory.streaming.id: [.init(multiplier: 3, attributes: [.caveat("On popular services")])],
                     SpendCategory.groceries.id: [.init(multiplier: 3)],
-                ]
+                ],
+                network: .mastercard
             ),
             Card(
                 id: "venture-rewards",
@@ -656,7 +678,8 @@ extension Card {
                 categoryPoints: [
                     SpendCategory.hotels.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
                     SpendCategory.carRentals.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
-                ]
+                ],
+                network: .visa
             ),
             Card(
                 id: "venture-one",
@@ -667,7 +690,8 @@ extension Card {
                 categoryPoints: [
                     SpendCategory.hotels.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
                     SpendCategory.carRentals.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
-                ]
+                ],
+                network: .mastercard
             ),
             Card(
                 id: "bilt",
@@ -701,14 +725,15 @@ extension Card {
                             .bilt5x,
                         ]
                     )],
-                ]
+                ],
+                network: .mastercard
             ),
             Card(
                 id: "active-cash",
                 name: "Active Cash",
                 icon: .red,
                 issuer: .wellsFargo,
-                basePoints: [.init(multiplier: 2)]
+                basePoints: [.init(multiplier: 2)], network: .visa
             ),
         ].sorted {
             (
