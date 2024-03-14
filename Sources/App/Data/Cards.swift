@@ -790,7 +790,7 @@ extension Card {
                             multiplier: 3,
                             attributes: [
                                 .caveat(
-                                    "Booked directly with airlines or on AmexTravel.com"
+                                    "Booked on AmexTravel.com"
                                 ),
                             ]
                         ),
@@ -839,7 +839,6 @@ extension Card {
                 ],
                 network: .amex
             ),
-            
         ].sorted {
             (
                 $0.issuer.name,
