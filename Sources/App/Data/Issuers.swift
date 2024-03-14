@@ -47,4 +47,9 @@ extension Issuer {
         id: "wells-fargo",
         name: "Wells Fargo"
     )
+
+    static let barclays = Issuer(
+        id: "barclays",
+        name: "Barclays"
+    )
 }

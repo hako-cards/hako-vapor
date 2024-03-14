@@ -866,6 +866,19 @@ extension Card {
                 ],
                 network: .amex
             ),
+            Card(
+                id: "barclay-aadvantage-aviator-red",
+                name: "AAdvantage Aviator Red",
+                icon: .black,
+                issuer: .barclays,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.flights.id: [
+                        .init(multiplier: 2, attributes: [.caveat("On eligible American Airlines purchases")])
+                    ]
+                ],
+                network: .mastercard
+            )
         ].sorted {
             (
                 $0.issuer.name,
