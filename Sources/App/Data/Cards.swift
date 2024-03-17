@@ -16,6 +16,33 @@ extension Card {
     static func buildCards() throws -> [Card] {
         let cards = try [
             Card(
+                id: "amex-everyday-preferred",
+                name: "EveryDay Preferred",
+                icon: .white,
+                issuer: .amex,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.groceries.id: [
+                        .init(
+                            multiplier: 3,
+                            attributes: [
+                                .caveat("At U.S. supermarkets"),
+                                .caveat("On up to $6,000 per year"),
+                            ]
+                        )
+                    ],
+                    SpendCategory.gas.id: [
+                        .init(
+                            multiplier: 2,
+                            attributes: [
+                                .caveat("At U.S. gas stations"),
+                            ]
+                        )
+                    ]
+                ],
+                network: .amex
+            ),
+            Card(
                 id: "freedom",
                 name: "Freedom",
                 icon: .lightBlue,
