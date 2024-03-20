@@ -955,6 +955,26 @@ extension Card {
                     SpendCategory.transit.id: [.init(multiplier: 2, attributes: [.info("Including ride share")])],
                 ],
                 network: .visa
+            ),
+            Card(
+                id: "citi-rewards-plus",
+                name: "Citi Rewards+",
+                icon: .gray,
+                issuer: .citi,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.groceries.id: [
+                        .init(multiplier: 2, attributes: [
+                            .caveat("On up to $6,000 per year"),
+                        ])
+                    ],
+                    SpendCategory.gas.id: [
+                        .init(multiplier: 2, attributes: [
+                            .caveat("On up to $6,000 per year"),
+                        ])
+                    ],
+                ],
+                network: .mastercard
             )
         ].sorted {
             (
