@@ -725,6 +725,66 @@ extension Card {
                 network: .mastercard
             ),
             Card(
+                id: "venture-x",
+                name: "Venture X",
+                icon: .darkBlue,
+                issuer: .capitalOne,
+                basePoints: [.init(multiplier: 2)],
+                categoryPoints: [
+                    SpendCategory.hotels.id: [.init(multiplier: 10, attributes: [.caveat("Booked through Capital One Travel")])],
+                    SpendCategory.carRentals.id: [.init(multiplier: 10, attributes: [.caveat("Booked through Capital One Travel")])],
+                    SpendCategory.flights.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                ],
+                network: .visa
+            ),
+            Card(
+                id: "ihg-rewards-club-select",
+                name: "IHG Rewards Club Select",
+                icon: .gray,
+                issuer: .chase,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.hotels.id: [.init(
+                        multiplier: 15,
+                        attributes: [
+                            .caveat("With an IHG Rewards membership"),
+                            .caveat("At InterContinental Hotels & Resorts, Hualuxe Hotels, Crowne Plaza Hotels & Resorts, Hotel Indigo and the Holiday Inn "),
+                        ]
+                    )],
+                    SpendCategory.hotels.id: [.init(
+                        multiplier: 5,
+                        attributes: [
+                            .caveat("At IHG hotels and resorts"),
+                        ]
+                    )],
+                    SpendCategory.gas.id: [.init(multiplier: 2)],
+                    SpendCategory.groceries.id: [.init(multiplier: 2)],
+                    SpendCategory.dining.id: [.init(multiplier: 2)],
+                ],
+                network: .mastercard
+            ),
+            Card(
+                id: "ihg-one-premier",
+                name: "IHG One Rewards Premier",
+                icon: .gray,
+                issuer: .chase,
+                basePoints: [.init(multiplier: 3)],
+                categoryPoints: [
+                    SpendCategory.hotels.id: [.init(
+                        multiplier: 26,
+                        attributes: [
+                            .caveat("At IHG hotels and resorts"),
+                            .info("Up to 10× for being an IHG One Rewards member"),
+                            .info("Up to 6× with Platinum Elite Status"),
+                        ]
+                    )],
+                    SpendCategory.travel.id: [.init(multiplier: 5)],
+                    SpendCategory.dining.id: [.init(multiplier: 5)],
+                    SpendCategory.gas.id: [.init(multiplier: 5)],
+                ],
+                network: .mastercard
+            ),
+            Card(
                 id: "bilt",
                 name: "Bilt",
                 icon: .black,
