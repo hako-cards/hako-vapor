@@ -52,4 +52,9 @@ extension Issuer {
         id: "barclays",
         name: "Barclays"
     )
+
+    static let bofa = Issuer(
+        id: "bofa",
+        name: "Bank of America"
+    )
 }

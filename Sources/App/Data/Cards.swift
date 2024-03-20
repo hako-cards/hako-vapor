@@ -940,6 +940,21 @@ extension Card {
                     ]
                 ],
                 network: .mastercard
+            ),
+            Card(
+                id: "alaska-airlines",
+                name: "Alaska Airlines",
+                icon: .darkBlue,
+                issuer: .bofa,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.alaskaAirlines.id: [.init(multiplier: 3)],
+                    SpendCategory.gas.id: [.init(multiplier: 2)],
+                    SpendCategory.evCharging.id: [.init(multiplier: 2)],
+                    SpendCategory.streaming.id: [.init(multiplier: 2)],
+                    SpendCategory.transit.id: [.init(multiplier: 2, attributes: [.info("Including ride share")])],
+                ],
+                network: .visa
             )
         ].sorted {
             (

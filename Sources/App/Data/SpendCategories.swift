@@ -25,6 +25,7 @@ extension SpendCategory {
         .rent,
         .travel,
         .flights,
+        .alaskaAirlines,
         .delta,
         .united,
         .hotels,
@@ -177,5 +178,12 @@ extension SpendCategory {
         name: "Your Top Categories",
         tint: .foregound,
         showCategoryCardsOnly: true
+    )
+
+    static let alaskaAirlines = SpendCategory(
+        id: "alaska-airlines",
+        name: "Alaska Airlines",
+        tint: .subduedBlue,
+        parent: SpendCategory.travel.id
     )
 }
