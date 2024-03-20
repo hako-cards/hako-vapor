@@ -744,19 +744,21 @@ extension Card {
                 issuer: .chase,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [.init(
-                        multiplier: 15,
-                        attributes: [
-                            .caveat("With an IHG Rewards membership"),
-                            .caveat("At InterContinental Hotels & Resorts, Hualuxe Hotels, Crowne Plaza Hotels & Resorts, Hotel Indigo and the Holiday Inn "),
-                        ]
-                    )],
-                    SpendCategory.hotels.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .caveat("At IHG hotels and resorts"),
-                        ]
-                    )],
+                    SpendCategory.hotels.id: [
+                        .init(
+                            multiplier: 15,
+                            attributes: [
+                                .caveat("With an IHG Rewards membership"),
+                                .caveat("At InterContinental Hotels & Resorts, Hualuxe Hotels, Crowne Plaza Hotels & Resorts, Hotel Indigo and the Holiday Inn "),
+                            ]
+                        ),
+                        .init(
+                            multiplier: 5,
+                            attributes: [
+                                .caveat("At IHG hotels and resorts"),
+                            ]
+                        )
+                    ],
                     SpendCategory.gas.id: [.init(multiplier: 2)],
                     SpendCategory.groceries.id: [.init(multiplier: 2)],
                     SpendCategory.dining.id: [.init(multiplier: 2)],
