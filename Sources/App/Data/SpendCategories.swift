@@ -15,8 +15,10 @@ extension SpendCategory {
         .evCharging,
         .drugstores,
         .phoneBill,
+        .internet,
         .homeImprovement,
         .online,
+        .advertising,
         .entertainment,
         .streaming,
         .amazon,
@@ -25,8 +27,9 @@ extension SpendCategory {
         .rent,
         .travel,
         .flights,
-        .alaskaAirlines,
+        .alaska,
         .delta,
+        .southwest,
         .united,
         .hotels,
         .carRentals,
@@ -169,8 +172,14 @@ extension SpendCategory {
 
     static let phoneBill = SpendCategory(
         id: "phone-bill",
-        name: "Phone Bill",
+        name: "Phone Services",
         tint: .indigo
+    )
+
+    static let internet = SpendCategory(
+        id: "internet",
+        name: "Internet Services",
+        tint: .blue
     )
 
     static let yourTopCategories = SpendCategory(
@@ -180,10 +189,23 @@ extension SpendCategory {
         showCategoryCardsOnly: true
     )
 
-    static let alaskaAirlines = SpendCategory(
+    static let alaska = SpendCategory(
         id: "alaska-airlines",
         name: "Alaska Airlines",
         tint: .subduedBlue,
         parent: SpendCategory.travel.id
+    )
+
+    static let southwest = SpendCategory(
+        id: "southwest",
+        name: "Southwest",
+        tint: .subduedBlue,
+        parent: SpendCategory.travel.id
+    )
+
+    static let advertising = SpendCategory(
+        id: "advertising",
+        name: "Advertising",
+        tint: .red
     )
 }

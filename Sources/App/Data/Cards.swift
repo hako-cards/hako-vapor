@@ -948,11 +948,11 @@ extension Card {
                 issuer: .bofa,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.alaskaAirlines.id: [.init(multiplier: 3)],
+                    SpendCategory.alaska.id: [.init(multiplier: 3)],
                     SpendCategory.gas.id: [.init(multiplier: 2)],
                     SpendCategory.evCharging.id: [.init(multiplier: 2)],
                     SpendCategory.streaming.id: [.init(multiplier: 2)],
-                    SpendCategory.transit.id: [.init(multiplier: 2, attributes: [.info("Including ride share")])],
+                    SpendCategory.transit.id: [.init(multiplier: 2, attributes: [.info("Including rideshare")])],
                 ],
                 network: .visa
             ),
@@ -975,7 +975,153 @@ extension Card {
                     ],
                 ],
                 network: .mastercard
-            )
+            ),
+            Card(
+                id: "sw-rr-plus",
+                name: "Southwest Rapid Rewards Plus",
+                icon: .gray,
+                issuer: .chase,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.southwest.id: [
+                        .init(multiplier: 2)
+                    ],
+                    SpendCategory.hotels.id: [
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")])
+                    ],
+                    SpendCategory.carRentals.id: [
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")])
+                    ],
+                    SpendCategory.transit.id: [
+                        .init(multiplier: 2, attributes: [.info("Including rideshare")])
+                    ],
+                    SpendCategory.phoneBill.id: [
+                        .init(multiplier: 2)
+                    ],
+                    SpendCategory.internet.id: [
+                        .init(multiplier: 2)
+                    ],
+                    SpendCategory.streaming.id: [
+                        .init(multiplier: 2, attributes: [.caveat("On select services")])
+                    ],
+                ],
+                network: .visa
+            ),
+            Card(
+                id: "sw-rr-priority",
+                name: "Southwest Rapid Rewards Priority",
+                icon: .darkBlue,
+                issuer: .chase,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.southwest.id: [
+                        .init(multiplier: 3)
+                    ],
+                    SpendCategory.hotels.id: [
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")])
+                    ],
+                    SpendCategory.carRentals.id: [
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")])
+                    ],
+                    SpendCategory.transit.id: [
+                        .init(multiplier: 2, attributes: [.info("Including rideshare")])
+                    ],
+                    SpendCategory.phoneBill.id: [
+                        .init(multiplier: 2)
+                    ],
+                    SpendCategory.internet.id: [
+                        .init(multiplier: 2)
+                    ],
+                    SpendCategory.streaming.id: [
+                        .init(multiplier: 2, attributes: [.caveat("On select services")])
+                    ],
+                ],
+                network: .visa
+            ),
+            Card(
+                id: "sw-rr-premier",
+                name: "Southwest Rapid Rewards Premier",
+                icon: .darkBlue,
+                issuer: .chase,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.southwest.id: [
+                        .init(multiplier: 3)
+                    ],
+                    SpendCategory.hotels.id: [
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")])
+                    ],
+                    SpendCategory.carRentals.id: [
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")])
+                    ],
+                    SpendCategory.transit.id: [
+                        .init(multiplier: 2, attributes: [.info("Including rideshare")])
+                    ],
+                    SpendCategory.phoneBill.id: [
+                        .init(multiplier: 2)
+                    ],
+                    SpendCategory.internet.id: [
+                        .init(multiplier: 2)
+                    ],
+                    SpendCategory.streaming.id: [
+                        .init(multiplier: 2, attributes: [.caveat("On select services")])
+                    ],
+                ],
+                network: .visa
+            ),
+            Card(
+                id: "sw-rr-perf-bus",
+                name: "Southwest Rapid Performance Business",
+                icon: .black,
+                issuer: .chase,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.southwest.id: [
+                        .init(multiplier: 4)
+                    ],
+                    SpendCategory.hotels.id: [
+                        .init(multiplier: 3, attributes: [.caveat("With Rapid Rewards hotel partners")])
+                    ],
+                    SpendCategory.carRentals.id: [
+                        .init(multiplier: 3, attributes: [.caveat("With Rapid Rewards car rental partners")])
+                    ],
+                    SpendCategory.transit.id: [
+                        .init(multiplier: 2, attributes: [.info("Including rideshare")])
+                    ],
+                    SpendCategory.advertising.id: [
+                        .init(multiplier: 2, attributes: [.info("On social media and search engines")])
+                    ],
+                    SpendCategory.phoneBill.id: [
+                        .init(multiplier: 2)
+                    ],
+                    SpendCategory.internet.id: [
+                        .init(multiplier: 2)
+                    ],
+                ],
+                network: .visa
+            ),
+            Card(
+                id: "sw-rr-prem-bus",
+                name: "Southwest Rapid Premier Business",
+                icon: .black,
+                issuer: .chase,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.southwest.id: [
+                        .init(multiplier: 3)
+                    ],
+                    SpendCategory.hotels.id: [
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")])
+                    ],
+                    SpendCategory.carRentals.id: [
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")])
+                    ],
+                    SpendCategory.transit.id: [
+                        .init(multiplier: 2, attributes: [.info("Including rideshare")])
+                    ],
+                ],
+                network: .visa
+            ),
         ].sorted {
             (
                 $0.issuer.name,
