@@ -120,7 +120,7 @@ extension SpendCategory {
     static let streaming = SpendCategory(
         id: "streaming",
         name: "Streaming",
-        tint: .gray
+        tint: .blue
     )
 
     static let transit = SpendCategory(
