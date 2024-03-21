@@ -1132,6 +1132,9 @@ extension Card {
                     SpendCategory.dining.id: [
                         .init(multiplier: 5, attributes: [.info("On eligible restaurants or food delivery in Canada")])
                     ],
+                    SpendCategory.groceries.id: [
+                        .init(multiplier: 5, attributes: [.info("At stand-alone grocery stores in Canada")])
+                    ],
                     SpendCategory.streaming.id: [
                         .init(multiplier: 3, attributes: [.caveat("For eligible streaming subscriptions in Canada")])
                     ],
