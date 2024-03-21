@@ -1124,7 +1124,7 @@ extension Card {
             ),
             Card(
                 id: "amex-cobalt",
-                name: "Cobalt Card",
+                name: "Cobalt Card (Canada)",
                 icon: .gray,
                 issuer: .chase,
                 basePoints: [.init(multiplier: 1)],
@@ -1143,6 +1143,41 @@ extension Card {
                     ],
                 ],
                 network: .amex
+            ),
+            Card(
+                id: "amex-bonvoy",
+                name: "Marriott Bonvoy (Canada)",
+                icon: .lightGray,
+                issuer: .chase,
+                basePoints: [.init(multiplier: 2)],
+                categoryPoints: [
+                    SpendCategory.hotels.id: [
+                        .init(multiplier: 5, attributes: [.caveat("On eligible purchases at participating Marriott Bonvoy hotels")])
+                    ],
+                ],
+                network: .amex
+            ),
+            Card(
+                id: "td-aeroplan",
+                name: "Aeroplan (Canada)",
+                icon: .gray,
+                issuer: .chase,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.airCanada.id: [
+                        .init(multiplier: 1.5, attributes: [.info("Including Air Canada Vacations")])
+                    ],
+                    SpendCategory.starbucks.id: [
+                        .init(multiplier: 1.5, attributes: [.caveat("When you link your card with your Starbucks Rewards account")])
+                    ],
+                    SpendCategory.gas.id: [
+                        .init(multiplier: 1.5)
+                    ],
+                    SpendCategory.groceries.id: [
+                        .init(multiplier: 1.5)
+                    ],
+                ],
+                network: .visa
             ),
         ].sorted {
             (

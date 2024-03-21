@@ -14,6 +14,7 @@ extension SpendCategory {
         .gas,
         .evCharging,
         .drugstores,
+        .starbucks,
         .phoneBill,
         .internet,
         .homeImprovement,
@@ -27,6 +28,7 @@ extension SpendCategory {
         .rent,
         .travel,
         .flights,
+        .airCanada,
         .alaska,
         .delta,
         .southwest,
@@ -207,5 +209,18 @@ extension SpendCategory {
         id: "advertising",
         name: "Advertising",
         tint: .red
+    )
+
+    static let starbucks = SpendCategory(
+        id: "starbucks",
+        name: "Starbucks",
+        tint: .green
+    )
+
+    static let airCanada = SpendCategory(
+        id: "air-canada",
+        name: "Air Canada",
+        tint: .red,
+        parent: SpendCategory.travel.id
     )
 }

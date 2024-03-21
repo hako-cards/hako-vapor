@@ -57,4 +57,9 @@ extension Issuer {
         id: "bofa",
         name: "Bank of America"
     )
+
+    static let td = Issuer(
+        id: "td",
+        name: "TD"
+    )
 }
