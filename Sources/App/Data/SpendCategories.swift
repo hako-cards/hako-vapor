@@ -74,7 +74,7 @@ extension SpendCategory {
 
     static let evCharging = SpendCategory(
         id: "ev",
-        name: "EV Charging Stations",
+        name: "EV Charging",
         tint: .green
     )
 
