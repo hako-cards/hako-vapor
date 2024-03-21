@@ -979,7 +979,7 @@ extension Card {
             Card(
                 id: "sw-rr-plus",
                 name: "Southwest Rapid Rewards Plus",
-                icon: .gray,
+                icon: .lightGray,
                 issuer: .chase,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
