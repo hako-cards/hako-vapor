@@ -1122,6 +1122,28 @@ extension Card {
                 ],
                 network: .visa
             ),
+            Card(
+                id: "amex-cobalt",
+                name: "Cobalt Card",
+                icon: .gray,
+                issuer: .chase,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.dining.id: [
+                        .init(multiplier: 5, attributes: [.info("On eligible restaurants or food delivery in Canada")])
+                    ],
+                    SpendCategory.streaming.id: [
+                        .init(multiplier: 3, attributes: [.caveat("For eligible streaming subscriptions in Canada")])
+                    ],
+                    SpendCategory.travel.id: [
+                        .init(multiplier: 2)
+                    ],
+                    SpendCategory.transit.id: [
+                        .init(multiplier: 2, attributes: [.info("Including rideshare")])
+                    ],
+                ],
+                network: .amex
+            ),
         ].sorted {
             (
                 $0.issuer.name,
