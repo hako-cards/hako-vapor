@@ -1126,7 +1126,7 @@ extension Card {
                 id: "amex-cobalt",
                 name: "Cobalt Card (Canada)",
                 icon: .gray,
-                issuer: .chase,
+                issuer: .amex,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
                     SpendCategory.dining.id: [
@@ -1148,7 +1148,7 @@ extension Card {
                 id: "amex-bonvoy",
                 name: "Marriott Bonvoy (Canada)",
                 icon: .lightGray,
-                issuer: .chase,
+                issuer: .amex,
                 basePoints: [.init(multiplier: 2)],
                 categoryPoints: [
                     SpendCategory.hotels.id: [
@@ -1161,7 +1161,7 @@ extension Card {
                 id: "td-aeroplan",
                 name: "Aeroplan (Canada)",
                 icon: .gray,
-                issuer: .chase,
+                issuer: .td,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
                     SpendCategory.airCanada.id: [
