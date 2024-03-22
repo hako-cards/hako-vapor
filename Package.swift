@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "hako-vapor",
     platforms: [
-       .macOS(.v13)
+        .macOS(.v13),
     ],
     dependencies: [
         // 💧 A server-side Swift web framework.
@@ -29,6 +29,6 @@ let package = Package(
             .product(name: "Vapor", package: "vapor"),
             .product(name: "HakoShared", package: "hako-shared"),
             .product(name: "Time", package: "time"),
-        ])
+        ]),
     ]
 )

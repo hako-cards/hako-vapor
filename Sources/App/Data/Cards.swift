@@ -29,7 +29,7 @@ extension Card {
                                 .caveat("At U.S. supermarkets"),
                                 .caveat("On up to $6,000 per year"),
                             ]
-                        )
+                        ),
                     ],
                     SpendCategory.gas.id: [
                         .init(
@@ -37,8 +37,8 @@ extension Card {
                             attributes: [
                                 .caveat("At U.S. gas stations"),
                             ]
-                        )
-                    ]
+                        ),
+                    ],
                 ],
                 network: .amex
             ),
@@ -118,7 +118,7 @@ extension Card {
                         ),
                     ],
                 ],
-                canCombinePoints: true, 
+                canCombinePoints: true,
                 network: .visa
             ),
             Card(
@@ -126,7 +126,7 @@ extension Card {
                 name: "Freedom Rise",
                 icon: .lightBlue,
                 issuer: .chase,
-                basePoints: [.init(multiplier: 1.5)], 
+                basePoints: [.init(multiplier: 1.5)],
                 network: .visa
             ),
             Card(
@@ -212,7 +212,7 @@ extension Card {
                         "When redeemed for Travel through Chase"
                     )]
                 ),
-                canCombinePoints: true, 
+                canCombinePoints: true,
                 network: .visa
             ),
             Card(
@@ -424,7 +424,7 @@ extension Card {
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
                     SpendCategory.americanAirlines.id: [
-                        .init(multiplier: 4)
+                        .init(multiplier: 4),
                     ],
                     SpendCategory.hotels.id: [
                         .init(
@@ -774,7 +774,7 @@ extension Card {
                             attributes: [
                                 .caveat("At IHG hotels and resorts"),
                             ]
-                        )
+                        ),
                     ],
                     SpendCategory.gas.id: [.init(multiplier: 2)],
                     SpendCategory.groceries.id: [.init(multiplier: 2)],
@@ -857,16 +857,16 @@ extension Card {
                             multiplier: 6,
                             attributes: [.caveat("On eligible purchases at hotels participating in the Marriott Bonvoy program")],
                             kind: .standard
-                        )
+                        ),
                     ],
                     SpendCategory.dining.id: [
-                        .init(multiplier: 4)
+                        .init(multiplier: 4),
                     ],
                     SpendCategory.gas.id: [
-                        .init(multiplier: 4)
+                        .init(multiplier: 4),
                     ],
                     SpendCategory.phoneBill.id: [
-                        .init(multiplier: 4, attributes: [.caveat("Purchased directly from U.S. service providers ")])
+                        .init(multiplier: 4, attributes: [.caveat("Purchased directly from U.S. service providers ")]),
                     ],
                 ],
                 network: .amex
@@ -879,7 +879,7 @@ extension Card {
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
                     SpendCategory.yourTopCategories.id: [
-                        .init(multiplier: 4, attributes: [.info("On your top 2 eligible categories")])
+                        .init(multiplier: 4, attributes: [.info("On your top 2 eligible categories")]),
                     ],
                     SpendCategory.hotels.id: [
                         .init(
@@ -918,8 +918,8 @@ extension Card {
                                 .caveat("At U.S. supermarkets"),
                                 .caveat("On up to $6,000 per year"),
                             ]
-                        )
-                    ]
+                        ),
+                    ],
                 ],
                 network: .amex
             ),
@@ -931,16 +931,16 @@ extension Card {
                 basePoints: [.init(multiplier: 3)],
                 categoryPoints: [
                     SpendCategory.gas.id: [
-                        .init(multiplier: 5, attributes: [.caveat("At U.S. gas stations")])
+                        .init(multiplier: 5, attributes: [.caveat("At U.S. gas stations")]),
                     ],
                     SpendCategory.groceries.id: [
-                        .init(multiplier: 5, attributes: [.caveat("At U.S. supermarkets")])
+                        .init(multiplier: 5, attributes: [.caveat("At U.S. supermarkets")]),
                     ],
                     SpendCategory.dining.id: [
-                        .init(multiplier: 5, attributes: [.caveat("At U.S. restaurants, including takeout and delivery")])
+                        .init(multiplier: 5, attributes: [.caveat("At U.S. restaurants, including takeout and delivery")]),
                     ],
                     SpendCategory.hotels.id: [
-                        .init(multiplier: 7, attributes: [.caveat("For eligible purchases at hotels and resorts in the Hilton portfolio")])
+                        .init(multiplier: 7, attributes: [.caveat("For eligible purchases at hotels and resorts in the Hilton portfolio")]),
                     ],
                 ],
                 network: .amex
@@ -953,8 +953,8 @@ extension Card {
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
                     SpendCategory.flights.id: [
-                        .init(multiplier: 2, attributes: [.caveat("On eligible American Airlines purchases")])
-                    ]
+                        .init(multiplier: 2, attributes: [.caveat("On eligible American Airlines purchases")]),
+                    ],
                 ],
                 network: .mastercard
             ),
@@ -983,12 +983,12 @@ extension Card {
                     SpendCategory.groceries.id: [
                         .init(multiplier: 2, attributes: [
                             .caveat("On up to $6,000 per year"),
-                        ])
+                        ]),
                     ],
                     SpendCategory.gas.id: [
                         .init(multiplier: 2, attributes: [
                             .caveat("On up to $6,000 per year"),
-                        ])
+                        ]),
                     ],
                 ],
                 network: .mastercard
@@ -1015,25 +1015,25 @@ extension Card {
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
                     SpendCategory.southwest.id: [
-                        .init(multiplier: 2)
+                        .init(multiplier: 2),
                     ],
                     SpendCategory.hotels.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")])
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")]),
                     ],
                     SpendCategory.carRentals.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")])
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")]),
                     ],
                     SpendCategory.transit.id: [
-                        .init(multiplier: 2, attributes: [.info("Including rideshare")])
+                        .init(multiplier: 2, attributes: [.info("Including rideshare")]),
                     ],
                     SpendCategory.phoneBill.id: [
-                        .init(multiplier: 2)
+                        .init(multiplier: 2),
                     ],
                     SpendCategory.internet.id: [
-                        .init(multiplier: 2)
+                        .init(multiplier: 2),
                     ],
                     SpendCategory.streaming.id: [
-                        .init(multiplier: 2, attributes: [.caveat("On select services")])
+                        .init(multiplier: 2, attributes: [.caveat("On select services")]),
                     ],
                 ],
                 network: .visa
@@ -1046,25 +1046,25 @@ extension Card {
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
                     SpendCategory.southwest.id: [
-                        .init(multiplier: 3)
+                        .init(multiplier: 3),
                     ],
                     SpendCategory.hotels.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")])
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")]),
                     ],
                     SpendCategory.carRentals.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")])
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")]),
                     ],
                     SpendCategory.transit.id: [
-                        .init(multiplier: 2, attributes: [.info("Including rideshare")])
+                        .init(multiplier: 2, attributes: [.info("Including rideshare")]),
                     ],
                     SpendCategory.phoneBill.id: [
-                        .init(multiplier: 2)
+                        .init(multiplier: 2),
                     ],
                     SpendCategory.internet.id: [
-                        .init(multiplier: 2)
+                        .init(multiplier: 2),
                     ],
                     SpendCategory.streaming.id: [
-                        .init(multiplier: 2, attributes: [.caveat("On select services")])
+                        .init(multiplier: 2, attributes: [.caveat("On select services")]),
                     ],
                 ],
                 network: .visa
@@ -1077,25 +1077,25 @@ extension Card {
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
                     SpendCategory.southwest.id: [
-                        .init(multiplier: 3)
+                        .init(multiplier: 3),
                     ],
                     SpendCategory.hotels.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")])
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")]),
                     ],
                     SpendCategory.carRentals.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")])
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")]),
                     ],
                     SpendCategory.transit.id: [
-                        .init(multiplier: 2, attributes: [.info("Including rideshare")])
+                        .init(multiplier: 2, attributes: [.info("Including rideshare")]),
                     ],
                     SpendCategory.phoneBill.id: [
-                        .init(multiplier: 2)
+                        .init(multiplier: 2),
                     ],
                     SpendCategory.internet.id: [
-                        .init(multiplier: 2)
+                        .init(multiplier: 2),
                     ],
                     SpendCategory.streaming.id: [
-                        .init(multiplier: 2, attributes: [.caveat("On select services")])
+                        .init(multiplier: 2, attributes: [.caveat("On select services")]),
                     ],
                 ],
                 network: .visa
@@ -1108,25 +1108,25 @@ extension Card {
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
                     SpendCategory.southwest.id: [
-                        .init(multiplier: 4)
+                        .init(multiplier: 4),
                     ],
                     SpendCategory.hotels.id: [
-                        .init(multiplier: 3, attributes: [.caveat("With Rapid Rewards hotel partners")])
+                        .init(multiplier: 3, attributes: [.caveat("With Rapid Rewards hotel partners")]),
                     ],
                     SpendCategory.carRentals.id: [
-                        .init(multiplier: 3, attributes: [.caveat("With Rapid Rewards car rental partners")])
+                        .init(multiplier: 3, attributes: [.caveat("With Rapid Rewards car rental partners")]),
                     ],
                     SpendCategory.transit.id: [
-                        .init(multiplier: 2, attributes: [.info("Including rideshare")])
+                        .init(multiplier: 2, attributes: [.info("Including rideshare")]),
                     ],
                     SpendCategory.advertising.id: [
-                        .init(multiplier: 2, attributes: [.info("On social media and search engines")])
+                        .init(multiplier: 2, attributes: [.info("On social media and search engines")]),
                     ],
                     SpendCategory.phoneBill.id: [
-                        .init(multiplier: 2)
+                        .init(multiplier: 2),
                     ],
                     SpendCategory.internet.id: [
-                        .init(multiplier: 2)
+                        .init(multiplier: 2),
                     ],
                 ],
                 network: .visa
@@ -1139,16 +1139,16 @@ extension Card {
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
                     SpendCategory.southwest.id: [
-                        .init(multiplier: 3)
+                        .init(multiplier: 3),
                     ],
                     SpendCategory.hotels.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")])
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")]),
                     ],
                     SpendCategory.carRentals.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")])
+                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")]),
                     ],
                     SpendCategory.transit.id: [
-                        .init(multiplier: 2, attributes: [.info("Including rideshare")])
+                        .init(multiplier: 2, attributes: [.info("Including rideshare")]),
                     ],
                 ],
                 network: .visa
@@ -1161,19 +1161,19 @@ extension Card {
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
                     SpendCategory.dining.id: [
-                        .init(multiplier: 5, attributes: [.info("On eligible restaurants or food delivery in Canada")])
+                        .init(multiplier: 5, attributes: [.info("On eligible restaurants or food delivery in Canada")]),
                     ],
                     SpendCategory.groceries.id: [
-                        .init(multiplier: 5, attributes: [.info("At stand-alone grocery stores in Canada")])
+                        .init(multiplier: 5, attributes: [.info("At stand-alone grocery stores in Canada")]),
                     ],
                     SpendCategory.streaming.id: [
-                        .init(multiplier: 3, attributes: [.caveat("For eligible streaming subscriptions in Canada")])
+                        .init(multiplier: 3, attributes: [.caveat("For eligible streaming subscriptions in Canada")]),
                     ],
                     SpendCategory.travel.id: [
-                        .init(multiplier: 2)
+                        .init(multiplier: 2),
                     ],
                     SpendCategory.transit.id: [
-                        .init(multiplier: 2, attributes: [.info("Including rideshare")])
+                        .init(multiplier: 2, attributes: [.info("Including rideshare")]),
                     ],
                 ],
                 network: .amex
@@ -1186,7 +1186,7 @@ extension Card {
                 basePoints: [.init(multiplier: 2)],
                 categoryPoints: [
                     SpendCategory.hotels.id: [
-                        .init(multiplier: 5, attributes: [.caveat("On eligible purchases at participating Marriott Bonvoy hotels")])
+                        .init(multiplier: 5, attributes: [.caveat("On eligible purchases at participating Marriott Bonvoy hotels")]),
                     ],
                 ],
                 network: .amex
@@ -1199,16 +1199,16 @@ extension Card {
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
                     SpendCategory.airCanada.id: [
-                        .init(multiplier: 1.5, attributes: [.info("Including Air Canada Vacations")])
+                        .init(multiplier: 1.5, attributes: [.info("Including Air Canada Vacations")]),
                     ],
                     SpendCategory.starbucks.id: [
-                        .init(multiplier: 1.5, attributes: [.caveat("When you link your card with your Starbucks Rewards account")])
+                        .init(multiplier: 1.5, attributes: [.caveat("When you link your card with your Starbucks Rewards account")]),
                     ],
                     SpendCategory.gas.id: [
-                        .init(multiplier: 1.5)
+                        .init(multiplier: 1.5),
                     ],
                     SpendCategory.groceries.id: [
-                        .init(multiplier: 1.5)
+                        .init(multiplier: 1.5),
                     ],
                 ],
                 network: .visa
@@ -1223,7 +1223,7 @@ extension Card {
             )
         }
 
-        guard cards.count == Set(cards.map { $0.id }).count else {
+        guard cards.count == Set(cards.map(\.id)).count else {
             throw CardError.duplicateIDs
         }
 
