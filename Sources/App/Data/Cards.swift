@@ -1315,7 +1315,7 @@ extension Card {
                             multiplier: 5,
                             attributes: [
                                 .caveat("On up to $500 each billing cycle"),
-                                .caveat("On eligible categories")
+                                .caveat("On one eligible category")
                             ]
                         )
                     ]
