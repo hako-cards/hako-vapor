@@ -71,7 +71,6 @@ extension Card {
                 issuer: .chase,
                 basePoints: [.init(
                     multiplier: 1,
-                    attributes: [],
                     kind: .standard
                 )],
                 categoryPoints: [
@@ -171,8 +170,7 @@ extension Card {
                 icon: .darkBlue,
                 issuer: .chase,
                 basePoints: [.init(
-                    multiplier: 1,
-                    attributes: []
+                    multiplier: 1
                 )],
                 categoryPoints: [
                     SpendCategory.dining.id: [
@@ -224,8 +222,7 @@ extension Card {
                 issuer: .chase,
                 basePoints: [
                     .init(
-                        multiplier: 1,
-                        attributes: []
+                        multiplier: 1
                     ),
                 ],
                 categoryPoints: [
@@ -253,8 +250,7 @@ extension Card {
                 icon: .lightBlue,
                 issuer: .amex,
                 basePoints: [.init(
-                    multiplier: 1,
-                    attributes: []
+                    multiplier: 1
                 )],
                 categoryPoints: [
                     SpendCategory.groceries.id: [
@@ -287,8 +283,7 @@ extension Card {
                 icon: .darkBlue,
                 issuer: .amex,
                 basePoints: [.init(
-                    multiplier: 1,
-                    attributes: []
+                    multiplier: 1
                 )],
                 categoryPoints: [
                     SpendCategory.groceries.id: [
@@ -330,8 +325,7 @@ extension Card {
                 icon: .silver,
                 issuer: .amex,
                 basePoints: [.init(
-                    multiplier: 1,
-                    attributes: []
+                    multiplier: 1
                 )],
                 categoryPoints: [
                     SpendCategory.hotels.id: [
@@ -363,8 +357,7 @@ extension Card {
                 icon: .gold,
                 issuer: .amex,
                 basePoints: [.init(
-                    multiplier: 1,
-                    attributes: []
+                    multiplier: 1
                 )],
                 categoryPoints: [
                     SpendCategory.dining.id: [
@@ -397,8 +390,7 @@ extension Card {
                 issuer: .apple,
                 basePoints: [
                     .init(
-                        multiplier: 1,
-                        attributes: []
+                        multiplier: 1
                     ),
                     .init(
                         multiplier: 2,
@@ -463,8 +455,7 @@ extension Card {
                 icon: .gray,
                 issuer: .citi,
                 basePoints: [.init(
-                    multiplier: 1,
-                    attributes: []
+                    multiplier: 1
                 )],
                 categoryPoints: [
                     SpendCategory.costco.id: [
@@ -497,21 +488,17 @@ extension Card {
                 icon: .gold,
                 issuer: .amex,
                 basePoints: [.init(
-                    multiplier: 1,
-                    attributes: []
+                    multiplier: 1
                 )],
                 categoryPoints: [
                     SpendCategory.delta.id: [.init(
-                        multiplier: 2,
-                        attributes: []
+                        multiplier: 2
                     )],
                     SpendCategory.dining.id: [.init(
-                        multiplier: 2,
-                        attributes: []
+                        multiplier: 2
                     )],
                     SpendCategory.groceries.id: [.init(
-                        multiplier: 2,
-                        attributes: []
+                        multiplier: 2
                     )],
                 ],
                 network: .amex
@@ -533,8 +520,7 @@ extension Card {
                 icon: .darkBlue,
                 issuer: .chase,
                 basePoints: [.init(
-                    multiplier: 1,
-                    attributes: []
+                    multiplier: 1
                 )],
                 categoryPoints: [
                     SpendCategory.amazon.id: [.init(
@@ -552,12 +538,10 @@ extension Card {
                         ]
                     )],
                     SpendCategory.dining.id: [.init(
-                        multiplier: 2,
-                        attributes: []
+                        multiplier: 2
                     )],
                     SpendCategory.transit.id: [.init(
-                        multiplier: 2,
-                        attributes: []
+                        multiplier: 2
                     )],
                 ],
                 network: .visa
@@ -568,8 +552,7 @@ extension Card {
                 icon: .lightGray,
                 issuer: .chase,
                 basePoints: [.init(
-                    multiplier: 1,
-                    attributes: []
+                    multiplier: 1
                 )],
                 categoryPoints: [
                     SpendCategory.amazon.id: [.init(
@@ -587,12 +570,10 @@ extension Card {
                         ]
                     )],
                     SpendCategory.dining.id: [.init(
-                        multiplier: 2,
-                        attributes: []
+                        multiplier: 2
                     )],
                     SpendCategory.transit.id: [.init(
-                        multiplier: 2,
-                        attributes: []
+                        multiplier: 2
                     )],
                 ],
                 network: .visa
@@ -603,8 +584,7 @@ extension Card {
                 icon: .midBlue,
                 issuer: .discover,
                 basePoints: [.init(
-                    multiplier: 1,
-                    attributes: []
+                    multiplier: 1
                 )],
                 categoryPoints: [
                     SpendCategory.dining.id: [.init(
