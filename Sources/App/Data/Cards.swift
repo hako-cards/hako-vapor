@@ -26,8 +26,8 @@ extension Card {
                         .init(
                             multiplier: 3,
                             attributes: [
-                                .caveat("At U.S. supermarkets"),
-                                .caveat("On up to $6,000 per year"),
+                                .info("At U.S. supermarkets"),
+                                .info("On up to $6,000 per year"),
                             ]
                         ),
                     ],
@@ -35,7 +35,7 @@ extension Card {
                         .init(
                             multiplier: 2,
                             attributes: [
-                                .caveat("At U.S. gas stations"),
+                                .info("At U.S. gas stations"),
                             ]
                         ),
                     ],
@@ -54,7 +54,7 @@ extension Card {
                     SpendCategory.groceries.id: [
                         .init(
                             multiplier: 5,
-                            attributes: [.caveat(
+                            attributes: [.info(
                                 "On up to $1,500"
                             )],
                             kind: .Q12024(activateBy: (3, 14))
@@ -87,7 +87,7 @@ extension Card {
                     SpendCategory.groceries.id: [
                         .init(
                             multiplier: 5,
-                            attributes: [.caveat(
+                            attributes: [.info(
                                 "On up to $1,500"
                             )],
                             kind: .Q12024(activateBy: (3, 14))
@@ -257,21 +257,21 @@ extension Card {
                         .init(
                             multiplier: 3,
                             attributes: [
-                                .caveat("At U.S. supermarkets"),
-                                .caveat("On up to $6,000 per year"),
+                                .info("At U.S. supermarkets"),
+                                .info("On up to $6,000 per year"),
                             ]
                         ),
                     ],
                     SpendCategory.gas.id: [
                         .init(
                             multiplier: 3,
-                            attributes: [.caveat("On up to $6,000 per year")]
+                            attributes: [.info("On up to $6,000 per year")]
                         ),
                     ],
                     SpendCategory.online.id: [
                         .init(
                             multiplier: 3,
-                            attributes: [.caveat("On up to $6,000 per year")]
+                            attributes: [.info("On up to $6,000 per year")]
                         ),
                     ],
                 ],
@@ -290,8 +290,8 @@ extension Card {
                         .init(
                             multiplier: 6,
                             attributes: [
-                                .caveat("At U.S. supermarkets"),
-                                .caveat("On up to $6,000 per year"),
+                                .info("At U.S. supermarkets"),
+                                .info("On up to $6,000 per year"),
                             ]
                         ),
                     ],
@@ -590,7 +590,7 @@ extension Card {
                     SpendCategory.dining.id: [.init(
                         multiplier: 5,
                         attributes: [
-                            .caveat("On up to $1,500"),
+                            .info("On up to $1,500"),
                             .caveat("Must be activated"),
                         ],
                         kind: .Q12024()
@@ -598,7 +598,7 @@ extension Card {
                     SpendCategory.drugstores.id: [.init(
                         multiplier: 5,
                         attributes: [
-                            .caveat("On up to $1,500"),
+                            .info("On up to $1,500"),
                             .caveat("Must be activated"),
                         ],
                         kind: .Q12024()
@@ -606,7 +606,7 @@ extension Card {
                     SpendCategory.gas.id: [.init(
                         multiplier: 5,
                         attributes: [
-                            .caveat("On up to $1,500"),
+                            .info("On up to $1,500"),
                             .caveat("Must be activated"),
                         ],
                         kind: .Q22024()
@@ -614,7 +614,7 @@ extension Card {
                     SpendCategory.evCharging.id: [.init(
                         multiplier: 5,
                         attributes: [
-                            .caveat("On up to $1,500"),
+                            .info("On up to $1,500"),
                             .caveat("Must be activated"),
                         ],
                         kind: .Q22024()
@@ -622,7 +622,7 @@ extension Card {
                     SpendCategory.homeImprovement.id: [.init(
                         multiplier: 5,
                         attributes: [
-                            .caveat("On up to $1,500"),
+                            .info("On up to $1,500"),
                             .caveat("Must be activated"),
                         ],
                         kind: .Q22024()
@@ -631,7 +631,7 @@ extension Card {
                         multiplier: 5,
                         attributes: [
                             .caveat("Public transit"),
-                            .caveat("On up to $1,500"),
+                            .info("On up to $1,500"),
                             .caveat("Must be activated"),
                         ],
                         kind: .Q22024()
@@ -646,8 +646,8 @@ extension Card {
                 issuer: .discover,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.dining.id: [.init(multiplier: 2, attributes: [.caveat("On up to $1,000")])],
-                    SpendCategory.gas.id: [.init(multiplier: 2, attributes: [.caveat("On up to $1,000")])],
+                    SpendCategory.dining.id: [.init(multiplier: 2, attributes: [.info("On up to $1,000")])],
+                    SpendCategory.gas.id: [.init(multiplier: 2, attributes: [.info("On up to $1,000")])],
                 ],
                 network: .discover
             ),
@@ -915,8 +915,8 @@ extension Card {
                         .init(
                             multiplier: 2,
                             attributes: [
-                                .caveat("At U.S. supermarkets"),
-                                .caveat("On up to $6,000 per year"),
+                                .info("At U.S. supermarkets"),
+                                .info("On up to $6,000 per year"),
                             ]
                         ),
                     ],
@@ -931,13 +931,13 @@ extension Card {
                 basePoints: [.init(multiplier: 3)],
                 categoryPoints: [
                     SpendCategory.gas.id: [
-                        .init(multiplier: 5, attributes: [.caveat("At U.S. gas stations")]),
+                        .init(multiplier: 5, attributes: [.info("At U.S. gas stations")]),
                     ],
                     SpendCategory.groceries.id: [
-                        .init(multiplier: 5, attributes: [.caveat("At U.S. supermarkets")]),
+                        .init(multiplier: 5, attributes: [.info("At U.S. supermarkets")]),
                     ],
                     SpendCategory.dining.id: [
-                        .init(multiplier: 5, attributes: [.caveat("At U.S. restaurants, including takeout and delivery")]),
+                        .init(multiplier: 5, attributes: [.info("At U.S. restaurants, including takeout and delivery")]),
                     ],
                     SpendCategory.hotels.id: [
                         .init(multiplier: 7, attributes: [.caveat("For eligible purchases at hotels and resorts in the Hilton portfolio")]),
@@ -982,12 +982,12 @@ extension Card {
                 categoryPoints: [
                     SpendCategory.groceries.id: [
                         .init(multiplier: 2, attributes: [
-                            .caveat("On up to $6,000 per year"),
+                            .info("On up to $6,000 per year"),
                         ]),
                     ],
                     SpendCategory.gas.id: [
                         .init(multiplier: 2, attributes: [
-                            .caveat("On up to $6,000 per year"),
+                            .info("On up to $6,000 per year"),
                         ]),
                     ],
                 ],
@@ -1120,7 +1120,7 @@ extension Card {
                         .init(multiplier: 2, attributes: [.info("Including rideshare")]),
                     ],
                     SpendCategory.advertising.id: [
-                        .init(multiplier: 2, attributes: [.info("On social media and search engines")]),
+                        .init(multiplier: 2, attributes: [.caveat("On social media and search engines")]),
                     ],
                     SpendCategory.phoneBill.id: [
                         .init(multiplier: 2),
@@ -1213,6 +1213,96 @@ extension Card {
                 ],
                 network: .visa
             ),
+            Card(
+                id: "ink-bus-premier",
+                name: "Ink Business Premier",
+                icon: .black,
+                issuer: .chase,
+                basePoints: [
+                    .init(multiplier: 2.5, attributes: [.caveat("On purchases of $5,000 or more")]),
+                    .init(multiplier: 2),
+                ],
+                categoryPoints: [
+                    SpendCategory.lyft.id: [.init(multiplier: 5, attributes: [.info("Through March 2025")])]
+                ],
+                canCombinePoints: true,
+                network: .visa
+            ),
+            Card(
+                id: "ink-bus-unlimited",
+                name: "Ink Business Unlimited",
+                icon: .gray,
+                issuer: .chase,
+                basePoints: [
+                    .init(multiplier: 1.5),
+                ],
+                categoryPoints: [
+                    SpendCategory.lyft.id: [.init(multiplier: 5, attributes: [.info("Through March 2025")])]
+                ],
+                canCombinePoints: true,
+                network: .visa
+            ),
+            Card(
+                id: "ink-bus-cash",
+                name: "Ink Business Cash",
+                icon: .lightGray,
+                issuer: .chase,
+                basePoints: [
+                    .init(multiplier: 1),
+                ],
+                categoryPoints: [
+                    SpendCategory.officeSupply.id: [.init(multiplier: 5, attributes: [.info("On the first $25,000 each year")])],
+                    SpendCategory.internet.id: [.init(multiplier: 5, attributes: [.info("On the first $25,000 each year")])],
+                    SpendCategory.phoneBill.id: [.init(multiplier: 5, attributes: [.info("On the first $25,000 each year")])],
+                    SpendCategory.gas.id: [.init(multiplier: 2, attributes: [.info("On the first $25,000 each year")])],
+                    SpendCategory.dining.id: [.init(multiplier: 2, attributes: [.info("On the first $25,000 each year")])],
+                    SpendCategory.lyft.id: [.init(multiplier: 5, attributes: [.info("Through March 2025")])]
+                ],
+                canCombinePoints: true,
+                network: .visa
+            ),
+            Card(
+                id: "ink-bus-preferred",
+                name: "Ink Business Preferred",
+                icon: .darkBlue,
+                issuer: .chase,
+                basePoints: [
+                    .init(multiplier: 1),
+                ],
+                categoryPoints: [
+                    SpendCategory.advertising.id: [.init(
+                        multiplier: 3,
+                        attributes: [
+                            .caveat("On social media and search engines"),
+                            .info("On the first $150,000 each year"),
+                        ]
+                    )],
+                    SpendCategory.internet.id: [.init(multiplier: 3, attributes: [.info("On the first $150,000 each year")])],
+                    SpendCategory.phoneBill.id: [.init(multiplier: 3, attributes: [.info("On the first $150,000 each year")])],
+                    SpendCategory.travel.id: [.init(multiplier: 3, attributes: [.info("On the first $150,000 each year")])],
+                    SpendCategory.shipping.id: [.init(multiplier: 3, attributes: [.info("On the first $150,000 each year")])],
+                    SpendCategory.lyft.id: [.init(multiplier: 5, attributes: [.info("Through March 2025")])]
+                ],
+                redemptionReward: .init(
+                    amount: .multiplier(1.25),
+                    attributes: [.caveat(
+                        "When redeemed for Travel through Chase"
+                    )]
+                ),
+                canCombinePoints: true,
+                network: .visa
+            ),
+            Card(
+                id: "blue-bus-plus",
+                name: "Blue Business Plus",
+                icon: .midBlue,
+                issuer: .amex,
+                basePoints: [
+                    .init(multiplier: 2, attributes: [.caveat("On the first $50,000 each year")]),
+                    .init(multiplier: 1),
+                ],
+                network: .amex
+            )
         ].sorted {
             (
                 $0.issuer.name,

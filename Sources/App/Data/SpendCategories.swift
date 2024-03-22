@@ -17,6 +17,8 @@ extension SpendCategory {
         .starbucks,
         .phoneBill,
         .internet,
+        .officeSupply,
+        .shipping,
         .homeImprovement,
         .online,
         .advertising,
@@ -230,5 +232,17 @@ extension SpendCategory {
         name: "American Airlines",
         tint: .blue,
         parent: SpendCategory.travel.id
+    )
+
+    static let officeSupply = SpendCategory(
+        id: "office",
+        name: "Office Supply Stores",
+        tint: .gray
+    )
+
+    static let shipping = SpendCategory(
+        id: "shipping",
+        name: "Shipping",
+        tint: .brown
     )
 }
