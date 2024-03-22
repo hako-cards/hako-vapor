@@ -189,7 +189,7 @@ extension SpendCategory {
 
     static let yourTopCategories = SpendCategory(
         id: "your-top-categories",
-        name: "Your Top Categories",
+        name: "Top Categories",
         tint: .foregound,
         showCategoryCardsOnly: true
     )

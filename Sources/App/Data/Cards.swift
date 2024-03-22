@@ -1302,7 +1302,26 @@ extension Card {
                     .init(multiplier: 1),
                 ],
                 network: .amex
-            )
+            ),
+            Card(
+                id: "citi-custom-cash",
+                name: "Custom Cash",
+                icon: .lightBlue,
+                issuer: .citi,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.yourTopCategories.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [
+                                .caveat("On up to $500 each billing cycle"),
+                                .caveat("On eligible categories")
+                            ]
+                        )
+                    ]
+                ],
+                network: .mastercard
+            ),
         ].sorted {
             (
                 $0.issuer.name,
