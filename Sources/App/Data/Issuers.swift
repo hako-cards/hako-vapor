@@ -62,4 +62,9 @@ extension Issuer {
         id: "td",
         name: "TD"
     )
+
+    static let usBank = Issuer(
+        id: "usbank",
+        name: "US Bank"
+    )
 }

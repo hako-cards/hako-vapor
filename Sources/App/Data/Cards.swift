@@ -426,16 +426,14 @@ extension Card {
             ),
             Card(
                 id: "aadvantage-exec",
-                name: "AA Executive",
+                name: "AAdvantage Executive",
                 icon: .black,
                 issuer: .citi,
-                basePoints: [
-                    .init(
-                        multiplier: 1,
-                        attributes: []
-                    ),
-                ],
+                basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
+                    SpendCategory.americanAirlines.id: [
+                        .init(multiplier: 4)
+                    ],
                     SpendCategory.hotels.id: [
                         .init(
                             multiplier: 10,
@@ -515,6 +513,17 @@ extension Card {
                         multiplier: 2,
                         attributes: []
                     )],
+                ],
+                network: .amex
+            ),
+            Card(
+                id: "skymiles-reserve",
+                name: "Delta SkyMiles Reserve",
+                icon: .purple,
+                issuer: .amex,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.delta.id: [.init(multiplier: 3)],
                 ],
                 network: .amex
             ),
@@ -736,6 +745,34 @@ extension Card {
                     SpendCategory.flights.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
                 ],
                 network: .visa
+            ),
+            Card(
+                id: "quicksilver",
+                name: "Quicksilver",
+                icon: .lightGray,
+                issuer: .capitalOne,
+                basePoints: [.init(multiplier: 1.5)],
+                categoryPoints: [
+                    SpendCategory.hotels.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                    SpendCategory.carRentals.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                ],
+                network: .mastercard
+            ),
+            Card(
+                id: "altitude-connect",
+                name: "Altitude Connect",
+                icon: .lightBlue,
+                issuer: .usBank,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.dining.id: [.init(multiplier: 2)],
+                    SpendCategory.streaming.id: [.init(multiplier: 2)],
+                    SpendCategory.groceries.id: [.init(multiplier: 2)],
+                    SpendCategory.travel.id: [.init(multiplier: 4)],
+                    SpendCategory.hotels.id: [.init(multiplier: 5, attributes: [.caveat("Booked through the Altitude Rewards Center")])],
+                    SpendCategory.carRentals.id: [.init(multiplier: 5, attributes: [.caveat("Booked through the Altitude Rewards Center")])],
+                ],
+                network: .mastercard
             ),
             Card(
                 id: "ihg-rewards-club-select",
@@ -973,6 +1010,20 @@ extension Card {
                             .caveat("On up to $6,000 per year"),
                         ])
                     ],
+                ],
+                network: .mastercard
+            ),
+            Card(
+                id: "citi-premier",
+                name: "Citi Premier",
+                icon: .gray,
+                issuer: .citi,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.dining.id: [.init(multiplier: 3)],
+                    SpendCategory.groceries.id: [.init(multiplier: 3)],
+                    SpendCategory.gas.id: [.init(multiplier: 3)],
+                    SpendCategory.flights.id: [.init(multiplier: 3)],
                 ],
                 network: .mastercard
             ),

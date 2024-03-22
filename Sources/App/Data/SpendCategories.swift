@@ -30,6 +30,7 @@ extension SpendCategory {
         .flights,
         .airCanada,
         .alaska,
+        .americanAirlines,
         .delta,
         .southwest,
         .united,
@@ -221,6 +222,13 @@ extension SpendCategory {
         id: "air-canada",
         name: "Air Canada",
         tint: .red,
+        parent: SpendCategory.travel.id
+    )
+
+    static let americanAirlines = SpendCategory(
+        id: "american-airlines",
+        name: "American Airlines",
+        tint: .blue,
         parent: SpendCategory.travel.id
     )
 }
