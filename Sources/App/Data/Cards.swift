@@ -1322,6 +1322,35 @@ extension Card {
                 ],
                 network: .mastercard
             ),
+            Card(
+                id: "world-of-hyatt",
+                name: "World of Hyatt",
+                icon: .gray,
+                issuer: .chase,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.hyatt.id: [.init(multiplier: 4)],
+                    SpendCategory.dining.id: [.init(multiplier: 2)],
+                    SpendCategory.flights.id: [
+                        .init(
+                            multiplier: 2,
+                            attributes: [
+                                .caveat("On airline tickets purchased directly from the airline"),
+                            ]
+                        ),
+                    ],
+                    SpendCategory.transit.id: [
+                        .init(
+                            multiplier: 2,
+                            attributes: [
+                                .caveat("On local transit and commuting"),
+                            ]
+                        ),
+                    ],
+                    SpendCategory.fitness.id: [.init(multiplier: 2)],
+                ],
+                network: .visa
+            ),
         ].sorted {
             (
                 $0.issuer.name,

@@ -24,6 +24,7 @@ extension SpendCategory {
         .advertising,
         .entertainment,
         .streaming,
+        .fitness,
         .amazon,
         .costco,
         .apple,
@@ -37,6 +38,7 @@ extension SpendCategory {
         .southwest,
         .united,
         .hotels,
+        .hyatt,
         .carRentals,
         .lyft,
         .transit,
@@ -244,5 +246,18 @@ extension SpendCategory {
         id: "shipping",
         name: "Shipping",
         tint: .brown
+    )
+
+    static let hyatt = SpendCategory(
+        id: "hyatt",
+        name: "Hyatt Hotels",
+        tint: .blue,
+        parent: SpendCategory.travel.id
+    )
+
+    static let fitness = SpendCategory(
+        id: "fitness",
+        name: "Fitness Club and Gym Memberships",
+        tint: .red
     )
 }
