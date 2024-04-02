@@ -67,4 +67,9 @@ extension Issuer {
         id: "usbank",
         name: "US Bank"
     )
+
+    static let gemini = Issuer(
+        id: "gemini",
+        name: "Gemini"
+    )
 }

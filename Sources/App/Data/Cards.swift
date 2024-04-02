@@ -1322,6 +1322,39 @@ extension Card {
                 ],
                 network: .mastercard
             ),
+            Card(
+                id: "gemini",
+                name: "Gemini",
+                icon: .black,
+                issuer: .gemini,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.gas.id: [.init(multiplier: 4, attributes: [.caveat("On up to $200 in spend per month")])],
+                    SpendCategory.evCharging.id: [.init(multiplier: 4, attributes: [.caveat("On up to $200 in spend per month")])],
+                    SpendCategory.dining.id: [.init(multiplier: 3)],
+                    SpendCategory.groceries.id: [.init(multiplier: 2)],
+                ],
+                network: .mastercard
+            ),
+            Card(
+                id: "bofa-customized-cash",
+                name: "Customized Cash Rewards",
+                icon: .red,
+                issuer: .bofa,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.chosenCategories.id: [.init(
+                        multiplier: 3,
+                        attributes: [
+                            .info("One one category of your choice"),
+                            .caveat("On the first $2,500 each quarter")
+                        ]
+                    )],
+                    SpendCategory.groceries.id: [.init(multiplier: 2)],
+                    SpendCategory.wholesaleClubs.id: [.init(multiplier: 2)],
+                ],
+                network: .visa
+            )
         ].sorted {
             (
                 $0.issuer.name,

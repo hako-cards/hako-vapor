@@ -26,6 +26,7 @@ extension SpendCategory {
         .streaming,
         .amazon,
         .costco,
+        .wholesaleClubs,
         .apple,
         .rent,
         .travel,
@@ -40,6 +41,7 @@ extension SpendCategory {
         .carRentals,
         .lyft,
         .transit,
+        .chosenCategories,
         .yourTopCategories,
     ]
 
@@ -194,6 +196,13 @@ extension SpendCategory {
         showCategoryCardsOnly: true
     )
 
+    static let chosenCategories = SpendCategory(
+        id: "chosen-categories",
+        name: "Chosen Categories",
+        tint: .foregound,
+        showCategoryCardsOnly: true
+    )
+
     static let alaska = SpendCategory(
         id: "alaska-airlines",
         name: "Alaska Airlines",
@@ -243,6 +252,12 @@ extension SpendCategory {
     static let shipping = SpendCategory(
         id: "shipping",
         name: "Shipping",
+        tint: .brown
+    )
+
+    static let wholesaleClubs = SpendCategory(
+        id: "wholesale-clubs",
+        name: "Wholesale Clubs",
         tint: .brown
     )
 }
