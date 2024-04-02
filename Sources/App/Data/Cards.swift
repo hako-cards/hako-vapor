@@ -51,13 +51,31 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.groceries.id: [
+                    SpendCategory.amazon.id: [
                         .init(
                             multiplier: 5,
                             attributes: [.info(
                                 "On up to $1,500"
                             )],
-                            kind: .Q12024(activateBy: (3, 14))
+                            kind: .Q22024(activateBy: (6, 14))
+                        ),
+                    ],
+                    SpendCategory.hotels.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.info(
+                                "On up to $1,500"
+                            )],
+                            kind: .Q22024(activateBy: (6, 14))
+                        ),
+                    ],
+                    SpendCategory.dining.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.info(
+                                "On up to $1,500"
+                            )],
+                            kind: .Q22024(activateBy: (6, 14))
                         ),
                     ],
                 ],
@@ -70,8 +88,7 @@ extension Card {
                 icon: .lightBlue,
                 issuer: .chase,
                 basePoints: [.init(
-                    multiplier: 1,
-                    kind: .standard
+                    multiplier: 1
                 )],
                 categoryPoints: [
                     SpendCategory.dining.id: [
@@ -84,16 +101,33 @@ extension Card {
                             multiplier: 3
                         ),
                     ],
-                    SpendCategory.groceries.id: [
+                    SpendCategory.amazon.id: [
                         .init(
                             multiplier: 5,
                             attributes: [.info(
                                 "On up to $1,500"
                             )],
-                            kind: .Q12024(activateBy: (3, 14))
+                            kind: .Q22024(activateBy: (6, 14))
                         ),
                     ],
-
+                    SpendCategory.hotels.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.info(
+                                "On up to $1,500"
+                            )],
+                            kind: .Q22024(activateBy: (6, 14))
+                        ),
+                    ],
+                    SpendCategory.dining.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.info(
+                                "On up to $1,500"
+                            )],
+                            kind: .Q22024(activateBy: (6, 14))
+                        ),
+                    ],
                 ],
                 canCombinePoints: true,
                 network: .mastercard
@@ -587,22 +621,6 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.dining.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .info("On up to $1,500"),
-                            .caveat("Must be activated"),
-                        ],
-                        kind: .Q12024()
-                    )],
-                    SpendCategory.drugstores.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .info("On up to $1,500"),
-                            .caveat("Must be activated"),
-                        ],
-                        kind: .Q12024()
-                    )],
                     SpendCategory.gas.id: [.init(
                         multiplier: 5,
                         attributes: [
@@ -855,8 +873,7 @@ extension Card {
                     SpendCategory.hotels.id: [
                         .init(
                             multiplier: 6,
-                            attributes: [.caveat("On eligible purchases at hotels participating in the Marriott Bonvoy program")],
-                            kind: .standard
+                            attributes: [.caveat("On eligible purchases at hotels participating in the Marriott Bonvoy program")]
                         ),
                     ],
                     SpendCategory.dining.id: [
