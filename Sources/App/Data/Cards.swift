@@ -91,11 +91,11 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.dining.id: [
-                        .init(
-                            multiplier: 3
-                        ),
-                    ],
+//                    SpendCategory.dining.id: [
+//                        .init(
+//                            multiplier: 3
+//                        ),
+//                    ],
                     SpendCategory.drugstores.id: [
                         .init(
                             multiplier: 3
