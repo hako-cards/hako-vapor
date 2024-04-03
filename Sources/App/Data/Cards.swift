@@ -96,6 +96,14 @@ extension Card {
 //                            multiplier: 3
 //                        ),
 //                    ],
+                    SpendCategory.travel.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.caveat(
+                                "Booked through Chase Ultimate Rewards"
+                            )]
+                        ),
+                    ],
                     SpendCategory.drugstores.id: [
                         .init(
                             multiplier: 3
@@ -141,6 +149,14 @@ extension Card {
                     multiplier: 1.5
                 )],
                 categoryPoints: [
+                    SpendCategory.travel.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.caveat(
+                                "Booked through Chase Ultimate Rewards"
+                            )]
+                        ),
+                    ],
                     SpendCategory.dining.id: [
                         .init(
                             multiplier: 3
