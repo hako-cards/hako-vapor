@@ -72,4 +72,9 @@ extension Issuer {
         id: "gemini",
         name: "Gemini"
     )
+
+    static let synchrony = Issuer(
+        id: "synchrony",
+        name: "Synchrony Bank"
+    )
 }

@@ -1387,6 +1387,20 @@ extension Card {
                     SpendCategory.wholesaleClubs.id: [.init(multiplier: 2)],
                 ],
                 network: .visa
+            ),
+            Card(
+                id: "verizon",
+                name: "Verizon Visa Card",
+                icon: .black,
+                issuer: .synchrony,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.groceries.id: [.init(multiplier: 4)],
+                    SpendCategory.gas.id: [.init(multiplier: 4)],
+                    SpendCategory.dining.id: [.init(multiplier: 3)],
+                    SpendCategory.verizon.id: [.init(multiplier: 2)],
+                ],
+                network: .visa
             )
         ].sorted {
             (
