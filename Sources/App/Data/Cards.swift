@@ -1401,6 +1401,15 @@ extension Card {
                     SpendCategory.verizon.id: [.init(multiplier: 2)],
                 ],
                 network: .visa
+            ),
+            Card(
+                id: "bofa-travel",
+                name: "Travel Rewards",
+                icon: .midBlue,
+                issuer: .bofa,
+                basePoints: [.init(multiplier: 1.5, attributes: [.info("Preferred Rewards members earn 25%-75% more")])],
+                canCombinePoints: false,
+                network: .visa
             )
         ].sorted {
             (
