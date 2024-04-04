@@ -77,4 +77,14 @@ extension Issuer {
         id: "synchrony",
         name: "Synchrony Bank"
     )
+
+    static let paypal = Issuer(
+        id: "paypal",
+        name: "PayPal"
+    )
+    
+    static let redstone = Issuer(
+        id: "redstone",
+        name: "Redstone Federal Credit Union"
+    )
 }

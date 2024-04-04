@@ -1408,7 +1408,35 @@ extension Card {
                 icon: .midBlue,
                 issuer: .bofa,
                 basePoints: [.init(multiplier: 1.5, attributes: [.info("Preferred Rewards members earn 25%-75% more")])],
-                canCombinePoints: false,
+                network: .visa
+            ),
+            Card(
+                id: "pp",
+                name: "PayPal Cashback",
+                icon: .darkBlue,
+                issuer: .paypal,
+                basePoints: [
+                    .init(multiplier: 3, attributes: [.caveat("When you checkout with PayPal")]),
+                    .init(multiplier: 2),
+                ],
+                network: .mastercard
+            ),
+            Card(
+                id: "red-visa-sig",
+                name: "Redstone Visa Signature",
+                icon: .black,
+                issuer: .redstone,
+                basePoints: [.init(multiplier: 1.5)],
+                categoryPoints: [
+                    SpendCategory.dining.id: [.init(multiplier: 5)],
+                    SpendCategory.gas.id: [.init(multiplier: 5)],
+                    SpendCategory.groceries.id: [.init(multiplier: 3)],
+                    SpendCategory.wholesaleClubs.id: [.init(multiplier: 3)],
+                    SpendCategory.discountStores.id: [.init(multiplier: 3)],
+                    SpendCategory.utilities.id: [.init(multiplier: 3)],
+                    SpendCategory.phoneBill.id: [.init(multiplier: 3)],
+                    SpendCategory.streaming.id: [.init(multiplier: 3)],
+                ],
                 network: .visa
             )
         ].sorted {

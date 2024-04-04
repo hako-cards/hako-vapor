@@ -18,6 +18,7 @@ extension SpendCategory {
         .phoneBill,
         .verizon,
         .internet,
+        .utilities,
         .officeSupply,
         .shipping,
         .homeImprovement,
@@ -28,6 +29,7 @@ extension SpendCategory {
         .amazon,
         .costco,
         .wholesaleClubs,
+        .discountStores,
         .apple,
         .rent,
         .travel,
@@ -265,6 +267,18 @@ extension SpendCategory {
     static let verizon = SpendCategory(
         id: "verizon",
         name: "Verizon",
+        tint: .red
+    )
+
+    static let utilities = SpendCategory(
+        id: "utilities",
+        name: "Utilities",
+        tint: .gray
+    )
+
+    static let discountStores = SpendCategory(
+        id: "discount",
+        name: "Discount Stores",
         tint: .red
     )
 }
