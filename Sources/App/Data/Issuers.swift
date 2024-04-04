@@ -87,4 +87,9 @@ extension Issuer {
         id: "redstone",
         name: "Redstone Federal Credit Union"
     )
+
+    static let elan = Issuer(
+        id: "elan",
+        name: "Elan"
+    )
 }
