@@ -1446,19 +1446,21 @@ extension Card {
                 issuer: .usBank,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.chosenCategories.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .caveat("On your first $2,000 each quarter"),
-                            .caveat("On two categories you must activate"),
-                        ]
-                    )],
-                    SpendCategory.chosenCategories.id: [.init(
-                        multiplier: 2,
-                        attributes: [
-                            .caveat("On one everyday category you must activate"),
-                        ]
-                    )],
+                    SpendCategory.chosenCategories.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [
+                                .caveat("On your first $2,000 each quarter"),
+                                .caveat("On two categories you must activate"),
+                            ]
+                        ),
+                        .init(
+                            multiplier: 2,
+                            attributes: [
+                                .caveat("On one everyday category you must activate"),
+                            ]
+                        )
+                    ],
                 ],
                 network: .visa
             ),
