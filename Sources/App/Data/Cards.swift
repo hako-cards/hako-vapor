@@ -1481,19 +1481,21 @@ extension Card {
                             .caveat("Booked in the rewards center"),
                         ]
                     )],
-                    SpendCategory.chosenCategories.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .caveat("On your first $2,000 each quarter"),
-                            .caveat("On two categories you choose"),
-                        ]
-                    )],
-                    SpendCategory.chosenCategories.id: [.init(
-                        multiplier: 2,
-                        attributes: [
-                            .caveat("On one everyday category you choose"),
-                        ]
-                    )],
+                    SpendCategory.chosenCategories.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [
+                                .caveat("On your first $2,000 each quarter"),
+                                .caveat("On two categories you choose"),
+                            ]
+                        ),
+                        .init(
+                            multiplier: 2,
+                            attributes: [
+                                .caveat("On one everyday category you choose"),
+                            ]
+                        )
+                    ],
                 ],
                 network: .visa
             )
