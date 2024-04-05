@@ -30,6 +30,7 @@ extension SpendCategory {
         .costco,
         .wholesaleClubs,
         .discountStores,
+        .walmart,
         .militaryBase,
         .apple,
         .rent,
@@ -287,5 +288,11 @@ extension SpendCategory {
         id: "military",
         name: "Military Base",
         tint: .green
+    )
+
+    static let walmart = SpendCategory(
+        id: "walmart",
+        name: "Walmart",
+        tint: .subduedBlue
     )
 }

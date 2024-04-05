@@ -1586,6 +1586,22 @@ extension Card {
                 basePoints: [.init(multiplier: 1.5)],
                 network: .visa
             ),
+            Card(
+                id: "cap-walmart",
+                name: "Walmart Rewards",
+                icon: .darkBlue,
+                issuer: .capitalOne,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.walmart.id: [
+                        .init(multiplier: 5, attributes: [.caveat("At Walmart.com, including pickup and delivery")]),
+                        .init(multiplier: 2, attributes: [.caveat("In Walmart stores")]),
+                    ],
+                    SpendCategory.travel.id: [.init(multiplier: 2)],
+                    SpendCategory.dining.id: [.init(multiplier: 2)],
+                ],
+                network: .mastercard
+            )
         ].sorted {
             (
                 $0.issuer.name,
