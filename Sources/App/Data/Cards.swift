@@ -554,6 +554,24 @@ extension Card {
                 network: .amex
             ),
             Card(
+                id: "skymiles-blue",
+                name: "Delta SkyMiles Blue",
+                icon: .lightBlue,
+                issuer: .amex,
+                basePoints: [.init(
+                    multiplier: 1
+                )],
+                categoryPoints: [
+                    SpendCategory.delta.id: [.init(
+                        multiplier: 2
+                    )],
+                    SpendCategory.dining.id: [.init(
+                        multiplier: 2
+                    )],
+                ],
+                network: .amex
+            ),
+            Card(
                 id: "skymiles-reserve",
                 name: "Delta SkyMiles Reserve",
                 icon: .purple,
