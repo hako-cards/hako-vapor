@@ -1510,7 +1510,64 @@ extension Card {
                     SpendCategory.amazon.id: [.init(multiplier: 5)]
                 ],
                 network: .visa
-            )
+            ),
+            Card(
+                id: "eagle-nav",
+                name: "Eagle Navigator",
+                icon: .gray,
+                issuer: .usaa,
+                basePoints: [.init(multiplier: 2)],
+                categoryPoints: [
+                    SpendCategory.travel.id: [.init(multiplier: 3)]
+                ],
+                network: .visa
+            ),
+            Card(
+                id: "usaa-rewards-amex",
+                name: "Rewards American Express",
+                icon: .darkBlue,
+                issuer: .usaa,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.dining.id: [.init(multiplier: 3)],
+                    SpendCategory.groceries.id: [.init(multiplier: 2)],
+                    SpendCategory.gas.id: [.init(multiplier: 2)],
+                ],
+                network: .amex
+            ),
+            Card(
+                id: "usaa-rewards-visa",
+                name: "Rewards Visa Signature",
+                icon: .darkBlue,
+                issuer: .usaa,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.dining.id: [.init(multiplier: 2)],
+                    SpendCategory.gas.id: [.init(multiplier: 2)],
+                ],
+                network: .visa
+            ),
+            Card(
+                id: "usaa-cashback-plus",
+                name: "Cashback Rewards Plus",
+                icon: .darkBlue,
+                issuer: .usaa,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.gas.id: [.init(multiplier: 5, attributes: [.caveat("On your first $3,000 yearly")])],
+                    SpendCategory.militaryBase.id: [.init(multiplier: 5, attributes: [.caveat("On your first $3,000 yearly")])],
+                    SpendCategory.groceries.id: [.init(multiplier: 2, attributes: [.caveat("On your first $3,000 yearly")])],
+                ],
+                network: .amex
+            ),
+            Card(
+                id: "usaa-preferred-cash",
+                name: "Preferred Cash Rewards",
+                icon: .darkBlue,
+                issuer: .usaa,
+                basePoints: [.init(multiplier: 1.5)],
+                network: .visa
+            ),
         ].sorted {
             (
                 $0.issuer.name,
