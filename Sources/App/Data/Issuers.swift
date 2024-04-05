@@ -92,4 +92,9 @@ extension Issuer {
         id: "elan",
         name: "Elan"
     )
+
+    static let amazon = Issuer(
+        id: "amazon",
+        name: "Amazon"
+    )
 }

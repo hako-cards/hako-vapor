@@ -1500,6 +1500,16 @@ extension Card {
                     ],
                 ],
                 network: .visa
+            ),
+            Card(
+                id: "amazon-prime-store",
+                name: "Prime Store Card",
+                icon: .darkBlue,
+                issuer: .amazon,
+                categoryPoints: [
+                    SpendCategory.amazon.id: [.init(multiplier: 5)]
+                ],
+                network: .visa
             )
         ].sorted {
             (
