@@ -1601,6 +1601,21 @@ extension Card {
                     SpendCategory.dining.id: [.init(multiplier: 2)],
                 ],
                 network: .mastercard
+            ),
+            Card(
+                id: "world-hyatt",
+                name: "World of Hyatt",
+                icon: .silver,
+                issuer: .chase,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.hotels.id: [.init(multiplier: 4, attributes: [.caveat("On purchases at all Hyatt hotels")])],
+                    SpendCategory.dining.id: [.init(multiplier: 2)],
+                    SpendCategory.flights.id: [.init(multiplier: 2, attributes: [.caveat("Purchased directly from the airline")])],
+                    SpendCategory.transit.id: [.init(multiplier: 2)],
+                    SpendCategory.gymMembership.id: [.init(multiplier: 2)],
+                ],
+                network: .visa
             )
         ].sorted {
             (
