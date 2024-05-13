@@ -422,7 +422,7 @@ extension Card {
                     ],
                     SpendCategory.flights.id: [
                         .init(
-                            multiplier: 4,
+                            multiplier: 3,
                             attributes: [
                                 .caveat(
                                     "Booked directly with airlines or on AmexTravel.com"
@@ -1616,7 +1616,50 @@ extension Card {
                     SpendCategory.gymMembership.id: [.init(multiplier: 2)],
                 ],
                 network: .visa
-            )
+            ),
+            Card(
+                id: "amex-green",
+                name: "Green Card",
+                icon: .green,
+                issuer: .amex,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.travel.id: [.init(multiplier: 3)],
+                    SpendCategory.transit.id: [.init(multiplier: 3)],
+                    SpendCategory.dining.id: [.init(multiplier: 3)],
+                ],
+                network: .amex
+            ),
+            Card(
+                id: "wf-auto-journ",
+                name: "Autograph Journey",
+                icon: .red,
+                issuer: .wellsFargo,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.hotels.id: [.init(multiplier: 5)],
+                    SpendCategory.flights.id: [.init(multiplier: 5)],
+                    SpendCategory.travel.id: [.init(multiplier: 3)],
+                    SpendCategory.dining.id: [.init(multiplier: 3)],
+                ],
+                network: .visa
+            ),
+            Card(
+                id: "wf-auto",
+                name: "Autograph",
+                icon: .red,
+                issuer: .wellsFargo,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.transit.id: [.init(multiplier: 3)],
+                    SpendCategory.gas.id: [.init(multiplier: 3)],
+                    SpendCategory.travel.id: [.init(multiplier: 3)],
+                    SpendCategory.dining.id: [.init(multiplier: 3)],
+                    SpendCategory.streaming.id: [.init(multiplier: 3)],
+                    SpendCategory.phoneBill.id: [.init(multiplier: 3)],
+                ],
+                network: .visa
+            ),
         ].sorted {
             (
                 $0.issuer.name,
