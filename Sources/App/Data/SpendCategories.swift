@@ -11,6 +11,7 @@ extension SpendCategory {
     static let all: [SpendCategory] = [
         .dining,
         .groceries,
+        .onlineGroceries,
         .gas,
         .evCharging,
         .drugstores,
@@ -60,6 +61,12 @@ extension SpendCategory {
     static let groceries = SpendCategory(
         id: "groceries",
         name: "Groceries",
+        tint: .green
+    )
+
+    static let onlineGroceries = SpendCategory(
+        id: "online-groceries",
+        name: "Online Groceries",
         tint: .green
     )
 

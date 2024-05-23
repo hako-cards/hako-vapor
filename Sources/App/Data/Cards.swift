@@ -188,11 +188,9 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.dining.id: [
-                        .init(
-                            multiplier: 3
-                        ),
-                    ],
+                    SpendCategory.dining.id: [.init(multiplier: 3)],
+                    SpendCategory.streaming.id: [.init(multiplier: 3, attributes: [.caveat("On select services")])],
+                    SpendCategory.onlineGroceries.id: [.init(multiplier: 3, attributes: [.caveat("Excluding Target, Walmart and wholesale clubs")])],
                     SpendCategory.travel.id: [
                         .init(
                             multiplier: 2
