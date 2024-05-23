@@ -1008,6 +1008,19 @@ extension Card {
                 network: .mastercard
             ),
             Card(
+                id: "barclay-jetblue",
+                name: "JetBlue Card",
+                icon: .midBlue,
+                issuer: .barclays,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.flights.id: [.init(multiplier: 3, attributes: [.caveat("On eligible JetBlue purchases")])],
+                    SpendCategory.dining.id: [.init(multiplier: 2)],
+                    SpendCategory.groceries.id: [.init(multiplier: 2)],
+                ],
+                network: .mastercard
+            ),
+            Card(
                 id: "alaska-airlines",
                 name: "Alaska Airlines",
                 icon: .darkBlue,
