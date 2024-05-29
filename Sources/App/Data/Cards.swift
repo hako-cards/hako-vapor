@@ -293,6 +293,20 @@ extension Card {
                 network: .visa
             ),
             Card(
+                id: "united-quest",
+                name: "United Quest",
+                icon: .purple,
+                issuer: .chase,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.united.id: [.init(multiplier: 3, attributes: [.caveat("After earning your $125 annual United purchase credit")])],
+                    SpendCategory.travel.id: [.init(multiplier: 2)],
+                    SpendCategory.dining.id: [.init(multiplier: 2, attributes: [.info("Including eligible delivery services")])],
+                    SpendCategory.streaming.id: [.init(multiplier: 2, attributes: [.caveat("On select services")])],
+                ],
+                network: .visa
+            ),
+            Card(
                 id: "blue-cash-everyday",
                 name: "Blue Cash Everyday",
                 icon: .lightBlue,
