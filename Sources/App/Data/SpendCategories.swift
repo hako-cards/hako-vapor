@@ -91,7 +91,7 @@ extension SpendCategory {
 
     static let gas = SpendCategory(
         id: "gas",
-        name: "Gasoline",
+        name: "Gas",
         tint: .red
     )
 

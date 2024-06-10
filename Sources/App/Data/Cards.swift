@@ -716,6 +716,16 @@ extension Card {
                 network: .discover
             ),
             Card(
+                id: "discover-it-miles",
+                name: "Discover it Miles",
+                icon: .midBlue,
+                issuer: .discover,
+                basePoints: [.init(
+                    multiplier: 1.5, attributes: [.info("2× Miles your first year with Discover Match")]
+                )],
+                network: .discover
+            ),
+            Card(
                 id: "savor-rewards",
                 name: "Savor Rewards",
                 icon: .bronze,
@@ -1286,6 +1296,20 @@ extension Card {
                     SpendCategory.groceries.id: [
                         .init(multiplier: 1.5),
                     ],
+                ],
+                network: .visa
+            ),
+            Card(
+                id: "td-cash",
+                name: "TD Cash",
+                icon: .green,
+                issuer: .td,
+                basePoints: [.init(multiplier: 1)],
+                categoryPoints: [
+                    SpendCategory.chosenCategories.id: [
+                        .init(multiplier: 3, attributes: [.info("Choose from Dining, Entertainment, Gas, Groceries, or Travel each quarter")]),
+                        .init(multiplier: 2, attributes: [.info("Choose from Dining, Entertainment, Gas, Groceries, or Travel each quarter")]),
+                    ]
                 ],
                 network: .visa
             ),
