@@ -78,6 +78,31 @@ extension Card {
                             kind: .Q22024(activateBy: (6, 14))
                         ),
                     ],
+                    SpendCategory.gas.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.info(
+                                "On up to $1,500"
+                            )],
+                            kind: .Q32024(activateBy: (9, 14))
+                        ),
+                    ],
+                    SpendCategory.evCharging.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.info(
+                                "On up to $1,500"
+                            )],
+                            kind: .Q32024(activateBy: (9, 14))
+                        ),
+                    ],
+                    SpendCategory.entertainment.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.caveat("Select live entertainment and movie theaters"), .info("On up to $1,500")],
+                            kind: .Q32024(activateBy: (9, 14))
+                        ),
+                    ],
                 ],
                 canCombinePoints: true,
                 network: .visa
@@ -91,11 +116,6 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-//                    SpendCategory.dining.id: [
-//                        .init(
-//                            multiplier: 3
-//                        ),
-//                    ],
                     SpendCategory.travel.id: [
                         .init(
                             multiplier: 5,
@@ -134,6 +154,31 @@ extension Card {
                                 "On up to $1,500"
                             )],
                             kind: .Q22024(activateBy: (6, 14))
+                        ),
+                    ],
+                    SpendCategory.gas.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.info(
+                                "On up to $1,500"
+                            )],
+                            kind: .Q32024(activateBy: (9, 14))
+                        ),
+                    ],
+                    SpendCategory.evCharging.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.info(
+                                "On up to $1,500"
+                            )],
+                            kind: .Q32024(activateBy: (9, 14))
+                        ),
+                    ],
+                    SpendCategory.entertainment.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.caveat("Select live entertainment and movie theaters"), .info("On up to $1,500")],
+                            kind: .Q32024(activateBy: (9, 14))
                         ),
                     ],
                 ],
@@ -699,6 +744,22 @@ extension Card {
                             .caveat("Must be activated"),
                         ],
                         kind: .Q22024()
+                    )],
+                    SpendCategory.groceries.id: [.init(
+                        multiplier: 5,
+                        attributes: [
+                            .info("On up to $1,500"),
+                            .caveat("Must be activated"),
+                        ],
+                        kind: .Q32024()
+                    )],
+                    SpendCategory.walmart.id: [.init(
+                        multiplier: 5,
+                        attributes: [
+                            .info("On up to $1,500"),
+                            .caveat("Must be activated"),
+                        ],
+                        kind: .Q32024()
                     )],
                 ],
                 network: .discover

@@ -18,6 +18,10 @@ extension PointKind {
         try rotating(year: 2024, startingMonth: 4, endingMonth: 6, activateBy: activateBy)
     }
 
+    static func Q32024(activateBy: (month: Int, day: Int)? = nil) throws -> Self {
+        try rotating(year: 2024, startingMonth: 7, endingMonth: 9, activateBy: activateBy)
+    }
+
     static func rotating(year: Int, startingMonth: Int, endingMonth: Int, activateBy: (month: Int, day: Int)? = nil) throws -> Self {
         let activateBy = try activateBy.flatMap { month, day in
             try Fixed(region: .posix, year: year, month: month, day: day).firstInstant.date
