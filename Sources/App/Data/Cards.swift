@@ -129,6 +129,11 @@ extension Card {
                             multiplier: 3
                         ),
                     ],
+                    SpendCategory.dining.id: [
+                        .init(
+                            multiplier: 3
+                        ),
+                    ],
                     SpendCategory.amazon.id: [
                         .init(
                             multiplier: 5,
