@@ -51,33 +51,6 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.amazon.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.info(
-                                "On up to $1,500"
-                            )],
-                            kind: .Q22024(activateBy: (6, 14))
-                        ),
-                    ],
-                    SpendCategory.hotels.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.info(
-                                "On up to $1,500"
-                            )],
-                            kind: .Q22024(activateBy: (6, 14))
-                        ),
-                    ],
-                    SpendCategory.dining.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.info(
-                                "On up to $1,500"
-                            )],
-                            kind: .Q22024(activateBy: (6, 14))
-                        ),
-                    ],
                     SpendCategory.gas.id: [
                         .init(
                             multiplier: 5,
@@ -132,33 +105,6 @@ extension Card {
                     SpendCategory.dining.id: [
                         .init(
                             multiplier: 3
-                        ),
-                    ],
-                    SpendCategory.amazon.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.info(
-                                "On up to $1,500"
-                            )],
-                            kind: .Q22024(activateBy: (6, 14))
-                        ),
-                    ],
-                    SpendCategory.hotels.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.info(
-                                "On up to $1,500"
-                            )],
-                            kind: .Q22024(activateBy: (6, 14))
-                        ),
-                    ],
-                    SpendCategory.dining.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.info(
-                                "On up to $1,500"
-                            )],
-                            kind: .Q22024(activateBy: (6, 14))
                         ),
                     ],
                     SpendCategory.gas.id: [
@@ -717,39 +663,6 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.gas.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .info("On up to $1,500"),
-                            .caveat("Must be activated"),
-                        ],
-                        kind: .Q22024()
-                    )],
-                    SpendCategory.evCharging.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .info("On up to $1,500"),
-                            .caveat("Must be activated"),
-                        ],
-                        kind: .Q22024()
-                    )],
-                    SpendCategory.homeImprovement.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .info("On up to $1,500"),
-                            .caveat("Must be activated"),
-                        ],
-                        kind: .Q22024()
-                    )],
-                    SpendCategory.transit.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .caveat("Public transit"),
-                            .info("On up to $1,500"),
-                            .caveat("Must be activated"),
-                        ],
-                        kind: .Q22024()
-                    )],
                     SpendCategory.groceries.id: [.init(
                         multiplier: 5,
                         attributes: [
