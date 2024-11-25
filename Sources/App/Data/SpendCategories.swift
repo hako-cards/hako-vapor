@@ -10,6 +10,7 @@ import HakoShared
 extension SpendCategory {
     static let all: [SpendCategory] = [
         .dining,
+        .mcDonalds,
         .groceries,
         .onlineGroceries,
         .gas,
@@ -23,11 +24,15 @@ extension SpendCategory {
         .officeSupply,
         .shipping,
         .homeImprovement,
+        .petShopsAndServices,
         .online,
+        .paypal,
+        .charities,
         .advertising,
         .entertainment,
         .streaming,
         .amazon,
+        .target,
         .costco,
         .wholesaleClubs,
         .discountStores,
@@ -52,10 +57,23 @@ extension SpendCategory {
         .yourTopCategories,
     ]
 
+    static let charities = SpendCategory(
+        id: "charity",
+        name: "Select Charities",
+        tint: .red
+    )
+
     static let dining = SpendCategory(
         id: "dining",
         name: "Dining",
         tint: .orange
+    )
+
+    static let mcDonalds = SpendCategory(
+        id: "mcd",
+        name: "McDonald’s",
+        tint: .yellow,
+        parent: SpendCategory.dining.id
     )
 
     static let groceries = SpendCategory(
@@ -107,6 +125,12 @@ extension SpendCategory {
         tint: .orange
     )
 
+    static let petShopsAndServices = SpendCategory(
+        id: "pets",
+        name: "Pet Shops & Vet Services",
+        tint: .brown
+    )
+
     static let delta = SpendCategory(
         id: "delta",
         name: "Delta Airlines",
@@ -140,6 +164,12 @@ extension SpendCategory {
         tint: .yellow
     )
 
+    static let paypal = SpendCategory(
+        id: "pypl",
+        name: "PayPal",
+        tint: .blue
+    )
+
     static let streaming = SpendCategory(
         id: "streaming",
         name: "Streaming",
@@ -164,6 +194,12 @@ extension SpendCategory {
         name: "Amazon",
         tint: .orange,
         parent: SpendCategory.online.id
+    )
+
+    static let target = SpendCategory(
+        id: "target",
+        name: "Target",
+        tint: .red
     )
 
     static let entertainment = SpendCategory(

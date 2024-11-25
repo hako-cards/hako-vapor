@@ -51,29 +51,36 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.gas.id: [
+                    SpendCategory.mcDonalds.id: [
                         .init(
                             multiplier: 5,
                             attributes: [.info(
                                 "On up to $1,500"
                             )],
-                            kind: .Q32024(activateBy: (9, 14))
+                            kind: .Q42024(activateBy: (12, 14))
                         ),
                     ],
-                    SpendCategory.evCharging.id: [
+                    SpendCategory.paypal.id: [
                         .init(
                             multiplier: 5,
                             attributes: [.info(
                                 "On up to $1,500"
                             )],
-                            kind: .Q32024(activateBy: (9, 14))
+                            kind: .Q42024(activateBy: (12, 14))
                         ),
                     ],
-                    SpendCategory.entertainment.id: [
+                    SpendCategory.petShopsAndServices.id: [
                         .init(
                             multiplier: 5,
-                            attributes: [.caveat("Select live entertainment and movie theaters"), .info("On up to $1,500")],
-                            kind: .Q32024(activateBy: (9, 14))
+                            attributes: [.info("On up to $1,500")],
+                            kind: .Q42024(activateBy: (12, 14))
+                        ),
+                    ],
+                    SpendCategory.charities.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.info("On up to $1,500")],
+                            kind: .Q42024(activateBy: (12, 14))
                         ),
                     ],
                 ],
@@ -107,29 +114,36 @@ extension Card {
                             multiplier: 3
                         ),
                     ],
-                    SpendCategory.gas.id: [
+                    SpendCategory.mcDonalds.id: [
                         .init(
                             multiplier: 5,
                             attributes: [.info(
                                 "On up to $1,500"
                             )],
-                            kind: .Q32024(activateBy: (9, 14))
+                            kind: .Q42024(activateBy: (12, 14))
                         ),
                     ],
-                    SpendCategory.evCharging.id: [
+                    SpendCategory.paypal.id: [
                         .init(
                             multiplier: 5,
                             attributes: [.info(
                                 "On up to $1,500"
                             )],
-                            kind: .Q32024(activateBy: (9, 14))
+                            kind: .Q42024(activateBy: (12, 14))
                         ),
                     ],
-                    SpendCategory.entertainment.id: [
+                    SpendCategory.petShopsAndServices.id: [
                         .init(
                             multiplier: 5,
-                            attributes: [.caveat("Select live entertainment and movie theaters"), .info("On up to $1,500")],
-                            kind: .Q32024(activateBy: (9, 14))
+                            attributes: [.info("On up to $1,500")],
+                            kind: .Q42024(activateBy: (12, 14))
+                        ),
+                    ],
+                    SpendCategory.charities.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [.info("On up to $1,500")],
+                            kind: .Q42024(activateBy: (12, 14))
                         ),
                     ],
                 ],
@@ -663,21 +677,21 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.groceries.id: [.init(
+                    SpendCategory.amazon.id: [.init(
                         multiplier: 5,
                         attributes: [
                             .info("On up to $1,500"),
                             .caveat("Must be activated"),
                         ],
-                        kind: .Q32024()
+                        kind: .Q42024()
                     )],
-                    SpendCategory.walmart.id: [.init(
+                    SpendCategory.target.id: [.init(
                         multiplier: 5,
                         attributes: [
                             .info("On up to $1,500"),
                             .caveat("Must be activated"),
                         ],
-                        kind: .Q32024()
+                        kind: .Q42024()
                     )],
                 ],
                 network: .discover
