@@ -9,6 +9,8 @@ import HakoShared
 
 extension SpendCategory {
     static let all: [SpendCategory] = [
+        .hairNailSpa,
+        .norwegianCruise,
         .dining,
         .mcDonalds,
         .groceries,
@@ -56,6 +58,18 @@ extension SpendCategory {
         .chosenCategories,
         .yourTopCategories,
     ]
+
+    static let hairNailSpa = SpendCategory(
+        id: "h-n-spa",
+        name: "Hair, Nails, & Spa Services",
+        tint: .teal
+    )
+
+    static let norwegianCruise = SpendCategory(
+        id: "nor-cruise",
+        name: "Norwegian Cruise Line",
+        tint: .subduedBlue
+    )
 
     static let charities = SpendCategory(
         id: "charity",

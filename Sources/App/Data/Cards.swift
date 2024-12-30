@@ -83,6 +83,43 @@ extension Card {
                             kind: .Q42024(activateBy: (12, 14))
                         ),
                     ],
+                    SpendCategory.groceries.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [
+                                .info("On up to $1,500"),
+                                .caveat("Excluding Walmart & Target"),
+                            ],
+                            kind: .Q12025Chase()
+                        ),
+                    ],
+                    SpendCategory.gymMembership.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [
+                                .info("On up to $1,500"),
+                            ],
+                            kind: .Q12025Chase()
+                        ),
+                    ],
+                    SpendCategory.hairNailSpa.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [
+                                .info("On up to $1,500"),
+                            ],
+                            kind: .Q12025Chase()
+                        ),
+                    ],
+                    SpendCategory.norwegianCruise.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [
+                                .info("On up to $1,500"),
+                            ],
+                            kind: .Q12025Chase()
+                        ),
+                    ],
                 ],
                 canCombinePoints: true,
                 network: .visa
@@ -144,6 +181,43 @@ extension Card {
                             multiplier: 5,
                             attributes: [.info("On up to $1,500")],
                             kind: .Q42024(activateBy: (12, 14))
+                        ),
+                    ],
+                    SpendCategory.groceries.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [
+                                .info("On up to $1,500"),
+                                .caveat("Excluding Walmart & Target"),
+                            ],
+                            kind: .Q12025Chase()
+                        ),
+                    ],
+                    SpendCategory.gymMembership.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [
+                                .info("On up to $1,500"),
+                            ],
+                            kind: .Q12025Chase()
+                        ),
+                    ],
+                    SpendCategory.hairNailSpa.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [
+                                .info("On up to $1,500"),
+                            ],
+                            kind: .Q12025Chase()
+                        ),
+                    ],
+                    SpendCategory.norwegianCruise.id: [
+                        .init(
+                            multiplier: 5,
+                            attributes: [
+                                .info("On up to $1,500"),
+                            ],
+                            kind: .Q12025Chase()
                         ),
                     ],
                 ],
@@ -692,6 +766,31 @@ extension Card {
                             .caveat("Must be activated"),
                         ],
                         kind: .Q42024()
+                    )],
+                    SpendCategory.homeImprovement.id: [.init(
+                        multiplier: 5,
+                        attributes: [
+                            .info("On up to $1,500"),
+                            .caveat("Must be activated"),
+                        ],
+                        kind: .Q12025()
+                    )],
+                    SpendCategory.dining.id: [.init(
+                        multiplier: 5,
+                        attributes: [
+                            .info("On up to $1,500"),
+                            .caveat("Must be activated"),
+                        ],
+                        kind: .Q12025()
+                    )],
+                    SpendCategory.streaming.id: [.init(
+                        multiplier: 5,
+                        attributes: [
+                            .info("On up to $1,500"),
+                            .caveat("On select services"),
+                            .caveat("Must be activated"),
+                        ],
+                        kind: .Q12025()
                     )],
                 ],
                 network: .discover
