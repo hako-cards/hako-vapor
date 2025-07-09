@@ -22,7 +22,21 @@ struct Controller: RouteCollection {
     }
 
     func categories(req: Request) -> SpendCategoriesResponse {
-        SpendCategoriesResponse(categories: SpendCategory.all)
+        SpendCategoriesResponse(
+            categories: [
+                SpendCategory(
+                    id: "goodbye",
+                    name: "Farewell 👋",
+                    tint: .blue
+                ),
+                SpendCategory(
+                    id: "subtitle",
+                    name: "Hako has been discontinued",
+                    tint: .blue,
+                    parent: "goodbye"
+                ),
+            ]
+        )
     }
 
     func version(req: Request) -> Version {

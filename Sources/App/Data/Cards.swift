@@ -14,7 +14,7 @@ enum CardError: Error {
 
 extension Card {
     static func buildCards() throws -> [Card] {
-        let cards = try [
+        let cards = [
             Card(
                 id: "amex-everyday-preferred",
                 name: "EveryDay Preferred",
@@ -22,23 +22,8 @@ extension Card {
                 issuer: .amex,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.groceries.id: [
-                        .init(
-                            multiplier: 3,
-                            attributes: [
-                                .info("At U.S. supermarkets"),
-                                .info("On up to $6,000 per year"),
-                            ]
-                        ),
-                    ],
-                    SpendCategory.gas.id: [
-                        .init(
-                            multiplier: 2,
-                            attributes: [
-                                .info("At U.S. gas stations"),
-                            ]
-                        ),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -51,75 +36,8 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.mcDonalds.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.info(
-                                "On up to $1,500"
-                            )],
-                            kind: .Q42024(activateBy: (12, 14))
-                        ),
-                    ],
-                    SpendCategory.paypal.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.info(
-                                "On up to $1,500"
-                            )],
-                            kind: .Q42024(activateBy: (12, 14))
-                        ),
-                    ],
-                    SpendCategory.petShopsAndServices.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.info("On up to $1,500")],
-                            kind: .Q42024(activateBy: (12, 14))
-                        ),
-                    ],
-                    SpendCategory.charities.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.info("On up to $1,500")],
-                            kind: .Q42024(activateBy: (12, 14))
-                        ),
-                    ],
-                    SpendCategory.groceries.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [
-                                .info("On up to $1,500"),
-                                .caveat("Excluding Walmart & Target"),
-                            ],
-                            kind: .Q12025Chase()
-                        ),
-                    ],
-                    SpendCategory.gymMembership.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [
-                                .info("On up to $1,500"),
-                            ],
-                            kind: .Q12025Chase()
-                        ),
-                    ],
-                    SpendCategory.hairNailSpa.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [
-                                .info("On up to $1,500"),
-                            ],
-                            kind: .Q12025Chase()
-                        ),
-                    ],
-                    SpendCategory.norwegianCruise.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [
-                                .info("On up to $1,500"),
-                            ],
-                            kind: .Q12025Chase()
-                        ),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 canCombinePoints: true,
                 network: .visa
@@ -133,93 +51,8 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.travel.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.caveat(
-                                "Booked through Chase Ultimate Rewards"
-                            )]
-                        ),
-                    ],
-                    SpendCategory.drugstores.id: [
-                        .init(
-                            multiplier: 3
-                        ),
-                    ],
-                    SpendCategory.dining.id: [
-                        .init(
-                            multiplier: 3
-                        ),
-                    ],
-                    SpendCategory.mcDonalds.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.info(
-                                "On up to $1,500"
-                            )],
-                            kind: .Q42024(activateBy: (12, 14))
-                        ),
-                    ],
-                    SpendCategory.paypal.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.info(
-                                "On up to $1,500"
-                            )],
-                            kind: .Q42024(activateBy: (12, 14))
-                        ),
-                    ],
-                    SpendCategory.petShopsAndServices.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.info("On up to $1,500")],
-                            kind: .Q42024(activateBy: (12, 14))
-                        ),
-                    ],
-                    SpendCategory.charities.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.info("On up to $1,500")],
-                            kind: .Q42024(activateBy: (12, 14))
-                        ),
-                    ],
-                    SpendCategory.groceries.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [
-                                .info("On up to $1,500"),
-                                .caveat("Excluding Walmart & Target"),
-                            ],
-                            kind: .Q12025Chase()
-                        ),
-                    ],
-                    SpendCategory.gymMembership.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [
-                                .info("On up to $1,500"),
-                            ],
-                            kind: .Q12025Chase()
-                        ),
-                    ],
-                    SpendCategory.hairNailSpa.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [
-                                .info("On up to $1,500"),
-                            ],
-                            kind: .Q12025Chase()
-                        ),
-                    ],
-                    SpendCategory.norwegianCruise.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [
-                                .info("On up to $1,500"),
-                            ],
-                            kind: .Q12025Chase()
-                        ),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 canCombinePoints: true,
                 network: .mastercard
@@ -233,24 +66,8 @@ extension Card {
                     multiplier: 1.5
                 )],
                 categoryPoints: [
-                    SpendCategory.travel.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [.caveat(
-                                "Booked through Chase Ultimate Rewards"
-                            )]
-                        ),
-                    ],
-                    SpendCategory.dining.id: [
-                        .init(
-                            multiplier: 3
-                        ),
-                    ],
-                    SpendCategory.drugstores.id: [
-                        .init(
-                            multiplier: 3
-                        ),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 canCombinePoints: true,
                 network: .visa
@@ -272,20 +89,8 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.dining.id: [.init(multiplier: 3)],
-                    SpendCategory.streaming.id: [.init(multiplier: 3, attributes: [.caveat("On select services")])],
-                    SpendCategory.onlineGroceries.id: [.init(multiplier: 3, attributes: [.caveat("Excluding Target, Walmart and wholesale clubs")])],
-                    SpendCategory.travel.id: [
-                        .init(
-                            multiplier: 2
-                        ),
-                        .init(
-                            multiplier: 5,
-                            attributes: [.caveat(
-                                "Booked through Chase Ultimate Rewards"
-                            )]
-                        ),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 redemptionReward: .init(
                     amount: .multiplier(1.25),
@@ -305,38 +110,8 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.dining.id: [
-                        .init(
-                            multiplier: 3
-                        ),
-                    ],
-                    SpendCategory.travel.id: [
-                        .init(
-                            multiplier: 3
-                        ),
-                        .init(
-                            multiplier: 5,
-                            attributes: [.caveat(
-                                "Booked through Chase Ultimate Rewards"
-                            )]
-                        ),
-                    ],
-                    SpendCategory.flights.id: [
-                        .init(
-                            multiplier: 10,
-                            attributes: [.caveat(
-                                "Booked through Chase Ultimate Rewards"
-                            )]
-                        ),
-                    ],
-                    SpendCategory.hotels.id: [
-                        .init(
-                            multiplier: 10,
-                            attributes: [.caveat(
-                                "Booked through Chase Ultimate Rewards"
-                            )]
-                        ),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 redemptionReward: .init(
                     amount: .multiplier(1.5),
@@ -358,21 +133,8 @@ extension Card {
                     ),
                 ],
                 categoryPoints: [
-                    SpendCategory.united.id: [
-                        .init(
-                            multiplier: 4
-                        ),
-                    ],
-                    SpendCategory.travel.id: [
-                        .init(
-                            multiplier: 2
-                        ),
-                    ],
-                    SpendCategory.dining.id: [
-                        .init(
-                            multiplier: 2
-                        ),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -383,10 +145,8 @@ extension Card {
                 issuer: .chase,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.united.id: [.init(multiplier: 3, attributes: [.caveat("After earning your $125 annual United purchase credit")])],
-                    SpendCategory.travel.id: [.init(multiplier: 2)],
-                    SpendCategory.dining.id: [.init(multiplier: 2, attributes: [.info("Including eligible delivery services")])],
-                    SpendCategory.streaming.id: [.init(multiplier: 2, attributes: [.caveat("On select services")])],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -399,27 +159,8 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.groceries.id: [
-                        .init(
-                            multiplier: 3,
-                            attributes: [
-                                .info("At U.S. supermarkets"),
-                                .info("On up to $6,000 per year"),
-                            ]
-                        ),
-                    ],
-                    SpendCategory.gas.id: [
-                        .init(
-                            multiplier: 3,
-                            attributes: [.info("On up to $6,000 per year")]
-                        ),
-                    ],
-                    SpendCategory.online.id: [
-                        .init(
-                            multiplier: 3,
-                            attributes: [.info("On up to $6,000 per year")]
-                        ),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -432,36 +173,8 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.groceries.id: [
-                        .init(
-                            multiplier: 6,
-                            attributes: [
-                                .info("At U.S. supermarkets"),
-                                .info("On up to $6,000 per year"),
-                            ]
-                        ),
-                    ],
-                    SpendCategory.streaming.id: [
-                        .init(
-                            multiplier: 6,
-                            attributes: [.caveat(
-                                "Select streaming subscriptions"
-                            )]
-                        ),
-                    ],
-                    SpendCategory.gas.id: [
-                        .init(
-                            multiplier: 3
-                        ),
-                    ],
-                    SpendCategory.transit.id: [
-                        .init(
-                            multiplier: 3,
-                            attributes: [.info(
-                                "Including taxis, rideshare, parking, tolls, trains, buses, and more"
-                            )]
-                        ),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -474,26 +187,8 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [
-                                .caveat(
-                                    "Booked on AmexTravel.com"
-                                ),
-                            ]
-                        ),
-                    ],
-                    SpendCategory.flights.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [
-                                .caveat(
-                                    "Booked directly with airlines or on AmexTravel.com"
-                                ),
-                            ]
-                        ),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -506,26 +201,8 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.dining.id: [
-                        .init(
-                            multiplier: 4
-                        ),
-                    ],
-                    SpendCategory.groceries.id: [
-                        .init(
-                            multiplier: 4
-                        ),
-                    ],
-                    SpendCategory.flights.id: [
-                        .init(
-                            multiplier: 3,
-                            attributes: [
-                                .caveat(
-                                    "Booked directly with airlines or on AmexTravel.com"
-                                ),
-                            ]
-                        ),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -544,7 +221,8 @@ extension Card {
                     ),
                 ],
                 categoryPoints: [
-                    SpendCategory.apple.id: [.init(multiplier: 3)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -569,29 +247,8 @@ extension Card {
                 issuer: .citi,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.americanAirlines.id: [
-                        .init(multiplier: 4),
-                    ],
-                    SpendCategory.hotels.id: [
-                        .init(
-                            multiplier: 10,
-                            attributes: [
-                                .caveat(
-                                    "Booked through aa.com/hotels"
-                                ),
-                            ]
-                        ),
-                    ],
-                    SpendCategory.carRentals.id: [
-                        .init(
-                            multiplier: 10,
-                            attributes: [
-                                .caveat(
-                                    "Booked through aa.com/cars"
-                                ),
-                            ]
-                        ),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -604,27 +261,8 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.costco.id: [
-                        .init(
-                            multiplier: 2
-                        ),
-                    ],
-                    SpendCategory.dining.id: [
-                        .init(
-                            multiplier: 3
-                        ),
-                    ],
-                    SpendCategory.travel.id: [
-                        .init(
-                            multiplier: 3
-                        ),
-                    ],
-                    SpendCategory.gas.id: [
-                        .init(multiplier: 4),
-                    ],
-                    SpendCategory.evCharging.id: [
-                        .init(multiplier: 4),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -637,15 +275,8 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.delta.id: [.init(
-                        multiplier: 2
-                    )],
-                    SpendCategory.dining.id: [.init(
-                        multiplier: 2
-                    )],
-                    SpendCategory.groceries.id: [.init(
-                        multiplier: 2
-                    )],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -658,12 +289,8 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.delta.id: [.init(
-                        multiplier: 2
-                    )],
-                    SpendCategory.dining.id: [.init(
-                        multiplier: 2
-                    )],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -674,7 +301,8 @@ extension Card {
                 issuer: .amex,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.delta.id: [.init(multiplier: 3)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -687,26 +315,8 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.amazon.id: [.init(
-                        multiplier: 5,
-                        attributes: [.info(
-                            "Including amazon.com, Amazon Fresh, and Whole Foods Market"
-                        )]
-                    )],
-                    SpendCategory.travel.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .caveat(
-                                "Booked through Chase Ultimate Rewards"
-                            ),
-                        ]
-                    )],
-                    SpendCategory.dining.id: [.init(
-                        multiplier: 2
-                    )],
-                    SpendCategory.transit.id: [.init(
-                        multiplier: 2
-                    )],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -719,26 +329,8 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.amazon.id: [.init(
-                        multiplier: 3,
-                        attributes: [.info(
-                            "Including amazon.com, Amazon Fresh, and Whole Foods Market"
-                        )]
-                    )],
-                    SpendCategory.travel.id: [.init(
-                        multiplier: 3,
-                        attributes: [
-                            .caveat(
-                                "Booked through Chase Ultimate Rewards"
-                            ),
-                        ]
-                    )],
-                    SpendCategory.dining.id: [.init(
-                        multiplier: 2
-                    )],
-                    SpendCategory.transit.id: [.init(
-                        multiplier: 2
-                    )],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -751,47 +343,8 @@ extension Card {
                     multiplier: 1
                 )],
                 categoryPoints: [
-                    SpendCategory.amazon.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .info("On up to $1,500"),
-                            .caveat("Must be activated"),
-                        ],
-                        kind: .Q42024()
-                    )],
-                    SpendCategory.target.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .info("On up to $1,500"),
-                            .caveat("Must be activated"),
-                        ],
-                        kind: .Q42024()
-                    )],
-                    SpendCategory.homeImprovement.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .info("On up to $1,500"),
-                            .caveat("Must be activated"),
-                        ],
-                        kind: .Q12025()
-                    )],
-                    SpendCategory.dining.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .info("On up to $1,500"),
-                            .caveat("Must be activated"),
-                        ],
-                        kind: .Q12025()
-                    )],
-                    SpendCategory.streaming.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .info("On up to $1,500"),
-                            .caveat("On select services"),
-                            .caveat("Must be activated"),
-                        ],
-                        kind: .Q12025()
-                    )],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .discover
             ),
@@ -802,8 +355,8 @@ extension Card {
                 issuer: .discover,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.dining.id: [.init(multiplier: 2, attributes: [.info("On up to $1,000")])],
-                    SpendCategory.gas.id: [.init(multiplier: 2, attributes: [.info("On up to $1,000")])],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .discover
             ),
@@ -824,15 +377,8 @@ extension Card {
                 issuer: .capitalOne,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
-                    SpendCategory.carRentals.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
-                    SpendCategory.dining.id: [.init(multiplier: 4)],
-                    SpendCategory.entertainment.id: [
-                        .init(multiplier: 8, attributes: [.caveat("On Capital One Entertainment purchases")]),
-                        .init(multiplier: 4),
-                    ],
-                    SpendCategory.streaming.id: [.init(multiplier: 4, attributes: [.caveat("On popular services")])],
-                    SpendCategory.groceries.id: [.init(multiplier: 3)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -843,15 +389,8 @@ extension Card {
                 issuer: .capitalOne,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
-                    SpendCategory.carRentals.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
-                    SpendCategory.dining.id: [.init(multiplier: 3)],
-                    SpendCategory.entertainment.id: [
-                        .init(multiplier: 8, attributes: [.caveat("On Capital One Entertainment purchases")]),
-                        .init(multiplier: 3),
-                    ],
-                    SpendCategory.streaming.id: [.init(multiplier: 3, attributes: [.caveat("On popular services")])],
-                    SpendCategory.groceries.id: [.init(multiplier: 3)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -862,8 +401,8 @@ extension Card {
                 issuer: .capitalOne,
                 basePoints: [.init(multiplier: 2)],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
-                    SpendCategory.carRentals.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -874,8 +413,8 @@ extension Card {
                 issuer: .capitalOne,
                 basePoints: [.init(multiplier: 1.25)],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
-                    SpendCategory.carRentals.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -886,9 +425,8 @@ extension Card {
                 issuer: .capitalOne,
                 basePoints: [.init(multiplier: 2)],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [.init(multiplier: 10, attributes: [.caveat("Booked through Capital One Travel")])],
-                    SpendCategory.carRentals.id: [.init(multiplier: 10, attributes: [.caveat("Booked through Capital One Travel")])],
-                    SpendCategory.flights.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -899,8 +437,8 @@ extension Card {
                 issuer: .capitalOne,
                 basePoints: [.init(multiplier: 1.5)],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
-                    SpendCategory.carRentals.id: [.init(multiplier: 5, attributes: [.caveat("Booked through Capital One Travel")])],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -911,12 +449,8 @@ extension Card {
                 issuer: .usBank,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.dining.id: [.init(multiplier: 2)],
-                    SpendCategory.streaming.id: [.init(multiplier: 2)],
-                    SpendCategory.groceries.id: [.init(multiplier: 2)],
-                    SpendCategory.travel.id: [.init(multiplier: 4)],
-                    SpendCategory.hotels.id: [.init(multiplier: 5, attributes: [.caveat("Booked through the Altitude Rewards Center")])],
-                    SpendCategory.carRentals.id: [.init(multiplier: 5, attributes: [.caveat("Booked through the Altitude Rewards Center")])],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -927,24 +461,8 @@ extension Card {
                 issuer: .chase,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [
-                        .init(
-                            multiplier: 15,
-                            attributes: [
-                                .caveat("With an IHG Rewards membership"),
-                                .caveat("At InterContinental Hotels & Resorts, Hualuxe Hotels, Crowne Plaza Hotels & Resorts, Hotel Indigo and the Holiday Inn "),
-                            ]
-                        ),
-                        .init(
-                            multiplier: 5,
-                            attributes: [
-                                .caveat("At IHG hotels and resorts"),
-                            ]
-                        ),
-                    ],
-                    SpendCategory.gas.id: [.init(multiplier: 2)],
-                    SpendCategory.groceries.id: [.init(multiplier: 2)],
-                    SpendCategory.dining.id: [.init(multiplier: 2)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -955,17 +473,8 @@ extension Card {
                 issuer: .chase,
                 basePoints: [.init(multiplier: 3)],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [.init(
-                        multiplier: 26,
-                        attributes: [
-                            .caveat("At IHG hotels and resorts"),
-                            .info("Up to 10× for being an IHG One Rewards member"),
-                            .info("Up to 6× with Platinum Elite Status"),
-                        ]
-                    )],
-                    SpendCategory.travel.id: [.init(multiplier: 5)],
-                    SpendCategory.dining.id: [.init(multiplier: 5)],
-                    SpendCategory.gas.id: [.init(multiplier: 5)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -976,31 +485,8 @@ extension Card {
                 issuer: .bilt,
                 basePoints: [.init(multiplier: 1, attributes: [.bilt5x])],
                 categoryPoints: [
-                    SpendCategory.lyft.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .caveat("When you link Bilt and Lyft"),
-                            .bilt5x,
-                        ]
-                    )],
-                    SpendCategory.dining.id: [.init(
-                        multiplier: 3,
-                        attributes: [.bilt5x]
-                    )],
-                    SpendCategory.travel.id: [.init(
-                        multiplier: 2,
-                        attributes: [
-                            .caveat("Booked directly through a hotel, airline, or car rental agency"),
-                            .bilt5x,
-                        ]
-                    )],
-                    SpendCategory.rent.id: [.init(
-                        multiplier: 1,
-                        attributes: [
-                            .caveat("Up to 100,000 points annually"),
-                            .bilt5x,
-                        ]
-                    )],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -1018,21 +504,8 @@ extension Card {
                 issuer: .amex,
                 basePoints: [.init(multiplier: 2)],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [
-                        .init(
-                            multiplier: 6,
-                            attributes: [.caveat("On eligible purchases at hotels participating in the Marriott Bonvoy program")]
-                        ),
-                    ],
-                    SpendCategory.dining.id: [
-                        .init(multiplier: 4),
-                    ],
-                    SpendCategory.gas.id: [
-                        .init(multiplier: 4),
-                    ],
-                    SpendCategory.phoneBill.id: [
-                        .init(multiplier: 4, attributes: [.caveat("Purchased directly from U.S. service providers ")]),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -1043,29 +516,8 @@ extension Card {
                 issuer: .amex,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.yourTopCategories.id: [
-                        .init(multiplier: 4, attributes: [.info("On your top 2 eligible categories")]),
-                    ],
-                    SpendCategory.hotels.id: [
-                        .init(
-                            multiplier: 3,
-                            attributes: [
-                                .caveat(
-                                    "Booked on AmexTravel.com"
-                                ),
-                            ]
-                        ),
-                    ],
-                    SpendCategory.flights.id: [
-                        .init(
-                            multiplier: 3,
-                            attributes: [
-                                .caveat(
-                                    "Booked on AmexTravel.com"
-                                ),
-                            ]
-                        ),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -1076,15 +528,8 @@ extension Card {
                 issuer: .amex,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.groceries.id: [
-                        .init(
-                            multiplier: 2,
-                            attributes: [
-                                .info("At U.S. supermarkets"),
-                                .info("On up to $6,000 per year"),
-                            ]
-                        ),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -1095,18 +540,8 @@ extension Card {
                 issuer: .amex,
                 basePoints: [.init(multiplier: 3)],
                 categoryPoints: [
-                    SpendCategory.gas.id: [
-                        .init(multiplier: 5, attributes: [.info("At U.S. gas stations")]),
-                    ],
-                    SpendCategory.groceries.id: [
-                        .init(multiplier: 5, attributes: [.info("At U.S. supermarkets")]),
-                    ],
-                    SpendCategory.dining.id: [
-                        .init(multiplier: 5, attributes: [.info("At U.S. restaurants, including takeout and delivery")]),
-                    ],
-                    SpendCategory.hotels.id: [
-                        .init(multiplier: 7, attributes: [.caveat("For eligible purchases at hotels and resorts in the Hilton portfolio")]),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -1117,9 +552,8 @@ extension Card {
                 issuer: .barclays,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.flights.id: [
-                        .init(multiplier: 2, attributes: [.caveat("On eligible American Airlines purchases")]),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -1130,9 +564,8 @@ extension Card {
                 issuer: .barclays,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.flights.id: [.init(multiplier: 3, attributes: [.caveat("On eligible JetBlue purchases")])],
-                    SpendCategory.dining.id: [.init(multiplier: 2)],
-                    SpendCategory.groceries.id: [.init(multiplier: 2)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -1143,11 +576,8 @@ extension Card {
                 issuer: .bofa,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.alaska.id: [.init(multiplier: 3)],
-                    SpendCategory.gas.id: [.init(multiplier: 2)],
-                    SpendCategory.evCharging.id: [.init(multiplier: 2)],
-                    SpendCategory.streaming.id: [.init(multiplier: 2)],
-                    SpendCategory.transit.id: [.init(multiplier: 2, attributes: [.info("Including rideshare")])],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1158,16 +588,8 @@ extension Card {
                 issuer: .citi,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.groceries.id: [
-                        .init(multiplier: 2, attributes: [
-                            .info("On up to $6,000 per year"),
-                        ]),
-                    ],
-                    SpendCategory.gas.id: [
-                        .init(multiplier: 2, attributes: [
-                            .info("On up to $6,000 per year"),
-                        ]),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -1178,10 +600,8 @@ extension Card {
                 issuer: .citi,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.dining.id: [.init(multiplier: 3)],
-                    SpendCategory.groceries.id: [.init(multiplier: 3)],
-                    SpendCategory.gas.id: [.init(multiplier: 3)],
-                    SpendCategory.flights.id: [.init(multiplier: 3)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -1192,27 +612,8 @@ extension Card {
                 issuer: .chase,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.southwest.id: [
-                        .init(multiplier: 2),
-                    ],
-                    SpendCategory.hotels.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")]),
-                    ],
-                    SpendCategory.carRentals.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")]),
-                    ],
-                    SpendCategory.transit.id: [
-                        .init(multiplier: 2, attributes: [.info("Including rideshare")]),
-                    ],
-                    SpendCategory.phoneBill.id: [
-                        .init(multiplier: 2),
-                    ],
-                    SpendCategory.internet.id: [
-                        .init(multiplier: 2),
-                    ],
-                    SpendCategory.streaming.id: [
-                        .init(multiplier: 2, attributes: [.caveat("On select services")]),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1223,27 +624,8 @@ extension Card {
                 issuer: .chase,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.southwest.id: [
-                        .init(multiplier: 3),
-                    ],
-                    SpendCategory.hotels.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")]),
-                    ],
-                    SpendCategory.carRentals.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")]),
-                    ],
-                    SpendCategory.transit.id: [
-                        .init(multiplier: 2, attributes: [.info("Including rideshare")]),
-                    ],
-                    SpendCategory.phoneBill.id: [
-                        .init(multiplier: 2),
-                    ],
-                    SpendCategory.internet.id: [
-                        .init(multiplier: 2),
-                    ],
-                    SpendCategory.streaming.id: [
-                        .init(multiplier: 2, attributes: [.caveat("On select services")]),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1254,27 +636,8 @@ extension Card {
                 issuer: .chase,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.southwest.id: [
-                        .init(multiplier: 3),
-                    ],
-                    SpendCategory.hotels.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")]),
-                    ],
-                    SpendCategory.carRentals.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")]),
-                    ],
-                    SpendCategory.transit.id: [
-                        .init(multiplier: 2, attributes: [.info("Including rideshare")]),
-                    ],
-                    SpendCategory.phoneBill.id: [
-                        .init(multiplier: 2),
-                    ],
-                    SpendCategory.internet.id: [
-                        .init(multiplier: 2),
-                    ],
-                    SpendCategory.streaming.id: [
-                        .init(multiplier: 2, attributes: [.caveat("On select services")]),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1285,27 +648,8 @@ extension Card {
                 issuer: .chase,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.southwest.id: [
-                        .init(multiplier: 4),
-                    ],
-                    SpendCategory.hotels.id: [
-                        .init(multiplier: 3, attributes: [.caveat("With Rapid Rewards hotel partners")]),
-                    ],
-                    SpendCategory.carRentals.id: [
-                        .init(multiplier: 3, attributes: [.caveat("With Rapid Rewards car rental partners")]),
-                    ],
-                    SpendCategory.transit.id: [
-                        .init(multiplier: 2, attributes: [.info("Including rideshare")]),
-                    ],
-                    SpendCategory.advertising.id: [
-                        .init(multiplier: 2, attributes: [.caveat("On social media and search engines")]),
-                    ],
-                    SpendCategory.phoneBill.id: [
-                        .init(multiplier: 2),
-                    ],
-                    SpendCategory.internet.id: [
-                        .init(multiplier: 2),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1316,18 +660,8 @@ extension Card {
                 issuer: .chase,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.southwest.id: [
-                        .init(multiplier: 3),
-                    ],
-                    SpendCategory.hotels.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards hotel partners")]),
-                    ],
-                    SpendCategory.carRentals.id: [
-                        .init(multiplier: 2, attributes: [.caveat("With Rapid Rewards car rental partners")]),
-                    ],
-                    SpendCategory.transit.id: [
-                        .init(multiplier: 2, attributes: [.info("Including rideshare")]),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1338,21 +672,8 @@ extension Card {
                 issuer: .amex,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.dining.id: [
-                        .init(multiplier: 5, attributes: [.info("On eligible restaurants or food delivery in Canada")]),
-                    ],
-                    SpendCategory.groceries.id: [
-                        .init(multiplier: 5, attributes: [.info("At stand-alone grocery stores in Canada")]),
-                    ],
-                    SpendCategory.streaming.id: [
-                        .init(multiplier: 3, attributes: [.caveat("For eligible streaming subscriptions in Canada")]),
-                    ],
-                    SpendCategory.travel.id: [
-                        .init(multiplier: 2),
-                    ],
-                    SpendCategory.transit.id: [
-                        .init(multiplier: 2, attributes: [.info("Including rideshare")]),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -1363,9 +684,8 @@ extension Card {
                 issuer: .amex,
                 basePoints: [.init(multiplier: 2)],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [
-                        .init(multiplier: 5, attributes: [.caveat("On eligible purchases at participating Marriott Bonvoy hotels")]),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -1376,18 +696,8 @@ extension Card {
                 issuer: .td,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.airCanada.id: [
-                        .init(multiplier: 1.5, attributes: [.info("Including Air Canada Vacations")]),
-                    ],
-                    SpendCategory.starbucks.id: [
-                        .init(multiplier: 1.5, attributes: [.caveat("When you link your card with your Starbucks Rewards account")]),
-                    ],
-                    SpendCategory.gas.id: [
-                        .init(multiplier: 1.5),
-                    ],
-                    SpendCategory.groceries.id: [
-                        .init(multiplier: 1.5),
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1398,10 +708,8 @@ extension Card {
                 issuer: .td,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.chosenCategories.id: [
-                        .init(multiplier: 3, attributes: [.info("Choose from Dining, Entertainment, Gas, Groceries, or Travel each quarter")]),
-                        .init(multiplier: 2, attributes: [.info("Choose from Dining, Entertainment, Gas, Groceries, or Travel each quarter")]),
-                    ]
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1415,7 +723,8 @@ extension Card {
                     .init(multiplier: 2),
                 ],
                 categoryPoints: [
-                    SpendCategory.lyft.id: [.init(multiplier: 5, attributes: [.info("Through March 2025")])]
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 canCombinePoints: true,
                 network: .visa
@@ -1429,7 +738,8 @@ extension Card {
                     .init(multiplier: 1.5),
                 ],
                 categoryPoints: [
-                    SpendCategory.lyft.id: [.init(multiplier: 5, attributes: [.info("Through March 2025")])]
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 canCombinePoints: true,
                 network: .visa
@@ -1443,12 +753,8 @@ extension Card {
                     .init(multiplier: 1),
                 ],
                 categoryPoints: [
-                    SpendCategory.officeSupply.id: [.init(multiplier: 5, attributes: [.info("On the first $25,000 each year")])],
-                    SpendCategory.internet.id: [.init(multiplier: 5, attributes: [.info("On the first $25,000 each year")])],
-                    SpendCategory.phoneBill.id: [.init(multiplier: 5, attributes: [.info("On the first $25,000 each year")])],
-                    SpendCategory.gas.id: [.init(multiplier: 2, attributes: [.info("On the first $25,000 each year")])],
-                    SpendCategory.dining.id: [.init(multiplier: 2, attributes: [.info("On the first $25,000 each year")])],
-                    SpendCategory.lyft.id: [.init(multiplier: 5, attributes: [.info("Through March 2025")])]
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 canCombinePoints: true,
                 network: .visa
@@ -1462,18 +768,8 @@ extension Card {
                     .init(multiplier: 1),
                 ],
                 categoryPoints: [
-                    SpendCategory.advertising.id: [.init(
-                        multiplier: 3,
-                        attributes: [
-                            .caveat("On social media and search engines"),
-                            .info("On the first $150,000 each year"),
-                        ]
-                    )],
-                    SpendCategory.internet.id: [.init(multiplier: 3, attributes: [.info("On the first $150,000 each year")])],
-                    SpendCategory.phoneBill.id: [.init(multiplier: 3, attributes: [.info("On the first $150,000 each year")])],
-                    SpendCategory.travel.id: [.init(multiplier: 3, attributes: [.info("On the first $150,000 each year")])],
-                    SpendCategory.shipping.id: [.init(multiplier: 3, attributes: [.info("On the first $150,000 each year")])],
-                    SpendCategory.lyft.id: [.init(multiplier: 5, attributes: [.info("Through March 2025")])]
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 redemptionReward: .init(
                     amount: .multiplier(1.25),
@@ -1502,15 +798,8 @@ extension Card {
                 issuer: .citi,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.yourTopCategories.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [
-                                .caveat("On up to $500 each billing cycle"),
-                                .caveat("On one eligible category")
-                            ]
-                        )
-                    ]
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -1521,10 +810,8 @@ extension Card {
                 issuer: .gemini,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.gas.id: [.init(multiplier: 4, attributes: [.caveat("On up to $200 in spend per month")])],
-                    SpendCategory.evCharging.id: [.init(multiplier: 4, attributes: [.caveat("On up to $200 in spend per month")])],
-                    SpendCategory.dining.id: [.init(multiplier: 3)],
-                    SpendCategory.groceries.id: [.init(multiplier: 2)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -1535,15 +822,8 @@ extension Card {
                 issuer: .bofa,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.chosenCategories.id: [.init(
-                        multiplier: 3,
-                        attributes: [
-                            .info("One one category of your choice"),
-                            .caveat("On the first $2,500 each quarter")
-                        ]
-                    )],
-                    SpendCategory.groceries.id: [.init(multiplier: 2)],
-                    SpendCategory.wholesaleClubs.id: [.init(multiplier: 2)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1554,10 +834,8 @@ extension Card {
                 issuer: .synchrony,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.groceries.id: [.init(multiplier: 4)],
-                    SpendCategory.gas.id: [.init(multiplier: 4)],
-                    SpendCategory.dining.id: [.init(multiplier: 3)],
-                    SpendCategory.verizon.id: [.init(multiplier: 2)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1587,14 +865,8 @@ extension Card {
                 issuer: .redstone,
                 basePoints: [.init(multiplier: 1.5)],
                 categoryPoints: [
-                    SpendCategory.dining.id: [.init(multiplier: 5)],
-                    SpendCategory.gas.id: [.init(multiplier: 5)],
-                    SpendCategory.groceries.id: [.init(multiplier: 3)],
-                    SpendCategory.wholesaleClubs.id: [.init(multiplier: 3)],
-                    SpendCategory.discountStores.id: [.init(multiplier: 3)],
-                    SpendCategory.utilities.id: [.init(multiplier: 3)],
-                    SpendCategory.phoneBill.id: [.init(multiplier: 3)],
-                    SpendCategory.streaming.id: [.init(multiplier: 3)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1605,21 +877,8 @@ extension Card {
                 issuer: .usBank,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.chosenCategories.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [
-                                .caveat("On your first $2,000 each quarter"),
-                                .caveat("On two categories you must activate"),
-                            ]
-                        ),
-                        .init(
-                            multiplier: 2,
-                            attributes: [
-                                .caveat("On one everyday category you must activate"),
-                            ]
-                        )
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1630,33 +889,8 @@ extension Card {
                 issuer: .elan,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .caveat("Booked in the rewards center"),
-                        ]
-                    )],
-                    SpendCategory.carRentals.id: [.init(
-                        multiplier: 5,
-                        attributes: [
-                            .caveat("Booked in the rewards center"),
-                        ]
-                    )],
-                    SpendCategory.chosenCategories.id: [
-                        .init(
-                            multiplier: 5,
-                            attributes: [
-                                .caveat("On your first $2,000 each quarter"),
-                                .caveat("On two categories you choose"),
-                            ]
-                        ),
-                        .init(
-                            multiplier: 2,
-                            attributes: [
-                                .caveat("On one everyday category you choose"),
-                            ]
-                        )
-                    ],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1666,7 +900,8 @@ extension Card {
                 icon: .darkBlue,
                 issuer: .amazon,
                 categoryPoints: [
-                    SpendCategory.amazon.id: [.init(multiplier: 5)]
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1677,7 +912,8 @@ extension Card {
                 issuer: .usaa,
                 basePoints: [.init(multiplier: 2)],
                 categoryPoints: [
-                    SpendCategory.travel.id: [.init(multiplier: 3)]
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1688,9 +924,8 @@ extension Card {
                 issuer: .usaa,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.dining.id: [.init(multiplier: 3)],
-                    SpendCategory.groceries.id: [.init(multiplier: 2)],
-                    SpendCategory.gas.id: [.init(multiplier: 2)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -1701,8 +936,8 @@ extension Card {
                 issuer: .usaa,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.dining.id: [.init(multiplier: 2)],
-                    SpendCategory.gas.id: [.init(multiplier: 2)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1713,9 +948,8 @@ extension Card {
                 issuer: .usaa,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.gas.id: [.init(multiplier: 5, attributes: [.caveat("On your first $3,000 yearly")])],
-                    SpendCategory.militaryBase.id: [.init(multiplier: 5, attributes: [.caveat("On your first $3,000 yearly")])],
-                    SpendCategory.groceries.id: [.init(multiplier: 2, attributes: [.caveat("On your first $3,000 yearly")])],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -1734,12 +968,8 @@ extension Card {
                 issuer: .capitalOne,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.walmart.id: [
-                        .init(multiplier: 5, attributes: [.caveat("At Walmart.com, including pickup and delivery")]),
-                        .init(multiplier: 2, attributes: [.caveat("In Walmart stores")]),
-                    ],
-                    SpendCategory.travel.id: [.init(multiplier: 2)],
-                    SpendCategory.dining.id: [.init(multiplier: 2)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .mastercard
             ),
@@ -1750,11 +980,8 @@ extension Card {
                 issuer: .chase,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [.init(multiplier: 4, attributes: [.caveat("On purchases at all Hyatt hotels")])],
-                    SpendCategory.dining.id: [.init(multiplier: 2)],
-                    SpendCategory.flights.id: [.init(multiplier: 2, attributes: [.caveat("Purchased directly from the airline")])],
-                    SpendCategory.transit.id: [.init(multiplier: 2)],
-                    SpendCategory.gymMembership.id: [.init(multiplier: 2)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1765,9 +992,8 @@ extension Card {
                 issuer: .amex,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.travel.id: [.init(multiplier: 3)],
-                    SpendCategory.transit.id: [.init(multiplier: 3)],
-                    SpendCategory.dining.id: [.init(multiplier: 3)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .amex
             ),
@@ -1778,10 +1004,8 @@ extension Card {
                 issuer: .wellsFargo,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.hotels.id: [.init(multiplier: 5)],
-                    SpendCategory.flights.id: [.init(multiplier: 5)],
-                    SpendCategory.travel.id: [.init(multiplier: 3)],
-                    SpendCategory.dining.id: [.init(multiplier: 3)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
@@ -1792,12 +1016,8 @@ extension Card {
                 issuer: .wellsFargo,
                 basePoints: [.init(multiplier: 1)],
                 categoryPoints: [
-                    SpendCategory.transit.id: [.init(multiplier: 3)],
-                    SpendCategory.gas.id: [.init(multiplier: 3)],
-                    SpendCategory.travel.id: [.init(multiplier: 3)],
-                    SpendCategory.dining.id: [.init(multiplier: 3)],
-                    SpendCategory.streaming.id: [.init(multiplier: 3)],
-                    SpendCategory.phoneBill.id: [.init(multiplier: 3)],
+                    "goodbye": [.init(multiplier: 1)],
+                    "subtitle": [.init(multiplier: 1)],
                 ],
                 network: .visa
             ),
